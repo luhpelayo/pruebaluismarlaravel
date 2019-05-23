@@ -1,0 +1,211 @@
+@font-face{
+	font-family: myriad;
+	src: url(../fonts/MyriadPro-Regular.otf);
+}
+a {
+	cursor: pointer;
+}
+html{
+	background-color: #221e1f;
+}
+
+.enlace-panel , .enlace-panel-xs{
+	cursor: pointer;
+}
+.bloque{
+	height: 320px;
+}
+.bloque2{
+	height: 120px;
+}
+.container {
+	/*
+	-webkit-box-shadow: 0px 0px 21px 0px rgba(184,184,184,0.24);
+	-moz-box-shadow: 0px 0px 21px 0px rgba(184,184,184,0.24);
+	box-shadow: 0px 0px 21px 0px rgba(184,184,184,0.24);
+	background-color: white;
+	*/
+}
+#main-navbar{
+	margin-bottom: 0;
+}
+#img-logo-ucr {
+	padding: 2em;
+}
+.nav-dark-background {
+	background-color: #222222;
+	color: #FFF;
+	text-decoration: none;
+	font-size: 1em;
+}
+.color-white{
+	color: #FFF;
+}
+/*///////////// nav /////////////*/
+
+/*//////////// Main ////////////*/
+
+/*/////////// Map ////////////////////*/
+
+/*//////////// Footer ////////////*/
+
+/*///////// Events //////////////////*/
+#icon-data-toggle-events {
+	text-transform: uppercase;
+	padding:0.7em;
+	-webkit-transition: 0.1s;
+	-o-transition: 0.1s;
+	transition: 0.1s;
+}
+#icon-data-toggle-events:hover {
+	background-color: #68CEEA;
+	text-decoration: none;
+	color: #FFF;
+}
+/*/////////// Panels ////////////*/
+.resizable-col-events {
+	max-height:544px;
+	overflow: hidden;
+	-webkit-transition: 0.6s;
+	-o-transition: 0.6s;
+	transition: 0.6s;
+}
+.show-more-link:hover{
+	text-decoration: none;
+	background-color: #D614A2;
+		overflow: hidden;
+	box-sizing: border-box;
+}
+.show-more-link{
+	margin:0;
+	color: #FFF;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 3px 3px;
+	bottom: 55px;
+	display: block;
+	background-color: #222222;
+}
+#col-container-noticias .panel-body{
+	-webkit-transition: 0.6s;
+	-o-transition: 0.6s;
+	transition: 0.6s;
+}
+/*/////////// Events ////////////*/
+table th, tr {
+	text-align: center;
+}
+.titleTableNextEvents {
+	margin-bottom: 50px;
+}
+#event_Exit {
+	font-size: 1.5em;
+	cursor: pointer;
+}
+#eventDetails {
+	margin-top: 25px;
+}
+/*/////////// General ////////////*/
+.download_file span {
+	color: #000000 !important;
+}
+.download_file:hover {
+	text-decoration: none !important;
+}
+#btnModifyImages{
+	padding-top: 10px;
+	padding-left: 18px;
+	padding-right: 16px;
+	padding-bottom: 7px;
+	color: #E3E3E3;
+	position: absolute;
+	right: 20px;
+	margin-top: 10px;
+	z-index: 20;
+	background-color: rgba(0,0,0,0.6);
+	-webkit-box-shadow: 0px 0px 21px 0px rgba(255,255,255,0.4);
+	-moz-box-shadow: 0px 0px 21px 0px rgba(255,255,255,0.4);
+	box-shadow: 0px 0px 21px 0px rgba(255,255,255,0.4);
+	-webkit-box-transition: 0.3s;
+	-moz-box-transition: 0.3s;
+	box-transition: 0.3s;
+	transition: 0.3s;
+}
+#btnModifyImages:hover{
+	color: #fff;
+	padding-top: 12px;
+	padding-left: 20px;
+	padding-right: 18px;
+	padding-bottom: 9px;
+	right: 19px;
+	margin-top: 9px;
+	background-color: rgba(0,0,0,0.7);
+	-webkit-box-shadow: 0px 0px 15px 2px rgba(255,255,255,0.6);
+	-moz-box-shadow: 0px 0px 15px 2px rgba(255,255,255,0.6);
+	box-shadow: 0px 0px 15px 2px rgba(255,255,255,0.6);
+}
+.btn {
+  border-radius: 2px !important;
+  border: 0px !important;
+}
+.modal-content {
+  border-radius: 0px;
+  padding: 4%;
+}
+.modal-content input, .modal-content select {
+  border-radius: 0px;
+}
+
+/* aside nav */
+.site-wrap {
+    width: 50%;
+    min-height: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    bottom: 100%;
+    left: -50%;
+    z-index: 2;
+    padding: 3em;
+    background: #222222;
+    transition: 0.5s;
+    color: #fff;
+}
+.site-wrap-shadow{
+	width: 100%;
+    min-height: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    bottom: 100%;
+    left: -100%;
+    z-index: 1;
+    padding: 4em;
+    background: rgba(0,0,0,0.7);
+}
+#botonAutoresCerrar{
+	display: block;
+	margin-top: -26px;
+	margin-right: -26px;
+	background: #000;
+	padding: 7px 10px;
+	border-radius: 100px;
+	color: #D1D1D1;
+	cursor: pointer;
+	-webkit-transition: 0.2s;
+	-o-transition: 0.2s;
+	transition: 0.2s;
+}
+#botonAutoresCerrar:hover{
+	color: #fff;
+	margin-right: -29px;
+	margin-top: -29px;
+	padding: 10px 13px;
+	border-radius: 100px;
+	-webkit-box-shadow: 0px 0px 15px -4px #fff;
+	box-shadow: 0px 0px 15px -4px #fff;
+}
+body {
+    overflow-x: hidden;
+}
+
