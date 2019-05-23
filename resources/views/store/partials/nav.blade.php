@@ -22,7 +22,7 @@
                 <div class="collapse navbar-collapse" id="min_navbar">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown submenu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Legales</a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Legal</a>
                             <ul class="dropdown-menu">
                                 
                                 <li><a href="{{route('normas')}}">Reglamentos</a></li>
@@ -30,7 +30,7 @@
                             </ul>
                         </li>
                         <li class="dropdown submenu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services</a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Servicios</a>
                             <ul class="dropdown-menu other_dropdwn">
                                 
                                 <li class="@if(isset($noticiasActive))  {{ 'active' }}  @endif"><a href="{{ route('noticias') }}">Noticias</a></li>
@@ -41,7 +41,7 @@
                         </li>
 
                         <li><a href="{{route('contacto')}}">Contacto</a></li>
-                        <li><a href="{{route('gallery')}}">Gallery</a></li>
+                        <li><a href="{{route('gallery')}}">Galeria</a></li>
                        
                     </ul>
                 </div><!-- /.navbar-collapse -->
