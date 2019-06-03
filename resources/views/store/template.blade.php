@@ -65,11 +65,11 @@
                 <div class="col-sm-8 constructing_laft">
                     <h2>PERFIL DEL POSTULANTE</h2>
 
-                    <p>Es deseable que quienes ingresen a esta carrera posean capacidad de razonamiento, habilidad de análisis, síntesis y capacidad para solución de problemas. La Ingenieria Financiera busca ir mas allá de los contenidos tradicionales de enseñanza impartados en nustro medio académico,buscando formar profesionales con conocimientos sólidos en lo científico y técnico, innovadores, con capacidad para la toma de decisiones y dar soluciones a los problemas de su entorno. El Estudiante deberá tener las siguientes actitudes en:</p>
+                    <p>Es deseable que quienes ingresen a esta carrera posean capacidad de razonamiento, habilidad de análisis, síntesis y capacidad para solución de problemas. La Ingeniería Financiera busca ir más allá de los contenidos tradicionales de enseñanza impartidos en nuestro medio académico, buscando formar profesionales con conocimientos sólidos en lo científico y técnico, innovadores, con capacidad para la toma de decisiones y dar soluciones a los problemas de su entorno. El Estudiante deberá tener las siguientes actitudes en:</p>
                     <div class="col-md-6 ipsum">
        
                         <ul class="excavator">
-                            <li><i class="fa fa-chevron-circle-right"></i>Predisposición para estudiar.</li>
+                            <li><i class="fa fa-chevron-circle-right"></i>Predisposición para el estudio.</li>
                             <li><i class="fa fa-chevron-circle-right"></i>Habilidad numérica.</li>
                             <li><i class="fa fa-chevron-circle-right"></i>Disposición al trabajo en grupo.</li>
                             <li><i class="fa fa-chevron-circle-right"></i>Capacidad de análisis y síntesis.</li>
@@ -100,7 +100,7 @@
         <div class="container">
             <div class="tittle wow fadeInUp">
                 <h2>Nuestras caracteristicas</h2>
-                <h4>Es un profesional de espíritu creativo e innovador que posee una gran capacidad técnica científica gestión financiera. Su conocimiento financiero de mercado nacional e internacional, su capacidad y liderazgo para guiar a otros e interactuar con quienes forman perte de las organizaciones en que participa.</h4>
+                <h4>Es un profesional de espíritu creativo e innovador que posee una gran capacidad técnica científica de gestión financiera. Su conocimiento financiero de mercado nacional e internacional, su capacidad y liderazgo para guiar a otros e interectuar con quienes forman parte de las organizaciones en que participa.</h4>
             </div>
             <div class="feature_row row">
                 <div class="col-md-6 feature_img">
@@ -108,7 +108,7 @@
                 </div>
                 <div class="col-md-6 feature_content">
                     <div class="subtittle">
-                        <h2>EL Ingeniero en Finanzas:</h2>
+                        <h2>EL Ingeniero Financiero:</h2>
                     </div>
                     <div class="media">
                         <div class="media-left">
@@ -241,7 +241,7 @@
                    <div class="cns-content">
                         <i class="fa fa-bar-chart" aria-hidden="true"></i>
                         <a href="#">MISIÓN</a>
-                        <p>FORMAR INGENIEROS FINANCIEROS DE ÉXITO, que logren su desarrollo pleno en la sociedad, con cualidades de lideres, practicantes de valores éticos y morales,poseedores de competencias propias de las finanzas. </p>
+                        <p>Formar ingenieros financieros de éxito, que logren su desarrollo pleno en la sociedad, con cualidades de líderes, practicantes de valores éticos y morales, poseedores de competencias propias de las finanzas. </p>
                    </div>
                 </div>
                 <div class="col-md-4 col-sm-6 construction">
@@ -251,9 +251,30 @@
                    <div class="cns-content">
                         <i class="fa fa-keyboard-o" aria-hidden="true"></i>
                         <a href="#">VISIÓN</a>
-                        <p >Somos un centro de formación profesional que desarrolla sus actividades académicas con calidad y pertenencia acreditada y la competitividad de sus profesionales tiene el recocimiento publico en la sociedad y el mercado sus docentes y administrativos son parte imprescindible del éxito profesional. </p>
+                        <p >Somos un centro de formación profesional que desarrolla sus actividades académicas con calidad y pertenencia acreditada y la competitividad de sus profesionales tiene el reconocimiento público en la sociedad y el mercado; sus docentes y administrativos son parte imprescindible del éxito profesional. </p>
                    </div>
                 </div>
+
+                <div class="col-md-4 col-sm-6 construction">
+                   <div class="cns-img">
+                        <img src="{{ asset('images/images/cns-3.jpg')}}" alt="">
+                   </div>
+                   <div class="cns-content">
+                        <i class="fa fa-gavel" aria-hidden="true"></i>
+                        <a href="#">PRINCIPIOS</a>
+                        <p align="left">- Búsqueda de la excelencia.<br/>
+                           - Trabajo en equipo<br/>
+                           - Desarrollo de las capacidades humanas.<br/>
+                           <br/>
+                           <br/>
+                           <br/>
+                           <br/>
+                           
+                         </p>
+                   </div>
+                </div>
+             
+
                 <div class="col-md-4 col-sm-6 construction">
                    <div class="cns-img">
                         <img src="{{ asset('images/images/cns-3.jpg')}}" alt="">
@@ -265,13 +286,33 @@
                            - Disciplina<br/>
                            - Compromiso<br/>
                            - Respeto<br/>
-                           - Responsabilidad<br/>
+                           - Responsabilidad con la sociedad y el medio ambiente<br/>
                            - Pensamiento Proactivo<br/>
                            - Honestidad<br/>
                            - Eficiencia y Eficacia
                          </p>
                    </div>
                 </div>
+                <div class="col-md-4 col-sm-6 construction">
+                   <div class="cns-img">
+                        <img src="<?php echo e(asset('images/images/cns-3.jpg')); ?>" alt="">
+                   </div>
+                   <div class="cns-content">
+                        <i class="fa fa-gavel" aria-hidden="true"></i>
+                        <a href="#">OBJETIVOS</a>
+                        <p align="left"><br/>
+                           <br/>
+                           <br/>
+                            <br/>
+                           <br/>
+                           <br/>
+                           <br/>
+                
+                         </p>
+                   </div>
+                </div>
+
+              
             </div>
         </div>
     </section>
