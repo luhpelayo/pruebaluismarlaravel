@@ -7,10 +7,10 @@
                     
                     <p>La carrera Ingeniería Financiera es una de las Carreras Universitarias de Matemática, Economía y Finanzas que dicta la Universidad Autónoma Gabriel René Moreno.</p>
                     <ul class="socail_icon">
-                        <li><a href="https://www.facebook.com/Ingenier%C3%ADa-Financiera-UAGRM-Oficial-241656083410280/?modal=admin_todo_tour"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.facebook.com/Ingenier%C3%ADa-Financiera-UAGRM-Oficial-241656083410280/?modal=admin_todo_tour" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.twitter.com/yalasdelauagrm" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.instagram.com/yalasdelauagrm" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-6 footer_about quick">
