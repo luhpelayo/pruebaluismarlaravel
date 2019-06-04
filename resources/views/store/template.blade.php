@@ -33,17 +33,14 @@
   
 
   <!-- Top Header_Area -->
- <section class="top_header_area">
+  <section class="top_header_area">
           <div class="container">
             <div class="row">
                 <div class="col-xs-12 ">
-                    
-                     <img id="img-logo-ucr" class="img-responsive center-block" src="{{ asset('images/img_include/portada.png')}}">
-                    
+                     <img id="img-logo-ucr" class="img-responsive center-block" src="{{ asset('images/img_include/portada1.png')}}">
                 </div>
             </div>
         </div>
-
 </section>
 
 
@@ -102,7 +99,7 @@
                 </div>
                 <div class="col-md-6 feature_content">
                     <div class="subtittle">
-                        <h2>EL Ingeniero Financiero:</h2>
+                        <h3>El Ingeniero Financiero:</h3>
                     </div>
                     <div class="media">
                         <div class="media-left">
@@ -148,13 +145,13 @@
         <div class="container">
             <div class="tittle wow fadeInUp">
                 <h2>Donde Trabaja</h2>
-                <h4>El ingeniero financiero es un profecinal con elevada formación práctica en el área de las finanzas, con esperitu crítico, ética profecinal y conciencia de la realiadad nacional, capaz de  promover y conducir el desarrollo empresarial.</h4>
+                <h4>El ingeniero financiero es un profesional con elevada formación práctica en el área de las finanzas, con espíritu crítico, ética profecinal y conciencia de la realiadad nacional, capaz de  promover y conducir el desarrollo empresarial.</h4>
             </div>
             <div class="feature_row row">
 
                 <div class="col-md-6 feature_content">
                     <div class="subtittle">
-                        <h2>EL Ingeniero en Financiero puede trabajar en:</h2>
+                        <h3>El Ingeniero en Financiero puede trabajar en:</h3>
                     </div>
                     <div class="media">
                         <div class="media-left">
@@ -261,15 +258,13 @@
                            - Trabajo en equipo<br/>
                            - Desarrollo de las capacidades humanas.<br/>
                            <br/>
-                           <br/>
-                           <br/>
-                           <br/>
                            
                          </p>
                    </div>
                 </div>
-             
+             </div>
 
+            <div class="row construction_iner">
                 <div class="col-md-4 col-sm-6 construction">
                    <div class="cns-img">
                         <img src="{{ asset('images/images/valores.jpg')}}" alt="">
@@ -297,12 +292,6 @@
                         <a href="#">OBJETIVOS</a>
                         <p align="left"><br/>
                            <br/>
-                           <br/>
-                            <br/>
-                           <br/>
-                           <br/>
-                           <br/>
-                
                          </p>
                    </div>
                 </div>

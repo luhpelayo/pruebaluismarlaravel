@@ -5,7 +5,7 @@
         <div class="container">
             <div class="footer_row row">
 
-                <div class="col-md-3 col-sm-6 footer_about quick">
+                <div class="col-md-6 col-sm-6 footer_about quick">
                     <h2>Normas de la carrera</h2>
                     @foreach ($normas as $norma)
                     <ul class="quick_link">
@@ -13,7 +13,7 @@
                     </ul>
                     @endforeach
                 </div>
-                <div class="col-md-3 col-sm-6 footer_about">
+                <div class="col-md-6 col-sm-6 footer_about">
                     <h2>Normas de la universidad</h2>
                      @foreach ($extermas as $norm)
                     <ul class="quick_link">

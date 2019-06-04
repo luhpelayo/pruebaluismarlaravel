@@ -50,7 +50,7 @@
                         <input name="email" type="email" class="form-control input_box" id="email" required="required" placeholder="Email">
                         <input name="subject" type="text" class="form-control input_box" id="subject" required="required" placeholder="Subject">
                         <textarea name="message" type="text" class="form-control input_box" id="message" rows="7" required="required" placeholder="Message"></textarea>
-                        <button type="submit" class="btn btn-default">Enviar Message</button>
+                        <button type="submit" class="btn btn-default">Enviar Mensaje</button>
                    
                     </form>
                 </div>
