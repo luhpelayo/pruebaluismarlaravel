@@ -62,12 +62,11 @@
     <section class="building_construction_area">
         <div class="container">
             <div class="row building_construction_row">
-                <div class="col-sm-8 constructing_laft">
+                <div class="col-sm-7 constructing_laft">
                     <h2>PERFIL DEL POSTULANTE</h2>
 
                     <p>Es deseable que quienes ingresen a esta carrera posean capacidad de razonamiento, habilidad de análisis, síntesis y capacidad para solución de problemas. La Ingeniería Financiera busca ir más allá de los contenidos tradicionales de enseñanza impartidos en nuestro medio académico, buscando formar profesionales con conocimientos sólidos en lo científico y técnico, innovadores, con capacidad para la toma de decisiones y dar soluciones a los problemas de su entorno. El Estudiante deberá tener las siguientes actitudes en:</p>
                     <div class="col-md-6 ipsum">
-       
                         <ul class="excavator">
                             <li><i class="fa fa-chevron-circle-right"></i>Predisposición para el estudio.</li>
                             <li><i class="fa fa-chevron-circle-right"></i>Habilidad numérica.</li>
@@ -76,9 +75,8 @@
                             <li><i class="fa fa-chevron-circle-right"></i>Buena memoria.</li>
                         </ul>
                     </div>
-
                 </div>
-                <div class="col-sm-4 constructing_right">                   
+                <div class="col-md-5 constructing_right">
                     <img src="{{ asset('images/images/estudiante2.png')}}" alt="">
                 </div>
             </div>
@@ -104,11 +102,7 @@
                 </div>
                 <div class="col-md-6 feature_content">
                     <div class="subtittle">
-<<<<<<< HEAD
-                        <h2>El Ingeniero en Finanzas:</h2>
-=======
                         <h2>EL Ingeniero Financiero:</h2>
->>>>>>> d89b9ad62f5fbab1adae3cd5c8be4f2c85273880
                     </div>
                     <div class="media">
                         <div class="media-left">
@@ -241,11 +235,8 @@
                    <div class="cns-content">
                         <i class="fa fa-bar-chart" aria-hidden="true"></i>
                         <a href="#">MISIÓN</a>
-<<<<<<< HEAD
-                        <p>Formar Ingenieros Financieros De Éxito, que logren su desarrollo pleno en la sociedad, con cualidades de lideres, practicantes de valores éticos y morales,poseedores de competencias propias de las finanzas. </p>
-=======
                         <p>Formar ingenieros financieros de éxito, que logren su desarrollo pleno en la sociedad, con cualidades de líderes, practicantes de valores éticos y morales, poseedores de competencias propias de las finanzas. </p>
->>>>>>> d89b9ad62f5fbab1adae3cd5c8be4f2c85273880
+
                    </div>
                 </div>
                 <div class="col-md-4 col-sm-6 construction">

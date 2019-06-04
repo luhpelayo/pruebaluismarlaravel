@@ -1,25 +1,19 @@
     <footer class="footer_area">
         <div class="container">
             <div class="footer_row row">
-                <div class="col-md-3 col-sm-6 footer_about">
+                <div class="col-md-4 col-sm-6 footer_about">
                     <h2>SOBRE NOSOTROS</h2>
                     <!--<img src="{{asset('images/images/footer-logo.png')}}" alt="">-->
                     
                     <p>La carrera Ingeniería Financiera es una de las Carreras Universitarias de Matemática, Economía y Finanzas que dicta la Universidad Autónoma Gabriel René Moreno.</p>
                     <ul class="socail_icon">
                         <li><a href="https://www.facebook.com/Ingenier%C3%ADa-Financiera-UAGRM-Oficial-241656083410280/?modal=admin_todo_tour" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-<<<<<<< HEAD
                         <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                        <li><a href="https://api.whatsapp.com/send?phone=62207177&text=Hola!!" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
-=======
-                        <li><a href="https://www.twitter.com/yalasdelauagrm" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                         <li><a href="https://www.instagram.com/yalasdelauagrm" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                        <li><a href="#" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
->>>>>>> d89b9ad62f5fbab1adae3cd5c8be4f2c85273880
+                        <li><a href="https://api.whatsapp.com/send?phone=59162207177&text=Hola!!" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
-                <div class="col-md-3 col-sm-6 footer_about quick">
+                <div class="col-md-4 col-sm-6 footer_about quick">
                     <h2>ENLACES RÁPIDOS</h2>
                     <ul class="quick_link">
                         <li><a href="{{route('/')}}"><i class="fa fa-chevron-right"></i>Home</a></li>
@@ -31,12 +25,7 @@
                         <li><a href="/galeria"><i class="fa fa-chevron-right"></i>Galeria</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3 col-sm-6 footer_about">
-                <!--    <h2>Twitter Feed</h2>
-                    <a href="#" class="twitter">@colorlib: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</a>
-                    <a href="#" class="twitter">@colorlib: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</a>
-                --></div>
-                <div class="col-md-3 col-sm-6 footer_about">
+                <div class="col-md-4 col-sm-6 footer_about">
                     <h2>CONTÁCTENOS</h2>
                     <address>
                         <p>:)</p>
