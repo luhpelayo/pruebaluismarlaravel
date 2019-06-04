@@ -76,13 +76,9 @@
                             <li><i class="fa fa-chevron-circle-right"></i>Buena memoria.</li>
                         </ul>
                     </div>
-                    
 
                 </div>
-                <div class="col-sm-4 constructing_right">
-                    
-                    
-                   
+                <div class="col-sm-4 constructing_right">                   
                     <img src="{{ asset('images/images/estudiante2.png')}}" alt="">
                 </div>
             </div>
@@ -108,7 +104,11 @@
                 </div>
                 <div class="col-md-6 feature_content">
                     <div class="subtittle">
+<<<<<<< HEAD
+                        <h2>El Ingeniero en Finanzas:</h2>
+=======
                         <h2>EL Ingeniero Financiero:</h2>
+>>>>>>> d89b9ad62f5fbab1adae3cd5c8be4f2c85273880
                     </div>
                     <div class="media">
                         <div class="media-left">
@@ -241,7 +241,11 @@
                    <div class="cns-content">
                         <i class="fa fa-bar-chart" aria-hidden="true"></i>
                         <a href="#">MISIÓN</a>
+<<<<<<< HEAD
+                        <p>Formar Ingenieros Financieros De Éxito, que logren su desarrollo pleno en la sociedad, con cualidades de lideres, practicantes de valores éticos y morales,poseedores de competencias propias de las finanzas. </p>
+=======
                         <p>Formar ingenieros financieros de éxito, que logren su desarrollo pleno en la sociedad, con cualidades de líderes, practicantes de valores éticos y morales, poseedores de competencias propias de las finanzas. </p>
+>>>>>>> d89b9ad62f5fbab1adae3cd5c8be4f2c85273880
                    </div>
                 </div>
                 <div class="col-md-4 col-sm-6 construction">
