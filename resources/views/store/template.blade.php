@@ -59,12 +59,11 @@
     <section class="building_construction_area">
         <div class="container">
             <div class="row building_construction_row">
-                <div class="col-sm-8 constructing_laft">
+                <div class="col-sm-7 constructing_laft">
                     <h2>PERFIL DEL POSTULANTE</h2>
 
                     <p>Es deseable que quienes ingresen a esta carrera posean capacidad de razonamiento, habilidad de análisis, síntesis y capacidad para solución de problemas. La Ingeniería Financiera busca ir más allá de los contenidos tradicionales de enseñanza impartidos en nuestro medio académico, buscando formar profesionales con conocimientos sólidos en lo científico y técnico, innovadores, con capacidad para la toma de decisiones y dar soluciones a los problemas de su entorno. El Estudiante deberá tener las siguientes actitudes en:</p>
                     <div class="col-md-6 ipsum">
-       
                         <ul class="excavator">
                             <li><i class="fa fa-chevron-circle-right"></i>Predisposición para el estudio.</li>
                             <li><i class="fa fa-chevron-circle-right"></i>Habilidad numérica.</li>
@@ -73,11 +72,9 @@
                             <li><i class="fa fa-chevron-circle-right"></i>Buena memoria.</li>
                         </ul>
                     </div>
-                    
-
                 </div>
-                <div class="col-sm-4 constructing_right">
-                    <img src="{{ asset('images/images/PERFIL 3.PNG')}}" alt="">
+                <div class="col-md-5 constructing_right">
+                    <img src="{{ asset('images/images/estudiante2.png')}}" alt="">
                 </div>
             </div>
         </div>
@@ -213,7 +210,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 feature_img">
-                    <img src="{{ asset('images/images/PERFIL 4.png')}}" alt="">
+                    <img src="{{ asset('images/images/dondetrabaja.jpg')}}" alt="">
                 </div>
             </div>
         </div>
@@ -230,20 +227,21 @@
             <div class="row construction_iner">
                 <div class="col-md-4 col-sm-6 construction">
                    <div class="cns-img">
-                        <img src="{{ asset('images/images/cns-1.jpg')}}" alt="">
+                        <img src="{{ asset('images/images/mision.jpg')}}" alt="">
                    </div>
                    <div class="cns-content">
                         <i class="fa fa-bar-chart" aria-hidden="true"></i>
                         <a href="#">MISIÓN</a>
                         <p>Formar ingenieros financieros de éxito, que logren su desarrollo pleno en la sociedad, con cualidades de líderes, practicantes de valores éticos y morales, poseedores de competencias propias de las finanzas. </p>
+
                    </div>
                 </div>
                 <div class="col-md-4 col-sm-6 construction">
                    <div class="cns-img">
-                        <img src="{{ asset('images/images/cns-2.jpg')}}" alt="">
+                        <img src="{{ asset('images/images/vision.jpg')}}" alt="">
                    </div>
                    <div class="cns-content">
-                        <i class="fa fa-keyboard-o" aria-hidden="true"></i>
+                        <i class="fa fa-university" aria-hidden="true"></i>
                         <a href="#">VISIÓN</a>
                         <p >Somos un centro de formación profesional que desarrolla sus actividades académicas con calidad y pertenencia acreditada y la competitividad de sus profesionales tiene el reconocimiento público en la sociedad y el mercado; sus docentes y administrativos son parte imprescindible del éxito profesional. </p>
                    </div>
@@ -251,10 +249,10 @@
 
                 <div class="col-md-4 col-sm-6 construction">
                    <div class="cns-img">
-                        <img src="{{ asset('images/images/cns-3.jpg')}}" alt="">
+                        <img src="{{ asset('images/images/principios.jpg')}}" alt="">
                    </div>
                    <div class="cns-content">
-                        <i class="fa fa-gavel" aria-hidden="true"></i>
+                        <i class="fa fa-life-ring" aria-hidden="true"></i>
                         <a href="#">PRINCIPIOS</a>
                         <p align="left">- Búsqueda de la excelencia.<br/>
                            - Trabajo en equipo<br/>
@@ -269,7 +267,7 @@
             <div class="row construction_iner">
                 <div class="col-md-4 col-sm-6 construction">
                    <div class="cns-img">
-                        <img src="{{ asset('images/images/cns-3.jpg')}}" alt="">
+                        <img src="{{ asset('images/images/valores.jpg')}}" alt="">
                    </div>
                    <div class="cns-content">
                         <i class="fa fa-gavel" aria-hidden="true"></i>
@@ -287,10 +285,10 @@
                 </div>
                 <div class="col-md-4 col-sm-6 construction">
                    <div class="cns-img">
-                        <img src="<?php echo e(asset('images/images/cns-3.jpg')); ?>" alt="">
+                        <img src="<?php echo e(asset('images/images/objetivo.jpg')); ?>" alt="">
                    </div>
                    <div class="cns-content">
-                        <i class="fa fa-gavel" aria-hidden="true"></i>
+                        <i class="fa fa-hourglass-end" aria-hidden="true"></i>
                         <a href="#">OBJETIVOS</a>
                         <p align="left"><br/>
                            <br/>
