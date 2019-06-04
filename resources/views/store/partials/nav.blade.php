@@ -26,7 +26,7 @@
                             <ul class="dropdown-menu">
                                 
                                 <li><a href="{{route('normas')}}">Reglamentos</a></li>
-                                <li><a href="{{route('procedimientos')}}">Procedimientos</a></li>
+                                <li><a href="{{route('procedimientos')}}">Manual de Procedimientos</a></li>
                             </ul>
                         </li>
                         <li class="dropdown submenu">
