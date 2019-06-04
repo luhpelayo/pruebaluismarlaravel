@@ -33,17 +33,14 @@
   
 
   <!-- Top Header_Area -->
- <section class="top_header_area">
+  <section class="top_header_area">
           <div class="container">
             <div class="row">
                 <div class="col-xs-12 ">
-                    
-                     <img id="img-logo-ucr" class="img-responsive center-block" src="{{ asset('images/img_include/portada.png')}}">
-                    
+                     <img id="img-logo-ucr" class="img-responsive center-block" src="{{ asset('images/img_include/portada1.png')}}">
                 </div>
             </div>
         </div>
-
 </section>
 
 
@@ -150,14 +147,14 @@
     <section class="our_feature_area">
         <div class="container">
             <div class="tittle wow fadeInUp">
-                <h3>Donde Trabaja</h3>
+                <h2>Donde Trabaja</h2>
                 <h4>El ingeniero financiero es un profesional con elevada formación práctica en el área de las finanzas, con espíritu crítico, ética profecinal y conciencia de la realiadad nacional, capaz de  promover y conducir el desarrollo empresarial.</h4>
             </div>
             <div class="feature_row row">
 
                 <div class="col-md-6 feature_content">
                     <div class="subtittle">
-                        <h3>EL Ingeniero en Financiero puede trabajar en:</h3>
+                        <h3>El Ingeniero en Financiero puede trabajar en:</h3>
                     </div>
                     <div class="media">
                         <div class="media-left">
