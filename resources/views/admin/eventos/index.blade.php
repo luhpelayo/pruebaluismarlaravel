@@ -5,8 +5,8 @@
 <div class="box box-primary">
 <div class="page-header text-center">
     <h1>
-        <i class="fa fa-calendar"style="color:green"></i>
-        EVENTOS <a href="{{ route('eventos.create') }}" class="btn btn-warning"><i class="fa fa-plus-circle"></i> Eventos</a>
+        {{--<i class="fa fa-calendar"style="color:green"></i>--}}
+        EVENTOS <a href="{{ route('eventos.create') }}" class="btn btn-success"><i class="fa fa-plus-circle"></i> Nuevo</a>
     </h1>
 </div>
 

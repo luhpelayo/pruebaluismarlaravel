@@ -4,8 +4,8 @@
 <div class="box box-primary">
 <div class="page-header text-center">
     <h1>
-        <i class="fa fa-file-image-o"style="color:green"></i>
-        GALLEREIS <a href="{{ route('galleries.create') }}" class="btn btn-warning"><i class="fa fa-plus-circle"></i> Gallery</a>
+        {{--<i class="fa fa-file-image-o"style="color:green"></i>--}}
+        GALERIA <a href="{{ route('galleries.create') }}" class="btn btn-success"><i class="fa fa-plus-circle"></i> Nuevo</a>
     </h1>
 </div>
 <div class="box-body">              

@@ -36,8 +36,8 @@
                         <div class="address">
                             <a href="#">Av. Busch, Ciudad Universitaria  <br>- Modulo 265</a>
                             <a href="#">359 - 9603</a>
-                            <a href="#">(626) 935-3026</a>
-                            <a href="#">info@thethemspro.com</a>
+                            <a href="#">(591) 935-3026</a>
+                            <a href="#">puntodev.com@gmail.com</a>
 
                         </div>
                     </div>

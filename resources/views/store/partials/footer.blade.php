@@ -3,8 +3,7 @@
             <div class="footer_row row">
                 <div class="col-md-4 col-sm-6 footer_about">
                     <h2>SOBRE NOSOTROS</h2>
-                    <!--<img src="{{asset('images/images/footer-logo.png')}}" alt="">-->
-                    
+                    <!--<img src=" {{ asset ('images/images/footer-logo.png')}}" alt="">-->
                     <p>La carrera Ingeniería Financiera es una de las Carreras Universitarias de Matemática, Economía y Finanzas que dicta la Universidad Autónoma Gabriel René Moreno.</p>
                     <ul class="socail_icon">
                         <li><a href="https://www.facebook.com/Ingenier%C3%ADa-Financiera-UAGRM-Oficial-241656083410280/?modal=admin_todo_tour" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -16,7 +15,7 @@
                 <div class="col-md-4 col-sm-6 footer_about quick">
                     <h2>ENLACES RÁPIDOS</h2>
                     <ul class="quick_link">
-                        <li><a href="{{route('/')}}"><i class="fa fa-chevron-right"></i>Home</a></li>
+                        <li><a href="{{route('/')}}"><i class="fa fa-chevron-right"></i>Inicio</a></li>
                         <li><a href="/normas"><i class="fa fa-chevron-right"></i>Normas</a></li>
                         <li><a href="/procedimientos"><i class="fa fa-chevron-right"></i>Procedimientos</a></li>
                         <li><a href="/noticias"><i class="fa fa-chevron-right"></i>Noticias</a></li>
@@ -28,17 +27,16 @@
                 <div class="col-md-4 col-sm-6 footer_about">
                     <h2>CONTÁCTENOS</h2>
                     <address>
-                        <p>:)</p>
                         <ul class="my_address">
                             <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>financierauagrm@gmail.com</a></li>
                             <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i>(591) 3599603</a></li>
-                            <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i><span>Av. Busch, Ciudad Universitaria - Modulo 265 </span></a></li>
+                            <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>Av. Busch, Ciudad Universitaria - Modulo 265 </a></li>
                         </ul>
                     </address>
                 </div>
             </div>
         </div>
         <div class="copyright_area">
-            Ing. Financiera <a href="{{route('autor-sitio')}}">Sitio Web.</a>
+            <a href="{{route('home')}}">Ing. Financiera </a>
         </div>
     </footer>

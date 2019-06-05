@@ -17,6 +17,7 @@ class ContactController extends Controller
             'message' => 'required',
         ]);
 
+//        Mail::to('valcyum.085@gmail.com');
         $contact = new Contact();
         $contact->name = $request->name;
         $contact->email = $request->email;
@@ -24,6 +25,6 @@ class ContactController extends Controller
         $contact->message = $request->message;
         $contact->save();
 
-        return redirect()->route('contacto')->with('message', 'Se agregó una nueva contacto');
+        return redirect()->route('contacto')->with('message', 'Se Email Exitosamente!!!');
     }
 }
