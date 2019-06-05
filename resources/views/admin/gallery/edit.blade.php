@@ -10,9 +10,9 @@
 <div class="container box box-primary">
   
         <div class="page-header  text-center">
-           <h1>
-            <i class="fa fa-file-image-o"style="color:green"></i>
-              GALLERIES <small>[Agregar Gallery]</small>
+           <h1>GALERIA
+            {{--<i class="fa fa-file-image-o"style="color:green"></i>--}}
+               {{--<small>[Agregar Galeria]</small>--}}
           </h1>
         </div><!-- /.box-header -->             
     <div class="col-xs-12 col-md-8 col-md-offset-2 col-xl-6 col-xl-offset-3">
@@ -23,7 +23,7 @@
         @endif
         
     <!-- Dropzone -->
-    <label class="control-label" for="title">Images</label>
+    <label class="control-label" for="title">Imagenes</label>
 
     <div style="width: 675px; min-height: 300px; height: auto; border:1px solid slategray;" id="dropzone">
        
@@ -105,7 +105,7 @@
                 init: function () {
                     this.on("addedfile", function (file) {
 
-                        var removeButton = Dropzone.createElement('<a class="dz-remove">Remove file</a>');
+                        var removeButton = Dropzone.createElement('<a class="dz-remove">Remover imagen</a>');
                         var _this = this;
 
                         removeButton.addEventListener("click", function (e) {

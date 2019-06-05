@@ -84,7 +84,7 @@
             </li>
            @endcan
            @can('sliders.index' || 'area.index' || 'requirements.index' || 'processes.index' || 'estado.index' || 'solicitante.index')
-            <li class="active treeview">
+            <li class="treeview">
               <a href="#">
                 <i class="fa fa-cog"></i> <span>Configuración</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
@@ -113,7 +113,7 @@
             @can('tramite.index')
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-file-word-o"></i><span>Documentos</span><i class="fa fa-angle-left pull-right"></i>
+                <i class="fa fa-file-word-o"></i><span>Tramites</span><i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
                 
@@ -131,7 +131,7 @@
               </a>
               <ul class="treeview-menu">
                 <li><a href="{{ route('galleries.index') }}"><i class="fa fa-circle-o"></i>Galeria de fotos</a></li>
-                <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Por Llegar</a></li>
+                {{--<li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Por Llegar</a></li>--}}
                 
                
               </ul>
@@ -150,32 +150,36 @@
                 <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
               </ul>
             </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-laptop"></i>
-                <span>Planificación</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> General</a></li>
-                <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
-                <li><a href="pages/UI/buttons.html"><i class="fa fa-circle-o"></i> Buttons</a></li>
-                <li><a href="pages/UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a></li>
-                <li><a href="pages/UI/timeline.html"><i class="fa fa-circle-o"></i> Timeline</a></li>
-                <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
-              </ul>
-            </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-edit"></i> <span>Academico</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> General Elements</a></li>
-                <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
-                <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
-              </ul>
-            </li>
+            {{--TODO --}}
+            {{--<li class="treeview">--}}
+              {{--<a href="#">--}}
+                {{--<i class="fa fa-laptop"></i>--}}
+                {{--<span>Planificación</span>--}}
+                {{--<i class="fa fa-angle-left pull-right"></i>--}}
+              {{--</a>--}}
+              {{--<ul class="treeview-menu">--}}
+                {{--<li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> General</a></li>--}}
+                {{--<li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>--}}
+                {{--<li><a href="pages/UI/buttons.html"><i class="fa fa-circle-o"></i> Buttons</a></li>--}}
+                {{--<li><a href="pages/UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a></li>--}}
+                {{--<li><a href="pages/UI/timeline.html"><i class="fa fa-circle-o"></i> Timeline</a></li>--}}
+                {{--<li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>--}}
+              {{--</ul>--}}
+            {{--</li>--}}
+            {{----}}
+
+            {{--<li class="treeview">--}}
+              {{--<a href="#">--}}
+                {{--<i class="fa fa-edit"></i> <span>Academico</span>--}}
+                {{--<i class="fa fa-angle-left pull-right"></i>--}}
+              {{--</a>--}}
+              {{--<ul class="treeview-menu">--}}
+                {{--<li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> General Elements</a></li>--}}
+                {{--<li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>--}}
+                {{--<li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>--}}
+              {{--</ul>--}}
+            {{--</li>--}}
+
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-table"></i> <span>Publicación</span>
@@ -226,7 +230,7 @@
         <div class="pull-right hidden-xs">
           <b>Version</b> 2.3.0
         </div>
-        <strong>Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 2019 <a href="#">Ingenieria Financiera</a>.</strong> All rights reserved.
       </footer>
 
 
