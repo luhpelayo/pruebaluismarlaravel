@@ -7,7 +7,7 @@
             </div>
             <div class="feature_row row">
                 <div class="col-md-6 feature_img">
-                    <img src="{{ asset('images/images/feature-man.png')}}" alt="">
+                    <img src="{{ asset('images/images/trabajador.jpg')}}" alt="">
                 </div>
                 <div class="col-md-6 feature_content">
                     <div class="subtittle">
