@@ -21,7 +21,7 @@ box-shadow: 0px 0px 32px -2px rgba(0,0,0,0.08); background-color: #FFF">
 			<?php $contadorNoticias= 0 ?>
 			@if(isset($noticias) && count($noticias) > 0)
 				@foreach ($noticias as $noticia)
-					<div class="col-xs-12 col-sm-4">
+					<div class="col-xs-12 col-sm-8"  >
 						<div class="panel panel-default resizable-col-events">
 						  	<div class="panel-body resizable-panel">
 									@if(isset($noticia->url_img))

@@ -12,7 +12,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="{{route('home')}}"><img src="{{ asset('images/images/logo1.png')}}" class="img-responsive"></a>
+                    <a class="navbar-brand" href="{{route('/')}}"><img src="{{ asset('images/images/logo1.png')}}" class="img-responsive"></a>
 
                 </div>
             </div>
@@ -42,7 +42,7 @@
 
                         <li><a href="{{route('contacto')}}">Contacto</a></li>
                         <li><a href="{{route('gallery')}}">Galeria</a></li>
-                       
+                        <li><a href="{{route('home')}}">Login</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div>
