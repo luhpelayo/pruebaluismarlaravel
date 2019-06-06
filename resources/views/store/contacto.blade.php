@@ -36,8 +36,8 @@
                         <div class="address">
                             <a href="#">Av. Busch, Ciudad Universitaria  <br>- Modulo 265</a>
                             <a href="#">359 - 9603</a>
-                            <a href="#">(626) 935-3026</a>
-                            <a href="#">info@thethemspro.com</a>
+                            <a href="#">(591) 935-3026</a>
+                            <a href="#">puntodev.com@gmail.com</a>
 
                         </div>
                     </div>
@@ -50,7 +50,7 @@
                         <input name="email" type="email" class="form-control input_box" id="email" required="required" placeholder="Email">
                         <input name="subject" type="text" class="form-control input_box" id="subject" required="required" placeholder="Subject">
                         <textarea name="message" type="text" class="form-control input_box" id="message" rows="7" required="required" placeholder="Message"></textarea>
-                        <button type="submit" class="btn btn-default">Enviar Message</button>
+                        <button type="submit" class="btn btn-default">Enviar Mensaje</button>
                    
                     </form>
                 </div>

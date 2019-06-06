@@ -33,6 +33,7 @@ Route::get('autor-sitio', function(){return view('store.web.acerca_sitio');})->n
 Route::get('contacto', function(){return view('store.contacto');})->name('contacto');
 // Contacto
 Route::post('contact-send','Web\ContactController@sendMessage')->name('contact.send');
+//Route::post('contact-send','Web\ContactController@sendMessage')->name('contact.send');
 
 Route::get('aca', 'Admin\ReportController@index')->name('aca');
 
@@ -123,6 +124,5 @@ Route::middleware(['auth'])->group(function(){
     Route::resource('meta', 
     'Admin\MetaController');
     //Objetivo
-    Route::resource('objetvo', 
-    'Admin\ObjetivoController');
+    Route::resource('objetvo', 'Admin\ObjetivoController');
 });

@@ -1,48 +1,42 @@
     <footer class="footer_area">
         <div class="container">
             <div class="footer_row row">
-                <div class="col-md-3 col-sm-6 footer_about">
-                    <h2>SOBRE NUESTRA COMPAÑÍA</h2>
-                    <img src="{{asset('images/images/footer-logo.png')}}" alt="">
-                    
+                <div class="col-md-4 col-sm-6 footer_about">
+                    <h2>SOBRE NOSOTROS</h2>
+                    <!--<img src=" {{ asset ('images/images/footer-logo.png')}}" alt="">-->
                     <p>La carrera Ingeniería Financiera es una de las Carreras Universitarias de Matemática, Economía y Finanzas que dicta la Universidad Autónoma Gabriel René Moreno.</p>
                     <ul class="socail_icon">
                         <li><a href="https://www.facebook.com/Ingenier%C3%ADa-Financiera-UAGRM-Oficial-241656083410280/?modal=admin_todo_tour" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href="https://www.twitter.com/yalasdelauagrm" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                         <li><a href="https://www.instagram.com/yalasdelauagrm" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                        <li><a href="#" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=59162207177&text=Hola!!" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
-                <div class="col-md-3 col-sm-6 footer_about quick">
+                <div class="col-md-4 col-sm-6 footer_about quick">
                     <h2>ENLACES RÁPIDOS</h2>
                     <ul class="quick_link">
-                        <li><a href="{{route('/')}}"><i class="fa fa-chevron-right"></i>Home</a></li>
-                        <li><a href="#"><i class="fa fa-chevron-right"></i>Home Renovation</a></li>
-                        <li><a href="#"><i class="fa fa-chevron-right"></i>Hardwood Flooring</a></li>
-                        <li><a href="#"><i class="fa fa-chevron-right"></i>Repairing Of Roof</a></li>
-                        <li><a href="#"><i class="fa fa-chevron-right"></i>Commercial Construction</a></li>
-                        <li><a href="#"><i class="fa fa-chevron-right"></i>Concreate Transport</a></li>
+                        <li><a href="{{route('/')}}"><i class="fa fa-chevron-right"></i>Inicio</a></li>
+                        <li><a href="/normas"><i class="fa fa-chevron-right"></i>Normas</a></li>
+                        <li><a href="/procedimientos"><i class="fa fa-chevron-right"></i>Procedimientos</a></li>
+                        <li><a href="/noticias"><i class="fa fa-chevron-right"></i>Noticias</a></li>
+                        <li><a href="/eventos"><i class="fa fa-chevron-right"></i>Eventos</a></li>
+                        <li><a href="/contacto"><i class="fa fa-chevron-right"></i>Contacto</a></li>
+                        <li><a href="/galeria"><i class="fa fa-chevron-right"></i>Galeria</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3 col-sm-6 footer_about">
-                    <h2>Twitter Feed</h2>
-                    <a href="#" class="twitter">@colorlib: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</a>
-                    <a href="#" class="twitter">@colorlib: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</a>
-                </div>
-                <div class="col-md-3 col-sm-6 footer_about">
+                <div class="col-md-4 col-sm-6 footer_about">
                     <h2>CONTÁCTENOS</h2>
                     <address>
-                        <p>Have questions, comments or just want to say hello:</p>
                         <ul class="my_address">
-                            <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>info@thethemspro.com</a></li>
-                            <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i>+880 123 456 789</a></li>
-                            <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i><span>Sector # 10, Road # 05, Plot # 31, Uttara, Dhaka 1230 </span></a></li>
+                            <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>financierauagrm@gmail.com</a></li>
+                            <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i>(591) 3599603</a></li>
+                            <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>Av. Busch, Ciudad Universitaria - Modulo 265 </a></li>
                         </ul>
                     </address>
                 </div>
             </div>
         </div>
         <div class="copyright_area">
-            Ing. Financiera <a href="{{route('autor-sitio')}}">Sitio Web.</a>
+            <a href="{{route('home')}}">Ing. Financiera </a>
         </div>
     </footer>

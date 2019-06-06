@@ -3,11 +3,9 @@
 @section('content')
 <div class="box box-primary">
 <div class="page-header text-center">
-    <h1>
-        <i class="fa fa-book"style="color:green"></i>
-        TRAMITES 
+    <h1>TRAMITES
         @can('tramite.create') 
-        <a href="{{ route('tramite.create') }}" class="btn btn-warning"><i class="fa fa-plus-circle"></i> Tramite</a>
+        <a href="{{ route('tramite.create') }}" class="btn btn-success"><i class="fa fa-plus-circle"></i> Nuevo</a>
         @endcan
     </h1>
 </div>

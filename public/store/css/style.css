@@ -186,7 +186,7 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
 /*--------------------------------------------------*/
 /* Top header */
 .top_header_area {
-  background:  #69B42E;
+  background:  #3d9e1d;
 }
 .top_header_area .top_nav li a {
   font: 400 14px/50px "Roboto", sans-serif;
@@ -239,7 +239,7 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
   background: #111f29;
   display: block;
   overflow: hidden;
-  padding-left: 20px;
+ // padding-left: 20px;
 }
 .top_header_area.top_header .right_top_header:after {
   content: "";
@@ -254,7 +254,7 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
 /* End Top header 2 */
 /* Header Aera */
 .header_aera {
-   background: #69B42E;
+   background: #44ac09;
   border-radius: 0;
   border: 0;
   margin: 0;
@@ -684,7 +684,8 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
 }
 .what_we_area .construction_iner {
   padding-top: 60px;
-  padding-bottom: 70px;
+  //padding-bottom: 70px;
+  padding-bottom: 0px;
 }
 .what_we_area .construction_iner .construction {
   text-align: center;
@@ -736,7 +737,7 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
 
 /*--------------------------------------------------*/
 .our_feature_area {
-  padding-bottom: 90px;
+  padding-bottom: 0px;
   background: #fefefe;
 }
 .our_feature_area .feature_row {
@@ -1505,7 +1506,7 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
 /*--------------------------------------------------*/
 .building_construction_area .building_construction_row {
   padding-top: 95px;
-  padding-bottom: 95px;
+  padding-bottom: 0px;
 }
 .building_construction_area .building_construction_row .constructing_laft h2 {
   font: 700 24px "Roboto", sans-serif;
