@@ -209,3 +209,26 @@ body {
     overflow-x: hidden;
 }
 
+
+
+
+.galeria {
+	width:90%;
+	margin:auto;
+	list-style:none;
+	padding:20px;
+	box-sizing:border-box;
+	
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-around;
+	}
+	
+	.galeria li{
+	margin:5px;
+	
+	}
+	.galeria img {
+	width: 150px;
+	height:100px;
+	}
