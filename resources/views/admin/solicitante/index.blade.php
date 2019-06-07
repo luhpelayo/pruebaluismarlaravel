@@ -4,8 +4,8 @@
 <div class="box box-primary">
 <div class="page-header text-center">
     <h1>
-        <i class="fa fa-user-secret"style="color:green"></i>
-        SALICITANTES <a href="{{ route('solicitante.create') }}" class="btn btn-warning"><i class="fa fa-plus-circle"></i> Solicitante</a>
+        <i class="fa fa-user-o"></i>
+        SOLICITANTES <a href="{{ route('solicitante.create') }}" class="btn btn-success"><i class="fa fa-plus-circle"></i> Nuevo</a>
     </h1>
 </div>
 <div class="panel-body">
@@ -42,14 +42,14 @@
              <td>{{ $solicitante->email }}</td>
              <td>
                 <a href="{{ route('solicitante.edit', $solicitante) }}" class="btn btn-primary">
-                    <i class="fa fa-pencil-square"></i>
+                    <i class="fa fa-pencil-square"></i> Editar
                 </a>
             </td>
             <td>
               {!! Form::open(['route' => ['solicitante.destroy', $solicitante]]) !!}
                         <input type="hidden" name="_method" value="DELETE">
                         <button onClick="return confirm('Eliminar registro?')" class="btn btn-danger">
-                          <i class="fa fa-trash-o"></i>
+                          <i class="fa fa-trash-o"></i> Eliminar
                         </button>
               {!! Form::close() !!}  
             </td> 

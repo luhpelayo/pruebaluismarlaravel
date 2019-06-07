@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Mail;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,6 +23,7 @@ Route::get('/', ['uses' => 'SlideController@index'])->name('/');
 // noticias
 Route::get('noticias' , [ 'uses' => 'Web\NoticiaController@indexInformativa' ])->name('noticias');
 Route::get('eventos' , [ 'uses' => 'Web\EventoController@indexInformativa' ])->name('eventos');
+Route::get('trabajos' , [ 'uses' => 'Web\TrabajoController@indexInformativa' ])->name('trabajos');
 
 Route::get('procedimientos' , [ 'uses' => 'Web\ProcedController@getProced' ])->name('procedimientos');
 Route::get('proced/{id}' , [ 'uses' => 'Web\ProcedController@Proced' ])->name('proced');
@@ -125,4 +127,16 @@ Route::middleware(['auth'])->group(function(){
     'Admin\MetaController');
     //Objetivo
     Route::resource('objetvo', 'Admin\ObjetivoController');
+
+    // Email
+    Route::get('sendEmail',function (){
+        $data= array(
+            'name' => "Email Laravel",
+        );
+        Mail::send('emails.Bienvenido', $data, function ($message){
+            $message->from('valcyum.085@gmail.com', 'Ejemplo Envio Email ');
+           $message->to('valcyum.085@gmail.com')->subject('subject Envio Email Laravel');
+        });
+        return "Email Enviado Exitosamente!!!";
+    });
 });

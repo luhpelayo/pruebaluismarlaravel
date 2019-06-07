@@ -69,7 +69,7 @@ class NormaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param Norma $norma
      * @return \Illuminate\Http\Response
      */
     public function show(Norma $norma)
@@ -126,9 +126,8 @@ class NormaController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
+     * Remove the specified resource from storage
+     * @param Norma $norma
      * @return \Illuminate\Http\Response
      */
     public function destroy(Norma $norma)
