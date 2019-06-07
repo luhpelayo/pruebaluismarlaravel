@@ -74,7 +74,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 constructing_right">
-                    <img src="{{ asset('images/images/estudiante2.png')}}" alt="">
+                    <img src="{{ asset('images/images/estudiante4.png')}}" alt="">
                 </div>
             </div>
         </div>
@@ -95,7 +95,7 @@
             </div>
             <div class="feature_row row">
                 <div class="col-md-6 feature_img">
-                    <img src="{{ asset('images/images/trabajador.jpg')}}" alt="">
+                    <img src="{{ asset('images/images/trabajador1.jpg')}}" alt="">
                 </div>
                 <div class="col-md-6 feature_content">
                     <div class="subtittle">
@@ -156,61 +156,61 @@
                     <div class="media">
                         <div class="media-left">
                             <a href="#">
-                                <i class="fa fa-handshake-o" aria-hidden="true"></i>
+                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
                             </a>
                         </div>
                         <div class="media-body">
-                            <a href="#">Sobre la Inversión</a>
+                            <a href="#"></a>
                             <p>Bancos, Cooperativas, Mutuales y fondo Finan Privados.</p>
                         </div>
                     </div>
                     <div class="media">
                         <div class="media-left">
                             <a href="#">
-                                <i class="fa fa-money" aria-hidden="true"></i>
+                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
                             </a>
                         </div>
                         <div class="media-body">
-                            <a href="#">Financiamiento</a>
+                            <a href="#"></a>
                             <p>Organizaciones No Gubernamentales, Bolsa de valores.</p>
                         </div>
                     </div>
                     <div class="media">
                         <div class="media-left">
                             <a href="#">
-                                <i class="fa fa-line-chart" aria-hidden="true"></i>
+                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
                             </a>
                         </div>
                         <div class="media-body">
-                            <a href="#">Evaluacion</a>
+                        <a href="#"></a>
                             <p>Empresas de Titulación, Calificadora de Riesgo, Warrant, Corredores de bolsa y Leasing Financiero.</p>
                         </div>
                     </div>
                     <div class="media">
                         <div class="media-left">
                             <a href="#">
-                                <i class="fa fa-line-chart" aria-hidden="true"></i>
+                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
                             </a>
                         </div>
                         <div class="media-body">
-                            <a href="#">Evaluacion</a>
+                            <a href="#"></a>
                             <p>Empresas privadas, industreas, comerciales y de servicios en el área de gestión financiera.</p>
                         </div>
                     </div>
                     <div class="media">
                         <div class="media-left">
                             <a href="#">
-                                <i class="fa fa-line-chart" aria-hidden="true"></i>
+                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
                             </a>
                         </div>
                         <div class="media-body">
-                            <a href="#">Evaluacion</a>
+                            <a href="#"></a>
                             <p>Docente e investigador académico en el área financiera.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 feature_img">
-                    <img src="{{ asset('images/images/dondetrabaja.jpg')}}" alt="">
+                    <img src="{{ asset('images/images/dondetrabaja1.jpg')}}" alt="">
                 </div>
             </div>
         </div>

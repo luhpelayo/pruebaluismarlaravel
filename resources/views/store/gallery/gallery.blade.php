@@ -17,12 +17,14 @@
                    <h4>{{ $galerias->content }}</h4>
                 </div>
                 <br>
+
+
                 <div class="portfolio_item">
                    <div class="grid-sizer"></div>
                     @foreach ($galerias->photos as $phot)
                     <div class="single_facilities col-xs-4 p0 adversting webdesign adversting">
                        <div class="single_facilities_inner">
-                            <img src="{{ asset($phot->path) }}" alt="" height="400" width="400">
+                            <img src="{{ asset($phot->path) }}" alt="" height="400" width="400" >
                             {{--<div class="gallery_hover">--}}
                                 {{--<h4>Construction</h4>--}}
                                 {{--<ul>--}}
