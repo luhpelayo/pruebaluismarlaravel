@@ -9,7 +9,10 @@
         EVENTOS <a href="{{ route('eventos.create') }}" class="btn btn-success"><i class="fa fa-plus-circle"></i> Nuevo</a>
     </h1>
 </div>
-
+    <div class="fb-share-button" data-href="http://financiera.test:81/eventos" data-layout="button_count" data-size="small">
+        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Ffinanciera.test%3A81%2Feventos&amp;src=sdkpreparse"
+           class="fb-xfbml-parse-ignore">Compartir</a>
+    </div>
 <div class="box-body">              
 
  <table class="table table-bordered table-hover"  id="dataTable_eventos">
@@ -82,4 +85,14 @@
             });
         });
     </script>
+
+     <script>(function(d, s, id) {
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if (d.getElementById(id)) return;
+             js = d.createElement(s); js.id = id;
+             js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+             fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+     </script>
+     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v3.3"></script>
  @endsection  

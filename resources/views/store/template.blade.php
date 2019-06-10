@@ -24,13 +24,18 @@
 
     <!--Theme Styles CSS-->
    <link  rel="stylesheet" type="text/css" href="{{asset('store/css/style.css')}}" media="all">
-
+    <meta property="og:url"           content="http://financiera.test:81/eventos" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Ingenieria Financiera" />
+    <meta property="og:description"   content="Ingenieria Financiera Rumbo a su acreditación" />
+    <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
 
 
 </head>
 <body>
     <!-- Preloader -->
-  
+    <div id="fb-root"></div>
+
 
   <!-- Top Header_Area -->
   <section class="top_header_area">
@@ -246,7 +251,6 @@
                         <p >Somos un centro de formación profesional que desarrolla sus actividades académicas con calidad y pertenencia acreditada y la competitividad de sus profesionales tiene el reconocimiento público en la sociedad y el mercado; sus docentes y administrativos son parte imprescindible del éxito profesional. </p>
                    </div>
                 </div>
-
                 <div class="col-md-4 col-sm-6 construction">
                    <div class="cns-img">
                         <img src="{{ asset('images/images/principios.jpg')}}" alt="">
@@ -265,11 +269,11 @@
              </div>
 
             <div class="row construction_iner">
-                <div class="col-md-4 col-sm-6 construction">
+                <div class="col-md-4 col-sm-6 col-md-offset-1 hiwbox construction">
                    <div class="cns-img">
                         <img src="{{ asset('images/images/valores.jpg')}}" alt="">
                    </div>
-                   <div class="cns-content">
+                   <div class="cns-content text-center">
                         <i class="fa fa-gavel" aria-hidden="true"></i>
                         <a href="#">VALORES</a>
                         <p align="left">- Integridad<br/>
@@ -283,7 +287,7 @@
                          </p>
                    </div>
                 </div>
-                <div class="col-md-4 col-sm-6 construction">
+                <div class="col-md-4 col-sm-4 col-md-offset-1 hiwbox construction">
                    <div class="cns-img">
                         <img src="<?php echo e(asset('images/images/objetivo.jpg')); ?>" alt="">
                    </div>
@@ -323,7 +327,14 @@
     <!-- End Footer Area -->
 
     <!-- jQuery JS -->
-    
+    {{--<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v3.3"></script>--}}
+    {{--<script>(function(d, s, id) {--}}
+            {{--var js, fjs = d.getElementsByTagName(s)[0];--}}
+            {{--if (d.getElementById(id)) return;--}}
+            {{--js = d.createElement(s); js.id = id;--}}
+            {{--js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";--}}
+            {{--fjs.parentNode.insertBefore(js, fjs);--}}
+        {{--}(document, 'script', 'facebook-jssdk'));</script>--}}
     <script src="{{ asset('store/js/jquery-1.12.0.min.js') }}"></script>
     <!-- Bootstrap JS -->
     <script src="{{ asset('store/js/bootstrap.min.js') }}"></script>
@@ -348,4 +359,5 @@
     <script src="{{ asset('store/js/theme.js') }}"></script>
    
 </body>
+
 </html>
