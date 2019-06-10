@@ -7,7 +7,13 @@
     <link rel="icon" href="{{asset('images/images/finanzas.png')}}">
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <!-- Bootstrap 3.3.5 -->
+      <meta property="og:url"           content="http://financiera.test:81/eventos" />
+      <meta property="og:type"          content="website" />
+      <meta property="og:title"         content="Ingenieria Financiera Meta" />
+      <meta property="og:description"   content="Ingenieria Financiera Rumbo a su acreditación" />
+      <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
+
+      <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
 
      <!-- Font Awesome -->

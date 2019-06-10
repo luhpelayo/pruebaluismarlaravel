@@ -6,9 +6,9 @@
                 <th>Contenido</th>  
                 <th>Fecha</th>          
                 <th>Lugar</th>
-                <th>Organisador</th>
+                <th>Organizador</th>
                 <th>Responsable</th>
-                <th text-center style="width: 100px;">Acciónes </th>
+                <th text-center style="width: 100px;">Acciones </th>
             </tr>
         </thead>         
    <tbody>

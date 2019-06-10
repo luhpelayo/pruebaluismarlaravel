@@ -5,8 +5,11 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SaveEventoRequest;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\SendMail;
 use App\Models\Evento;
 use App\Models\User;
+use App\Models\Contact;
 use File;
 use Session;
 use Storage;
@@ -91,7 +94,18 @@ class EventoController extends Controller
 
         $evento->save();
          $message = $evento ? 'Evento agregado correctamente!' : 'Evento NO pudo agregarse!';
-        
+//
+//        $contacts= Contact::all();
+//        $data = array(
+//            'name'      =>  'jimmy',
+//            'message'   =>   'Prueba2'
+//        );
+//        foreach ($contacts as $contact){
+//
+//            $email= $contact->getAttribute("email");
+//            Mail::to($email)->send(new SendMail($data));
+//        }
+
         return redirect()->route('eventos.index')->with('message', $message);
     }
 
@@ -121,7 +135,7 @@ class EventoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  Evento $evento
      * @return \Illuminate\Http\Response
      */
     public function update(Evento $evento,Request $request)
@@ -171,11 +185,11 @@ class EventoController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
+     * Delete the specified resource in storage.
+     * @param Evento $evento
      * @return \Illuminate\Http\Response
      */
+
     public function destroy(Evento $evento)
     {
       
