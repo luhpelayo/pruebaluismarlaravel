@@ -35,6 +35,7 @@
                                 
                                 <li class="@if(isset($noticiasActive))  {{ 'active' }}  @endif"><a href="{{ route('noticias') }}">Noticias</a></li>
                                 <li class="@if(isset($eventosActive))  {{ 'active' }}  @endif"><a href="{{ route('eventos') }}">Eventos</a></li>
+                                <li class="@if(isset($eventosActive))  {{ 'active' }}  @endif"><a href="{{ route('eventos') }}">Cronograma</a></li>
                                 <li class="@if(isset($eventosActive))  {{ 'active' }}  @endif"><a href="{{ route('eventos') }}">Bolsa de Trabajo</a></li>
                             </ul>
                         </li>

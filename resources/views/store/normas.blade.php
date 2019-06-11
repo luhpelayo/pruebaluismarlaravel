@@ -14,7 +14,7 @@
                     </ul>
                     @endforeach
                 </div>
-                <div class="col-md-6 col-sm-6 footer_about">
+                <div class="col-md-9 col-sm-9 footer_about">
                     <h2>Normas de la universidad</h2>
                      @foreach ($extermas as $norm)
                     <ul class="quick_link">
