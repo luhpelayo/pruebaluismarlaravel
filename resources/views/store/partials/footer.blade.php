@@ -30,7 +30,7 @@
                         <ul class="my_address">
                             <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>financierauagrm@gmail.com</a></li>
                             <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i>(591) 3599603</a></li>
-                            <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>Av. Busch, Ciudad Universitaria - Modulo 265 </a></li>
+                            <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> Santa Cruz, Bolivia <br>   Av. Busch, Ciudad Universitaria - Modulo 265 </a></li>
                         </ul>
                     </address>
                 </div>

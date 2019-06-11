@@ -65,10 +65,10 @@
         <div class="container">
             <div class="row building_construction_row">
                 <div class="col-sm-6 constructing_laft">
-                    <h2>PERFIL DEL POSTULANTE</h2>
+                    <h2 style="text-align: center;">PERFIL DEL POSTULANTE</h2>
 
                     <p>Es deseable que quienes ingresen a esta carrera posean capacidad de razonamiento, habilidad de análisis, síntesis y capacidad para solución de problemas. La Ingeniería Financiera busca ir más allá de los contenidos tradicionales de enseñanza impartidos en nuestro medio académico, buscando formar profesionales con conocimientos sólidos en lo científico y técnico, innovadores, con capacidad para la toma de decisiones y dar soluciones a los problemas de su entorno. El Estudiante deberá tener las siguientes actitudes en:</p>
-                    <div class="col-md-6 ipsum">
+                    <div class="col-md-8 ipsum">
                         <ul class="excavator">
                             <li><i class="fa fa-chevron-circle-right"></i>Predisposición para el estudio.</li>
                             <li><i class="fa fa-chevron-circle-right"></i>Habilidad numérica.</li>
@@ -78,7 +78,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-6 constructing_right">
+                <div class="col-md-6 constructing_laft">
                     <img src="{{ asset('images/images/estudiante4.png')}}" alt="">
                 </div>
             </div>
@@ -104,7 +104,7 @@
                 </div>
                 <div class="col-md-6 feature_content">
                     <div class="subtittle">
-                        <h3>EL INGENIERO FINANCIERO:</h3>
+                        <h3 style="text-align: center;">EL INGENIERO FINANCIERO:</h3>
                     </div>
                     <div class="media">
                         <div class="media-left">
@@ -149,14 +149,14 @@
     <section class="our_feature_area">
         <div class="container">
             <div class="tittle wow fadeInUp">
-                <h2>Donde Trabaja</h2>
-                <h4>El ingeniero financiero es un profesional con elevada formación práctica en el área de las finanzas, con espíritu crítico, ética profecinal y conciencia de la realiadad nacional, capaz de  promover y conducir el desarrollo empresarial.</h4>
+                <h2 style="text-align: center;">Donde Trabaja</h2>
+                <h4>El ingeniero financiero es un profesional con elevada formación práctica en el área de las finanzas, con espíritu crítico, ética profesional y conciencia de la realidad nacional, capaz de  promover y conducir el desarrollo empresarial.</h4>
             </div>
             <div class="feature_row row">
 
                 <div class="col-md-6 feature_content">
                     <div class="subtittle">
-                        <h3>El Ingeniero en Financiero puede trabajar en:</h3>
+                        <h3 style="text-align: center;">El Ingeniero en Financiero puede trabajar en:</h3>
                     </div>
                     <div class="media">
                         <div class="media-left">
