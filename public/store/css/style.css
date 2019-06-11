@@ -100,7 +100,7 @@ This files contents are outlined below.
   bottom: -30px;
 }
 .tittle h4 {
-  font: 400 14px "Roboto", sans-serif;
+  font: 400 16px "Roboto", sans-serif;
   color: #555555;
   padding-top: 55px;
 }
@@ -308,7 +308,7 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
   padding-top: 39px;
 }
 .header_aera .navbar-header .navbar-brand img {
-  max-width: 100%;
+  max-width: 85%;
 }
 .header_aera .navbar-collapse .navbar-nav.navbar-right li a {
   font: 700 14px/100px "Roboto", sans-serif;
@@ -724,7 +724,7 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
   display: block;
 }
 .what_we_area .construction_iner .construction .cns-content p {
-  font: 400 14px/26px "Roboto", sans-serif;
+  font: 400 16px/26px "Roboto", sans-serif;
   color: #555555;
   padding-top: 20px;
 }
@@ -776,7 +776,7 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
   color: #f6b60b;
 }
 .our_feature_area .feature_row .feature_content .media .media-body p {
-  font: 400 14px/26px "Roboto", sans-serif;
+  font: 400 16px/26px "Roboto", sans-serif;
   color: #555555;
   padding-top: 20px;
 }
@@ -1529,7 +1529,7 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
   color: #f6b60b;
 }
 .building_construction_area .building_construction_row .constructing_laft p {
-  font: 400 14px/26px "Roboto", sans-serif;
+  font: 400 16px/26px "Roboto", sans-serif;
   color: #555555;
 }
 .building_construction_area .building_construction_row .constructing_laft .ipsum {
@@ -1542,7 +1542,7 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
 }
 .building_construction_area .building_construction_row .constructing_laft .ipsum .excavator li {
   list-style: none;
-  font: 400 14px/26px "Roboto", sans-serif;
+  font: 400 16px/26px "Roboto", sans-serif;
   color: #555555;
 }
 .building_construction_area .building_construction_row .constructing_laft .ipsum .excavator li i {

@@ -6,13 +6,13 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="col-md-2 p0">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#min_navbar">
+                    <a class="navbar-brand" href="{{route('/')}}"><img src="{{ asset('images/images/logo1.png')}}" class="img-responsive"></a>
+                    <button type="button" class="navbar-toggle collapsed" style="margin-top: 0px;" data-toggle="collapse" data-target="#min_navbar">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="{{route('/')}}"><img src="{{ asset('images/images/logo1.png')}}" class="img-responsive"></a>
 
                 </div>
             </div>
