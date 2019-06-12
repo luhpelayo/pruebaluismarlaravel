@@ -4,7 +4,7 @@
     <!-- Our Services Area -->
     <section class="our_services_area">
         <div class="container">
-            <div class="portfolio_inner_area">
+            <div class=" text-inverse portfolio_inner_area">
                     <div class="portfolio_filter">
                         <ul>
                           @foreach ($galleries as $gallery)                               
@@ -24,7 +24,7 @@
                     @foreach ($galerias->photos as $phot)
                     <div class="single_facilities col-xs-4 p0 adversting webdesign adversting">
                        <div class="single_facilities_inner">
-                            <img src="{{ asset($phot->path) }}" alt="" height="400" width="400" >
+                            <img style="padding: 10px;" src="{{ asset($phot->path) }}" alt="" height="400" width="400" >
                             {{--<div class="gallery_hover">--}}
                                 {{--<h4>Construction</h4>--}}
                                 {{--<ul>--}}

@@ -37,6 +37,6 @@
             </div>
         </div>
         <div class="copyright_area">
-            <a href="{{route('home')}}">Ing. Financiera </a>
+            <a href="{{route('/')}}">Ingeniería Financiera formando profesionales de éxito </a>
         </div>
     </footer>
