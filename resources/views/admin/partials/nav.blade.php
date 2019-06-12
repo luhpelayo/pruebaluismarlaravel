@@ -187,6 +187,7 @@
               </a>
               <ul class="treeview-menu">
                 <li><a href="{{route('eventos.index')}}"><i class="fa fa-circle-o"></i> Eventos</a></li>
+                <li><a href="{{route('cronogramas.index')}}"><i class="fa fa-circle-o"></i> Cronogramas</a></li>
                 <li><a href="{{route('noticias.index')}}"><i class="fa fa-circle-o"></i> Noticias</a></li>
                 <li><a href="{{route('procedimientos.index')}}"><i class="fa fa-circle-o"></i>Procedimientos</a></li>
                  <li><a href="{{route('normas.index')}}"><i class="fa fa-circle-o"></i>Normas</a></li>

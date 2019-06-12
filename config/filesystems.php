@@ -77,6 +77,17 @@ return [
             'visibility' => 'public',
         ],
 
+        'cronograma/archivo' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/cronogramas'),
+        ],
+
+        'cronograma/img' => [
+            'driver' => 'local',
+            'root' => public_path('images/cronogramas'),
+            'visibility' => 'public',
+        ],
+
         'procedimiento/archivo' => [
             'driver' => 'local',
             'root' => storage_path('app/public/procedimientos'),

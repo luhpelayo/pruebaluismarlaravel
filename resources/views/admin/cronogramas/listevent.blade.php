@@ -1,5 +1,5 @@
 
-<table class="display table table-hover" cellspacing="0" width="100%" id="dataTable_eventos">
+<table class="display table table-hover" cellspacing="0" width="100%" id="dataTable_cronogramas">
         <thead>
             <tr>
                 <th >Titulo</th>
@@ -12,21 +12,21 @@
             </tr>
         </thead>         
    <tbody>
-    @foreach($eventos as $evento)
+    @foreach($cronogramas as $cronograma)
          <tr>  
-             <td>{{ $evento->title }}</td>
-             <td>{{ $evento->content }}</td> 
-             <td>{{ $evento->event_date }}</td>
-             <td>{{ $evento->lugar }}</td>
-             <td>{{ $evento->org }}</td>
-             <td>{{ $evento->usuario}}</td>
+             <td>{{ $cronograma->title }}</td>
+             <td>{{ $cronograma->content }}</td> 
+             <td>{{ $cronograma->cronog_date }}</td>
+             <td>{{ $cronograma->lugar }}</td>
+             <td>{{ $cronograma->org }}</td>
+             <td>{{ $cronograma->usuario}}</td>
              <td>
-                <a href="{{ route('eventos.edit', $eventos) }}" class="btn btn-primary">
+                <a href="{{ route('cronogramas.edit', $cronogramas) }}" class="btn btn-primary">
                     <i class="fa fa-pencil-square"></i>
                 </a>
             </td>
             <td>
-              {!! Form::open(['route' => ['eventos.destroy', $eventos]]) !!}
+              {!! Form::open(['route' => ['cronogramas.destroy', $cronogramas]]) !!}
                         <input type="hidden" name="_method" value="DELETE">
                         <button onClick="return confirm('Eliminar registro?')" class="btn btn-danger">
                           <i class="fa fa-trash-o"></i>
@@ -39,13 +39,13 @@
     </tbody>
    </table>
 <div class="text-center">
-    {!!$eventos->links()!!}
+    {!!$cronogramas->links()!!}
 </div>
 @section('js')
     <script>
         // dataTable
         $(document).ready(function() {
-            $('#dataTable_eventos').DataTable({
+            $('#dataTable_cronogramas').DataTable({
                 //responsive: true,
                 //scrollX: true,
                 pageLength: 10,
