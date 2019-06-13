@@ -23,6 +23,7 @@ Route::get('/', ['uses' => 'SlideController@index'])->name('/');
 // noticias
 Route::get('noticias' , [ 'uses' => 'Web\NoticiaController@indexInformativa' ])->name('noticias');
 Route::get('eventos' , [ 'uses' => 'Web\EventoController@indexInformativa' ])->name('eventos');
+Route::get('cronogramas' , [ 'uses' => 'Web\CronogramaController@indexInformativa' ])->name('cronogramas');
 Route::get('trabajos' , [ 'uses' => 'Web\TrabajoController@indexInformativa' ])->name('trabajos');
 
 Route::get('procedimientos' , [ 'uses' => 'Web\ProcedController@getProced' ])->name('procedimientos');
@@ -41,7 +42,7 @@ Route::get('aca', 'Admin\ReportController@index')->name('aca');
 
 Route::resource('estado', 'Admin\EstadoController');
 Route::resource('solicitante', 'Admin\SolicitanteController');
-
+Route::resource('admin/cronogramas', 'Admin\CronogramaController');
 Route::resource('admin/eventos', 'Admin\EventoController');
 Route::resource('admin/noticias', 'Admin\NoticiaController');
 
@@ -73,6 +74,7 @@ Route::get('slideImages/delete/{id}' , ['uses' => 'SlideController@delete' ,  'm
 ///////////////////////////////////////////////
 Route::get('file/getNoticia/{id}' , ['uses' => 'Web\NoticiaController@getFileNoticia'])->name('file.getNoticia');
 Route::get('file/getEvento/{id}' , ['uses' => 'Web\EventoController@getFileEvento'])->name('file.getEvento');
+Route::get('file/getCronograma/{id}' , ['uses' => 'Web\CronogramaController@getFileCronograma'])->name('file.getCronograma');
 Route::get('file/getNorma/{id}' , ['uses' => 'Web\NormasController@getFileNorma'])->name('file.getNorma');
 
 

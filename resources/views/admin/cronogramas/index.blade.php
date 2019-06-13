@@ -6,7 +6,7 @@
 <div class="page-header text-center">
     <h1>
         {{--<i class="fa fa-calendar"style="color:green"></i>--}}
-        EVENTOS <a href="{{ route('eventos.create') }}" class="btn btn-success"><i class="fa fa-plus-circle"></i> Nuevo</a>
+        CRONOGRAMAS <a href="{{ route('cronogramas.create') }}" class="btn btn-success"><i class="fa fa-plus-circle"></i> Nuevo</a>
     </h1>
 </div>
     <div class="fb-share-button" data-href="http://financiera.test:81/eventos" data-layout="button_count" data-size="small">
@@ -15,7 +15,7 @@
     </div>
 <div class="box-body">              
 
- <table class="table table-bordered table-hover"  id="dataTable_eventos">
+ <table class="table table-bordered table-hover"  id="dataTable_cronogramas">
 
         <thead>
             <tr>
@@ -30,26 +30,26 @@
             </tr>
         </thead>         
    <tbody>
-    @foreach($evento as $event)
+    @foreach($cronograma as $cronog)
          <tr>  
-             <td>{{ $event->title }}</td>
+             <td>{{ $cronog->title }}</td>
            
-             <td>{{ substr($event->content, 0, 50) }} [...]</td>
-             <td>{{ $event->event_date }}</td>
-             <td>{{ $event->lugar }}</td>
-             <td>{{ $event->org }}</td>
-             <td>{{ $event->user->name}}</td>
-              @if ($event->url_img)
-               <td><img src="{{ asset('images/eventos/'.$event->url_img) }}" height="40" width="120" /></td>
+             <td>{{ substr($cronog->content, 0, 50) }} [...]</td>
+             <td>{{ $cronog->cronog_date }}</td>
+             <td>{{ $cronog->lugar }}</td>
+             <td>{{ $cronog->org }}</td>
+             <td>{{ $cronog->user->name}}</td>
+              @if ($cronog->url_img)
+               <td><img src="{{ asset('images/cronogramas/'.$cronog->url_img) }}" height="40" width="120" /></td>
 
               @else
                   <td>No image</td>
               @endif
              <td>
-                <a href="{{ route('eventos.edit', $event) }}" class="btn btn-primary">
+                <a href="{{ route('cronogramas.edit', $cronog) }}" class="btn btn-primary">
                     <i class="fa fa-pencil-square"></i>
                 </a>
-                {!! Form::open(['route' => ['eventos.destroy', $event],'style'=>'display:inline']) !!}
+                {!! Form::open(['route' => ['cronogramas.destroy', $cronog],'style'=>'display:inline']) !!}
                         <input type="hidden" name="_method" value="DELETE">
                         <button onClick="return confirm('Eliminar registro?')" class="btn btn-danger">
                           <i class="fa fa-trash-o"></i>
@@ -73,7 +73,7 @@
      <script>
         // dataTable
         $(document).ready(function() {
-            $('#dataTable_eventos').DataTable({
+            $('#dataTable_cronogramas').DataTable({
                 //responsive: true,
                 //scrollX: true,
                 pageLength: 10,
