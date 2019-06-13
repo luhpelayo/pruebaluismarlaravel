@@ -2,25 +2,26 @@
 
 @section('content')
 
- 
-  <div class="container box box-primary">
-  
+<div class="row">  
+  <div class="box box-primary col-xs-12">
 
-    <div class="page-header  text-center">
-      <h1>
-       <i class="fa fa-calendar"style="color:green"></i>
-        EVENTO <small>[Agregar Evento]</small>
-      </h1>
-    </div>
-  <div class="col-xs-12 col-md-8 col-md-offset-2 col-xl-6 col-xl-offset-3">
-    @if (count($errors) > 0)
-        @include('admin.partials.errors')
-    @endif
+        <div class="page-header  text-center">
+           <h1>
+           <i class="fa fa-newspaper-o"style="color:green"></i>
+              CRONOGRAMA <small>[Editar Cronograma]</small>
+          </h1>
+        </div><!-- /.box-header -->             
+      <div class="col-xs-12 col-md-8 col-md-offset-2 col-xl-6 col-xl-offset-3">
+        
+        @if (count($errors) > 0)
+            @include('admin.partials.errors')
+        @endif
+        
+        {!! Form::model($cronograma, array('route' => array('cronogramas.update', $cronograma),'files' => true)) !!}
 
-
-     {!! Form::open(['route'=>'eventos.store','method' => 'POST','files' => true]) !!}
-
-          <div class="form-group">
+            <input type="hidden" name="_method" value="PUT">
+             
+           <div class="form-group">
               <label for="title">Título:</label>
               {!! 
                   Form::text(
@@ -29,36 +30,50 @@
                       array(
                          
                           'class'=>'form-control',
-                          'placeholder' => 'Título del evento...',
+                          'placeholder' => 'Título del cronograma...',
                                         'autofocus' => 'autofocus'
                       )
                   ) 
               !!}
           </div>
-
           <div class="form-group">
-              <label for="event_date">Fecha:</label>
+              <label for="cronog_date">Fecha:</label>
               {!! 
                   Form::date(
-                      'event_date', 
+                      'cronog_date', 
                       null, 
                       array(
                           'class'=>'form-control',
-                          'placeholder' => 'Título del evento...',
+                          'placeholder'=>'2012-12-12',
                                         'autofocus' => 'autofocus'
                       )
                   ) 
               !!}
           </div>
-
           <div class="form-group">
           {!! Form::label('file','Agregar un archivo') !!}
+
+                 @if(isset($cronograma->url_document))
+                    <p>
+                      <a  >{{ $cronograma->url_document }}</a>
+                    </p>
+
+                  @endif
+
           {!! Form::file('file')!!}
          </div>
 
           <div class="form-group">
           {!! Form::label('img','Agregar una imagen') !!}
-          {!! Form::file('img')!!}
+              @if (isset($cronograma->url_img))
+                 <a class="" href="{{ $cronograma->url_img }}">
+                  <img src="{{ asset('images/cronogramas/'.$cronograma->url_img) }}" class="img-responsive" alt="" height="120" width="120" />
+                  </a><br/>
+                @else
+                  <p>No image</p>
+                @endif
+
+         {!! Form::file('img')!!}
          </div>
          <div class="form-group">
            <label for="content">Contenido:</label>
@@ -82,12 +97,12 @@
                       null, 
                       array(
                           'class'=>'form-control',
-                          'placeholder' => 'Lugar del evento...',
+                          'placeholder' => 'Lugar del cronograma...',
                                         'autofocus' => 'autofocus'
                       )
                   ) 
               !!}
-          </div>
+          </div> 
           <div class="form-group">
               <label for="org">Organizador:</label>
               {!! 
@@ -96,26 +111,28 @@
                       null, 
                       array(
                           'class'=>'form-control',
-                          'placeholder' => 'Organizador del evento...',
+                          'placeholder' => 'Organizador del cronograma...',
                                         'autofocus' => 'autofocus'
                       )
                   ) 
               !!}
           </div>
+            
+            <div class="box-body col-xs-12">
+                {!! Form::submit('Actualizar', array('class'=>'btn btn-primary')) !!}
+                <a href="{{ route('cronogramas.index') }}" class="btn btn-warning">Cancelar</a>
+            </div>
+        
+        {!! Form::close() !!}
+        
+    </div>  
+  </div>
 
-          <div class="form-group">
-              
-              {!! Form::submit('Guardar', array('class'=>'btn btn-primary')) !!}
-              <a href="{{ route('eventos.index') }}" class="btn btn-warning">Cancelar</a>
-          </div>
-      
-      {!! Form::close() !!}
- </div>
-</div>
 
-@endsection
-
+</div> <!-- end row -->
+@stop
 @section('js')
+
   <script>
     $('.textarea-content').trumbowyg();
 
