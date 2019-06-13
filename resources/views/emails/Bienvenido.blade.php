@@ -10,6 +10,7 @@
 <body>
     <h1>Ingenieria Financiera</h1>
     <p> Rumbo a la Acreditacion   </p>
-    <p> Tipo Data : {!! $name !!}  </p>
+    <p> Hay Nuevos Eventos en La carrera  </p>
+    <p>dale click a <a href="www.google.com">Informacion Financiera</a> para mas detalles!!</p>
 </body>
 </html>

@@ -8,6 +8,7 @@ use App\Http\Requests\SaveEventoRequest;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendMail;
 use App\Models\Evento;
+use App\Mail\EmergencyCallReceived;
 use App\Models\User;
 use App\Models\Contact;
 use File;
@@ -105,6 +106,10 @@ class EventoController extends Controller
 //            $email= $contact->getAttribute("email");
 //            Mail::to($email)->send(new SendMail($data));
 //        }
+        $receivers = Contact::pluck('email');
+//        var_dump($receivers);
+        $name= "mensaje enviado Correctamente";
+        Mail::to($receivers)->send(new EmergencyCallReceived($name));
 
         return redirect()->route('eventos.index')->with('message', $message);
     }
