@@ -8,7 +8,7 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use App\Models\Contact;
 
-class EmergencyCallReceived extends Mailable
+class EmailSend extends Mailable
 {
     use Queueable, SerializesModels;
     public $mensaje;

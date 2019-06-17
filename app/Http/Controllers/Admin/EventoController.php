@@ -8,7 +8,7 @@ use App\Http\Requests\SaveEventoRequest;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendMail;
 use App\Models\Evento;
-use App\Mail\EmergencyCallReceived;
+use App\Mail\EmailSend;
 use App\Models\User;
 use App\Models\Contact;
 use File;
@@ -95,21 +95,10 @@ class EventoController extends Controller
 
         $evento->save();
          $message = $evento ? 'Evento agregado correctamente!' : 'Evento NO pudo agregarse!';
-//
-//        $contacts= Contact::all();
-//        $data = array(
-//            'name'      =>  'jimmy',
-//            'message'   =>   'Prueba2'
-//        );
-//        foreach ($contacts as $contact){
-//
-//            $email= $contact->getAttribute("email");
-//            Mail::to($email)->send(new SendMail($data));
-//        }
+
         $receivers = Contact::pluck('email');
-//        var_dump($receivers);
         $name= "mensaje enviado Correctamente";
-        Mail::to($receivers)->send(new EmergencyCallReceived($name));
+        Mail::to($receivers)->send(new EmailSend($name));
 
         return redirect()->route('eventos.index')->with('message', $message);
     }
