@@ -10,7 +10,7 @@
 <body>
     <h1>Ingenieria Financiera</h1>
     <h2> Rumbo a la Acreditacion   </h2>
-    <p> Hay Nuevos Eventos en La carrera  </p>
+    <p> Hay Nuevas Noticias en la carrera  </p>
     <p>dale click a <a href="www.google.com">Informacion Financiera</a> para mas detalles!!</p>
 </body>
 </html>
