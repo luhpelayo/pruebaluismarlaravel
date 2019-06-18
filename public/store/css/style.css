@@ -2246,7 +2246,7 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
 }
 .footer_area .copyright_area {
   background: #090909;
-  font: 400 14px/100px "Roboto", sans-serif;
+  font: 400 14px/50px "Roboto", sans-serif;
   color: #fefefe;
   text-align: center;
 }
