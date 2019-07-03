@@ -7,7 +7,7 @@
             <div class="col-md-2 p0">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="{{route('/')}}"><img src="{{ asset('images/images/logo1.png')}}" class="img-responsive"></a>
-                    <button type="button" class="navbar-toggle collapsed" style="margin-top: 0px;" data-toggle="collapse" data-target="#min_navbar">
+                    <button type="button" class="navbar-toggle collapsed" style="margin-top: 0px;border-color: #ffffff;" data-toggle="collapse" data-target="#min_navbar">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>

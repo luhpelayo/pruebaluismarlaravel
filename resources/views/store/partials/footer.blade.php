@@ -38,7 +38,7 @@
                 </div>
             </div>
         </div>
-        <div class="copyright_area">
+        <div class="col-md-12 col-sm-12 copyright_area">
             <a href="{{route('/')}}">Ingeniería Financiera formando profesionales de éxito </a>
         </div>
     </footer>

@@ -2246,7 +2246,7 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
 }
 .footer_area .copyright_area {
   background: #090909;
-  font: 400 14px/100px "Roboto", sans-serif;
+  font: 400 14px/50px "Roboto", sans-serif;
   color: #fefefe;
   text-align: center;
 }
@@ -2440,7 +2440,7 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
   }
 
   .navbar-toggle {
-    top: 15px;
+    top: -8px;
   }
 
   .header_aera .navbar-header {
@@ -2452,6 +2452,9 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
 
   .header_aera .navbar-collapse .navbar-nav.navbar-right li a {
     line-height: 5px;
+    position: relative;
+    display: block;
+    padding: 10px 15px;
   }
 
   .header_aera .navbar-collapse .navbar-nav.navbar-right li.submenu ul {
