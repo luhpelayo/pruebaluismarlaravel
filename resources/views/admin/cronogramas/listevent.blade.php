@@ -3,10 +3,8 @@
         <thead>
             <tr>
                 <th >Titulo</th>
-                <th>Contenido</th>  
                 <th>Fecha</th>          
                 <th>Lugar</th>
-                <th>Organizador</th>
                 <th>Responsable</th>
                 <th text-center style="width: 100px;">Acciones </th>
             </tr>
@@ -15,10 +13,8 @@
     @foreach($cronogramas as $cronograma)
          <tr>  
              <td>{{ $cronograma->title }}</td>
-             <td>{{ $cronograma->content }}</td> 
              <td>{{ $cronograma->cronog_date }}</td>
              <td>{{ $cronograma->lugar }}</td>
-             <td>{{ $cronograma->org }}</td>
              <td>{{ $cronograma->usuario}}</td>
              <td>
                 <a href="{{ route('cronogramas.edit', $cronogramas) }}" class="btn btn-primary">

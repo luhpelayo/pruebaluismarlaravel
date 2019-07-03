@@ -75,7 +75,7 @@
 
          {!! Form::file('img')!!}
          </div>
-         <div class="form-group">
+         <!-- <div class="form-group">
            <label for="content">Contenido:</label>
               {!! 
                   Form::textarea(
@@ -88,9 +88,9 @@
                       )
                   ) 
               !!}
-          </div>
+          </div> -->
           <div class="form-group">
-              <label for="lugar">Lugar:</label>
+              <label for="lugar">Tipo de Archivo:</label>
               {!! 
                   Form::text(
                       'lugar', 
@@ -103,7 +103,7 @@
                   ) 
               !!}
           </div> 
-          <div class="form-group">
+          <!-- <div class="form-group">
               <label for="org">Organizador:</label>
               {!! 
                   Form::text(
@@ -116,7 +116,7 @@
                       )
                   ) 
               !!}
-          </div>
+          </div> -->
             
             <div class="box-body col-xs-12">
                 {!! Form::submit('Actualizar', array('class'=>'btn btn-primary')) !!}

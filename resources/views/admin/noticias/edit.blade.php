@@ -61,6 +61,22 @@
 
          {!! Form::file('img')!!}
          </div>
+
+         <div class="form-group">
+           <label for="content">PreContenido:</label>
+              {!! 
+                  Form::textarea(
+                      'precontent', 
+                      null, 
+                      array(
+                          'class'=>'form-control textarea-content',
+                          'placeholder' => 'Pre-Contenido del artículo...',
+                                        'autofocus' => 'autofocus'
+                      )
+                  ) 
+              !!}
+          </div>
+
          <div class="form-group">
            <label for="content">Contenido:</label>
               {!! 

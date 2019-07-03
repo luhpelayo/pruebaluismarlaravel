@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Cronograma extends Model
 {
     protected $table = 'cronogramas';
-    protected $fillable = ['title', 'url_img', 'url_document', 'content', 'cronog_date', 'lugar','org','user_id'];
+    protected $fillable = ['title', 'url_img', 'url_document', 'cronog_date', 'lugar','user_id'];
 
     public function user()
     {

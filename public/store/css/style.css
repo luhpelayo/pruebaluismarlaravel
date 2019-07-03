@@ -2168,7 +2168,7 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
   transition-timing-function: ease-out;
 }
 .footer_area .footer_row .footer_about .socail_icon li a i {
-  font-size: 14px;
+  font-size: 28px;
   color: #fff;
   display: inline-block;
   padding-top: 7px;

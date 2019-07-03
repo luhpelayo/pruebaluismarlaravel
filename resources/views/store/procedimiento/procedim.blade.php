@@ -1,7 +1,7 @@
 @extends('store.template')
 
 @section('content')
-<div style="background-color: #2e3841">
+<div style="background-color: #FFFFF">
 	<div class="container" style="-webkit-box-shadow: 0px 0px 32px -2px rgba(0,0,0,0.08);
 -moz-box-shadow: 0px 0px 32px -2px rgba(0,0,0,0.08);
 box-shadow: 0px 0px 32px -2px rgba(0,0,0,0.08); background-color: #FFF">

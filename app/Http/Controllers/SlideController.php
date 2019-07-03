@@ -5,12 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\SlideImage;
+use App\Models\Noticia;
+use DB;
 
 class SlideController extends Controller
 {
     public function index(){
+
+        $noticias = DB::table('noticias')->orderBy('updated_at', 'desc')->paginate(3);
      
-      return view('store.index',['homeActive' => true , 'slideImages' => SlideImage::all()]);
+     
+      return view('store.index',['homeActive' => true , 'slideImages' => SlideImage::all(),'noticias' => $noticias, 'noticiasActive' => true]);
     }
 
     public function store(Request $request){
@@ -34,4 +39,9 @@ class SlideController extends Controller
         }
         return back();
     } 
+
+
+
+  
+
 }

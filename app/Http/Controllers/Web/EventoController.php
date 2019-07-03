@@ -11,7 +11,7 @@ class EventoController extends Controller
 {
     public function indexInformativa()
     {
-        $eventos = DB::table('eventos')->orderBy('event_date', 'desc')->paginate(5);
+        $eventos = DB::table('eventos')->orderBy('event_date', 'desc')->paginate(6);
         $eventosAll = Evento::all();
         $eventosNext = DB::table('eventos')->whereBetween('event_date', [date("Y/m/d"), date("Y/m/d", mktime(0, 0, 0, date("m")+3, date("d"), date("Y")))])->orderBy('event_date', 'asc')->take(5)->get();
 

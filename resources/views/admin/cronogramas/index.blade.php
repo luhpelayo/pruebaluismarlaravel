@@ -19,11 +19,9 @@
 
         <thead>
             <tr>
-                <th>Titulo</th>
-                <th>Contenido</th>  
+                <th>Titulo</th> 
                 <th>Fecha</th>          
-                <th>Lugar</th>
-                <th>Organisador</th>
+                <th>Tipo de Archivo</th>
                 <th>Responsable</th>
                 <th>Imagen</th>
                 <th width="10%">Acciónes </th>
@@ -32,12 +30,9 @@
    <tbody>
     @foreach($cronograma as $cronog)
          <tr>  
-             <td>{{ $cronog->title }}</td>
-           
-             <td>{{ substr($cronog->content, 0, 50) }} [...]</td>
+             <td>{{ $cronog->title }}</td>       
              <td>{{ $cronog->cronog_date }}</td>
              <td>{{ $cronog->lugar }}</td>
-             <td>{{ $cronog->org }}</td>
              <td>{{ $cronog->user->name}}</td>
               @if ($cronog->url_img)
                <td><img src="{{ asset('images/cronogramas/'.$cronog->url_img) }}" height="40" width="120" /></td>
