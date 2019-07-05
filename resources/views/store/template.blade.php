@@ -32,6 +32,7 @@
 
 
 </head>
+
 <body>
     <!-- Preloader -->
     <div id="fb-root"></div>
@@ -49,14 +50,21 @@
 </section>
 
 
+
   <!-- End Top Header_Area -->
 
   <!-- Header_Area -->
 
    @include('store.partials.nav')
 
+
+   
+
   <!-- End Header_Area -->
     @yield('content')
+
+
+
     <!-- Slider area -->
  
     <!-- End Slider area -->
@@ -79,7 +87,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 constructing_laft">
-                    <img src="{{ asset('images/images/estudiante4.png')}}" alt="">
+                    <img src="{{ asset('images/images/ofi.jpg')}}" alt="">
                 </div>
             </div>
         </div>
@@ -100,7 +108,7 @@
             </div>
             <div class="feature_row row">
                 <div class="col-md-6 feature_img">
-                    <img src="{{ asset('images/images/trabajador1.jpg')}}" alt="">
+                    <img src="{{ asset('images/images/estudiante4.png')}}" alt="">
                 </div>
                 <div class="col-md-6 feature_content">
                     <div class="subtittle">
@@ -215,7 +223,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 feature_img">
-                    <img src="{{ asset('images/images/dondetrabaja1.jpg')}}" alt="">
+                    <img src="{{ asset('images/images/trabajador1.jpg')}}" alt="">
                 </div>
             </div>
         </div>

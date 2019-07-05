@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Web;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Noticia;
 use Storage;
 use DB;
 class NoticiaController extends Controller
@@ -13,6 +14,7 @@ class NoticiaController extends Controller
         $noticias = DB::table('noticias')->orderBy('updated_at', 'desc')->paginate(6);
         return view('store.noticias' , ['noticias' => $noticias, 'noticiasActive' => true]);
     }
+    
 
     public function getFileNoticia($id)
     {
@@ -24,4 +26,17 @@ class NoticiaController extends Controller
           return back();
         }
     }
+    public function Noticia($id)
+    {
+
+        $noticias = Noticia::where('id',$id)->first();
+        $notici = DB::table('noticias')->orderBy('updated_at', 'desc')->paginate(3);
+    
+
+        return view('store.lanoticia.unanot' , ['unanoti' => $noticias, 'noticias'=>$notici]);
+    }
+
+   
+
+
 }

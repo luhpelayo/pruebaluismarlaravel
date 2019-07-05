@@ -43,13 +43,16 @@ class NoticiaController extends Controller
 
          $this->validate($request, [
             'title'      => 'required',
+            'precontent'    => 'required',
             'content'    => 'required',
-        
+            
         ]);
       
         $noticia=new Noticia;
         $noticia->title=$request->get('title');
+        $noticia->precontent=$request->get('precontent');
         $noticia->content=$request->get('content');
+       
       
         if($request->auth !== null) {
           $noticia->auth= $request->auth;
@@ -122,11 +125,16 @@ class NoticiaController extends Controller
     
         $this->validate($request, [
                    'title'      => 'required',
+                   'precontent'    => 'required',
                    'content'    => 'required',
+                  
              ]);
          
           $noticia->title= $request->title;
+          $noticia->precontent= $request->precontent;
           $noticia->content= $request->content;
+      
+
 
           $file= $request->file('file');
 

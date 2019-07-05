@@ -66,6 +66,17 @@ return [
             'visibility' => 'public',
         ],
 
+        'bolsa_de_trabajo/archivo' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/bolsa_de_trabajos'),
+        ],
+
+        'bolsa_de_trabajo/img' => [
+            'driver' => 'local',
+            'root' => public_path('images/bolsa_de_trabajos'),
+            'visibility' => 'public',
+        ],
+
         'evento/archivo' => [
             'driver' => 'local',
             'root' => storage_path('app/public/eventos'),
