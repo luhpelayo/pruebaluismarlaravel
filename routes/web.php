@@ -38,7 +38,7 @@ Route::get('contacto', function(){return view('store.contacto');})->name('contac
 Route::post('contact-send','Web\ContactController@sendMessage')->name('contact.send');
 //Route::post('contact-send','Web\ContactController@sendMessage')->name('contact.send');
 
-Route::get('aca', 'Admin\ReportController@index')->name('aca');
+Route::get('report', 'Admin\ReportController@index')->name('report');
 
 Route::resource('estado', 'Admin\EstadoController');
 Route::resource('solicitante', 'Admin\SolicitanteController');

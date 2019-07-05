@@ -12,6 +12,6 @@ class ReportController extends Controller
 
        //$academico = Academico::all();
         //dd($academico);
-        return view('index');
+        return view('admin.report.estudiantes');
     }
 }

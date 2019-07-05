@@ -357,7 +357,7 @@
     <script src="{{ asset('store/vendors/stellar/jquery.stellar.js') }}"></script>
     <!-- Theme JS -->
     <script src="{{ asset('store/js/theme.js') }}"></script>
-   
+
 </body>
 
 </html>
