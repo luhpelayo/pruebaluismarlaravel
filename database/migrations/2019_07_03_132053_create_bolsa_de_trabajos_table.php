@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePlanifsTable extends Migration
+class CreateBolsaDeTrabajosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,14 @@ class CreatePlanifsTable extends Migration
      */
     public function up()
     {
-        Schema::create('planifs', function (Blueprint $table) {
+        Schema::create('bolsa_de_trabajos', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nombre');
+            $table->string('nroregistro');
+            $table->string('email');
+            $table->string('telefono');
+            $table->string('carta_de_presentacion');
+            $table->string('curriculum');
             $table->timestamps();
         });
     }
@@ -26,6 +32,6 @@ class CreatePlanifsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('planifs');
+        Schema::dropIfExists('bolsa_de_trabajos');
     }
 }

@@ -25,7 +25,7 @@
 						<div class="bloque1"></div>
 						@if(isset($bolsa_de_trabajos) && count($bolsa_de_trabajos) > 0)
 							@foreach($bolsa_de_trabajos as $bolsa_de_trabajo)
-							<div class="col-xs-6 col-sm-6">
+							<div class="col-xs-12 col-sm-6">
 								<div class="panel panel-default">
 									<div class="panel-body">
                                     

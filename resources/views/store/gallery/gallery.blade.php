@@ -22,7 +22,7 @@
                 <div class="portfolio_item">
                    <div class="grid-sizer"></div>
                     @foreach ($galerias->photos as $phot)
-                    <div class="single_facilities col-xs-4 p0 adversting webdesign adversting">
+                    <div class="single_facilities col-md-4 col-xs-12 p0 adversting webdesign adversting">
                        <div class="single_facilities_inner">
                             <img style="padding: 10px;" src="{{ asset($phot->path) }}" alt="" height="400" width="400" >
                             {{--<div class="gallery_hover">--}}
