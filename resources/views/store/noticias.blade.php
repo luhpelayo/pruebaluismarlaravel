@@ -29,7 +29,7 @@ box-shadow: 0px 0px 32px -2px rgba(0,0,0,0.08); background-color: #FFF">
 						<div class="panel panel-default resizable-col-events">
 						  	<div class="panel-body resizable-panel">
 									@if(isset($noticia->url_img))
-									<div class="col-md-6 feature_img">
+									<div class="col-md-6 col-xs-12 feature_img">
 									<div class="zoom">
 						    		<img class="img-responsive " src="images/noticias/{{$noticia->url_img}}"  style="padding: 10px;"  alt="" height="400" width="400" >
 									</div>
