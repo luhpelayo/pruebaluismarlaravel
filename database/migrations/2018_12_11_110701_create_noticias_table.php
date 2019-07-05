@@ -18,7 +18,7 @@ class CreateNoticiasTable extends Migration
             $table->string('title');
             $table->string('url_img')->nullable();
             $table->string('url_document')->nullable();
-            $table->longText('preontent');
+            $table->longText('precontent');
             $table->longText('content');
             $table->string('auth');
             $table->integer('user_id')->unsigned();
