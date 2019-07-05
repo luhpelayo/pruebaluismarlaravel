@@ -8,9 +8,17 @@
                 <h2>PROCESOS</h2>
               
             </div>
+
+        
+ <div class="panel panel-default">
+<div class="panel-body">
+
+
+
             <div class="row construction_iner">
+            @if(isset($procedimientos) && count($procedimientos) > 0)
                 @foreach ($procedimientos as $pro)
-                <div class="col-md-4 col-sm-6 construction">
+                <div class="col-md col-sm-12 construction pull-left">
                     
                    <div class="cns-img">
                         <img src="{{ asset('images/procedimientos/'.$pro->url_img) }}" alt="" height="195" width="360">
@@ -26,7 +34,12 @@
 
                 </div>
                   @endforeach
+                  @endif
 
+
+ </div>
+
+</div>
             </div>
         </div>
     </section>

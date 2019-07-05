@@ -25,10 +25,8 @@ class SaveCronogramaRequest extends FormRequest
     {
         return [
             'title'      => 'required',
-            'content'    => 'required',
             'cronog_date' => 'required',
-            'lugar'      => 'required',
-            'org'        => 'required'
+            'lugar'      => 'required'
 
         ];
     }

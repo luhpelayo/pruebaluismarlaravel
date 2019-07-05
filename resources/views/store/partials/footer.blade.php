@@ -4,13 +4,15 @@
                 <div class="col-md-4 col-sm-6 footer_about">
                     <h2>SOBRE NOSOTROS</h2>
                     <!--<img src=" {{ asset ('images/images/footer-logo.png')}}" alt="">-->
-                    <p>La carrera Ingeniería Financiera es una de las Carreras Universitarias de Matemática, Economía y Finanzas que dicta la Universidad Autónoma Gabriel René Moreno.</p>
+                    <p>La Carrera de Ingeniería Financiera es una de las Carreras Universitarias de Matemática, Economía y Finanzas que dicta la Universidad Autónoma Gabriel René Moreno.</p>
                     <ul class="socail_icon">
                         <li><a href="https://www.facebook.com/Ingenier%C3%ADa-Financiera-UAGRM-Oficial-241656083410280/?modal=admin_todo_tour" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                         <li><a href="https://www.instagram.com/yalasdelauagrm" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                         <li><a href="https://api.whatsapp.com/send?phone=59162207177&text=Hola!!" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+                       
                     </ul>
+                    <p><h2>¡Síguenos en nuestras redes sociales!</h2></p>
                 </div>
                 <div class="col-md-4 col-sm-6 footer_about quick">
                     <h2>ENLACES RÁPIDOS</h2>
@@ -25,7 +27,7 @@
                     </ul>
                 </div>
                 <div class="col-md-4 col-sm-6 footer_about">
-                    <h2>CONTÁCTENOS</h2>
+                    <h2>CONTACTOS</h2>
                     <address>
                         <ul class="my_address">
                             <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>financierauagrm@gmail.com</a></li>

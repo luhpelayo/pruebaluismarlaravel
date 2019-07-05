@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\SaveEventoRequest;
+use App\Http\Requests\SaveCronogramaRequest;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendMail;
 use App\Models\Cronograma;
@@ -49,26 +49,18 @@ class CronogramaController extends Controller
     {
          $this->validate($request, [
             'title'      => 'required',
-            'content'    => 'required',
-            'cronog_date' => 'required',
+            //'cronog_date' => 'required',
             'lugar'      => 'required',
            
         ]);
-      
+        date_default_timezone_set('America/La_Paz');
+        $fecha_actual=date("Y-m-d");
         $cronograma=new Cronograma;
         $cronograma->title=$request->get('title');
-        $cronograma->content=$request->get('content');
-        $cronograma->cronog_date=$request->get('cronog_date');
+        $cronograma->cronog_date=$fecha_actual;
         $cronograma->lugar=$request->get('lugar');
       //  var_dump($cronograma);
        // exit();
-
-        if($request->get('org') !== '') {
-          $cronograma->org= $request->get('org');
-
-        } else {
-          $cronograma->org= Auth::user()->name;
-        }
         $cronograma->user_id= \Auth::user()->id;
    
         $file= $request->file('file');
@@ -134,14 +126,13 @@ class CronogramaController extends Controller
     
         $this->validate($request, [
                    'title'      => 'required',
-                   'content'    => 'required',
-                   'cronog_date' => 'required',
+             //      'cronog_date' => 'required',
                    'lugar'      => 'required',
              ]);
-         
+             date_default_timezone_set('America/La_Paz');
+             $fecha_actual=date("Y-m-d");
           $cronograma->title= $request->title;
-          $cronograma->content= $request->content;
-          $cronograma->cronog_date= $request->cronog_date;
+          $cronograma->cronog_date= $fecha_actual;
           $cronograma->lugar= $request->lugar;
 
           $file= $request->file('file');

@@ -11,7 +11,7 @@ class ProcedController extends Controller
 {
     public function getProced()
     {
-    	$procedimientos = Procedimiento::orderBy('created_at', 'desc')->paginate(5);
+    	$procedimientos = Procedimiento::orderBy('created_at', 'desc')->paginate(8);
        
         return view('store.procedim' , ['procedimientos' => $procedimientos, 'procedimientosActive' => true]);
     }

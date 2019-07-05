@@ -191,6 +191,7 @@
                 <li><a href="{{route('noticias.index')}}"><i class="fa fa-circle-o"></i> Noticias</a></li>
                 <li><a href="{{route('procedimientos.index')}}"><i class="fa fa-circle-o"></i>Procedimientos</a></li>
                  <li><a href="{{route('normas.index')}}"><i class="fa fa-circle-o"></i>Normas</a></li>
+                 <li><a href="{{route('bolsa_de_trabajos.index')}}"><i class="fa fa-circle-o"></i>Bolsa de Trabajo</a></li>
               </ul>
             </li>
             <li class="treeview">

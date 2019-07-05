@@ -21,14 +21,23 @@ use Illuminate\Support\Facades\Mail;
 Route::get('/', ['uses' => 'SlideController@index'])->name('/');
 
 // noticias
+
+Route::get('noticia/{id}' , [ 'uses' => 'Web\NoticiaController@Noticia' ])->name('noticia');
+
+
+
 Route::get('noticias' , [ 'uses' => 'Web\NoticiaController@indexInformativa' ])->name('noticias');
 Route::get('eventos' , [ 'uses' => 'Web\EventoController@indexInformativa' ])->name('eventos');
 Route::get('cronogramas' , [ 'uses' => 'Web\CronogramaController@indexInformativa' ])->name('cronogramas');
 Route::get('trabajos' , [ 'uses' => 'Web\TrabajoController@indexInformativa' ])->name('trabajos');
 
+Route::get('bolsa_de_trabajos' , [ 'uses' => 'Web\Bolsa_de_trabajoController@indexInformativa' ])->name('bolsa_de_trabajos');
+
 Route::get('procedimientos' , [ 'uses' => 'Web\ProcedController@getProced' ])->name('procedimientos');
 Route::get('proced/{id}' , [ 'uses' => 'Web\ProcedController@Proced' ])->name('proced');
 Route::get('normas' , [ 'uses' => 'Web\NormasController@getNormaInterna' ])->name('normas');
+
+
 
 //Acerca del sitio
 Route::get('autor-sitio', function(){return view('store.web.acerca_sitio');})->name('autor-sitio');
@@ -44,12 +53,17 @@ Route::resource('estado', 'Admin\EstadoController');
 Route::resource('solicitante', 'Admin\SolicitanteController');
 Route::resource('admin/cronogramas', 'Admin\CronogramaController');
 Route::resource('admin/eventos', 'Admin\EventoController');
+Route::resource('admin/bolsa_de_trabajos', 'Admin\Bolsa_de_trabajoController');
+
 Route::resource('admin/noticias', 'Admin\NoticiaController');
 
 Route::resource('archivos', 'Admin\FileController');
 
 Route::get('derivacion/{id}', 'Admin\DerivacionController@index')->name('derivacion');
 Route::post('dericion/store/{id}', 'Admin\DerivacionController@setDetalle')->name('dericion/store');
+
+
+
 
 //File
 Route::get('{id}/archivo','Admin\FileUploadController@archivo')->name('archivo');
@@ -72,14 +86,21 @@ Route::get('slideImages/delete/{id}' , ['uses' => 'SlideController@delete' ,  'm
 ////////////////////////////////////////////////
 // Descargar archivos
 ///////////////////////////////////////////////
+//Route::get('file/getNoticia/{id}' , ['uses' => 'Web\NoticiaController@getFileLaNoticias'])->name('file.getNoticia');
 Route::get('file/getNoticia/{id}' , ['uses' => 'Web\NoticiaController@getFileNoticia'])->name('file.getNoticia');
 Route::get('file/getEvento/{id}' , ['uses' => 'Web\EventoController@getFileEvento'])->name('file.getEvento');
+
+
+
 Route::get('file/getCronograma/{id}' , ['uses' => 'Web\CronogramaController@getFileCronograma'])->name('file.getCronograma');
 Route::get('file/getNorma/{id}' , ['uses' => 'Web\NormasController@getFileNorma'])->name('file.getNorma');
 
-
+Route::get('file/getBolsa_de_trabajo/{id}' , ['uses' => 'Web\Bolsa_de_trabajoController@getFileBolsa_de_trabajo'])->name('file.getBolsa_de_trabajo');
 
 Route::get('file/getProce/{id}' , ['uses' => 'Web\ProcedController@getFileProc'])->name('file.getProce');
+
+
+
 
 //********************************************//
 //    ADMINISTRACIÓN

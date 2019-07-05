@@ -15,6 +15,7 @@
         <thead>
             <tr>
                 <th>Titulo</th>
+                <th>PreNoticia</th> 
                 <th>Noticia</th>  
                 <th>Autor</th>          
                 <th>Publicado por</th>
@@ -28,6 +29,7 @@
     @foreach($noticia as $notici)
          <tr>  
              <td>{{ $notici->title }}</td>
+             <td>{{ substr($notici->precontent, 0, 50) }} [...]</td>
              <td>{{ substr($notici->content, 0, 50) }} [...]</td>
              <td>{{ $notici->auth }}</td>
              <td>{{ $notici->user->name}}</td>

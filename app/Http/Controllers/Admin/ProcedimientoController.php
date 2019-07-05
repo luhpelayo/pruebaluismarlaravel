@@ -97,7 +97,7 @@ class ProcedimientoController extends Controller
      */
     public function edit(Procedimiento $procedimiento)
     {
-        return view('admin.procedimientos.edit', compact('role','procedimiento'));
+        return view('admin.procedimientos.edit', compact('procedimiento'));
     }
 
     /**

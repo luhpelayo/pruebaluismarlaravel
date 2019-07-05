@@ -44,6 +44,22 @@
           {!! Form::label('img','Agregar una imagen') !!}
           {!! Form::file('img')!!}
          </div>
+
+         <div class="form-group">
+           <label for="precontent">PreContenido:</label>
+              {!! 
+                  Form::textarea(
+                      'precontent', 
+                      null, 
+                      array(
+                          'class'=>'form-control textarea-content',
+                          'placeholder' => 'PreContenido del artículo...',
+                                        'autofocus' => 'autofocus'
+                      )
+                  ) 
+              !!}
+          </div>
+
          <div class="form-group">
            <label for="content">Contenido:</label>
               {!! 
@@ -88,7 +104,7 @@
 @section('js')
 
   <script>
+    $('.textarea-precontent').trumbowyg();
     $('.textarea-content').trumbowyg();
-
   </script>
 @endsection
