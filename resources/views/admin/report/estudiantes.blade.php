@@ -19,22 +19,17 @@
         //seleccionamos el color de fondo para cada dato que le enviamos
         //añadimos las etiquetas correspondientes a la data
         var primer_grafico = document.getElementById('grafico').getContext('2d');//seleccionamos el canvas
-
-
-
         //le pasamos como opcion adicional que sea responsivo
         var mi_primer_grafico ={
             type:"doughnut",
             data:{
                 datasets:[{
-                    data:[50,30],
+                    data: {{$students_in}},
                     backgroundColor: [
-                        "#04B404","#FFBF00",
+                        "#04B404","#FFBF00","#161990","#ea0d2c",
                     ],
                 }],
-                labels: [
-                    "Activos",  "Inactivos",
-                ]
+                labels:  {{ $students_dates }},
             },
             options:{
                 responsive: true,
@@ -68,10 +63,10 @@
 
         var speedCanvas = document.getElementById("graficoLineas");
         var speedData = {
-            labels: ["2010", "2011", "2012", "2013", "2014", "2015", "2016","2017","2018","2019"],
+            labels: {{ $students_dates }},
             datasets: [{
                 label: "Ingreso Alumnos por año",
-                data: [75, 80, 120, 150, 90, 110, 150, 180, 200, 209],
+                data: {{ $students_total }},
                 lineTension: 0,
                 fill: false,
                 borderColor: 'orange',
@@ -92,7 +87,7 @@
             data: speedData,
             options: chartOptions
         });
-        // window.line = new Chart(speedCanvas,speedData);//le pasamos el grafico y la data para representarlo
+
     </script>
 
 @endsection

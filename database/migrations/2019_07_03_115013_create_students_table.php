@@ -21,6 +21,7 @@ class CreateStudentsTable extends Migration
             $table->integer('out');
             $table->integer('active');
             $table->integer('inactive');
+            $table->integer('user_id');
             $table->timestamps();
         });
     }
