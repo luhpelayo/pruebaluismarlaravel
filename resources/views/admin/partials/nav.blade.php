@@ -119,7 +119,7 @@
                 
                 <li><a href="{{ route('tramite.index') }}"><i class="fa fa-circle-o"></i>En Oficina</a></li>
                  
-                <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Por Llegar</a></li>
+                <li><a href="{{ route('tramite.index') }}"><i class="fa fa-circle-o"></i> deriva</a></li>
                 <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Archivados</a></li>
                
               </ul>

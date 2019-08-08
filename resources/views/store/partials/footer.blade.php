@@ -12,7 +12,10 @@
                         <li><a href="https://api.whatsapp.com/send?phone=59162207177&text=Hola!!" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
                        
                     </ul>
-                    <p><h2>¡Síguenos en nuestras redes sociales!</h2></p>
+                    
+                    <h2  style="padding-bottom:5px">¡Síguenos en nuestras redes sociales!</h2>
+                    <p><a href="https://forms.gle/qZ4VzP8F1xf5Ww5TA" target="_blank" ><h2>Ayúdanos a mejorar con una breve encuesta</h2> </A></p>
+                
                 </div>
                 <div class="col-md-4 col-sm-6 footer_about quick">
                     <h2>ENLACES RÁPIDOS</h2>
@@ -34,7 +37,9 @@
                             <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i>(591) 3599603</a></li>
                             <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> Santa Cruz, Bolivia <br>   Av. Busch, Ciudad Universitaria - Modulo 265 </a></li>
                         </ul>
+                        
                     </address>
+                    
                 </div>
             </div>
         </div>

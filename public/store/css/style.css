@@ -2131,9 +2131,10 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
   padding-top: 22px;
 }
 .footer_area .footer_row .footer_about .socail_icon {
-  padding: 0;
+  padding: 0px;
   margin: 0;
   padding-top: 25px;
+  padding-bottom: 9px;
 }
 .footer_area .footer_row .footer_about .socail_icon li {
   display: inline-block;

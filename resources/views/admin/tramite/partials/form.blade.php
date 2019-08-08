@@ -14,7 +14,7 @@
                               )
                      !!}
                 </div>
-                <div class="form-group" id="nro_oficio" style="display: none;">
+                <div class="form-group" id="nro_oficio" style="display: block;">
                     <label for="nroficio">Nro. Oficio:</label>
                     {!! 
                         Form::text(
@@ -28,11 +28,14 @@
                         ) 
                     !!}
                 </div>
-                <div class="form-group" id="remitente" style="display: none;">
-                      <label class="control-label" for="solicitante_id">Remitente:</label>
+                <div class="form-group" id="remitente" style="display: block;">
+                      
+                      <label class="control-label" for="solicitante_id">Remitente C.I:</label>
+ 
+
                       {!! Form::select('solicitante_id', $solicitantes, null, ['class' => 'form-control']) !!}
                 </div>
-                <div class="form-group" id="procedencia" style="display: none;">
+                <div class="form-group" id="procedencia" style="display: block;">
                   <label for="procedencia">Procedencia:</label>
                   {!! 
                       Form::text(
@@ -46,7 +49,7 @@
                       ) 
                   !!}
                 </div>
-                <div class="form-group" id="referencia" style="display: none;">
+                <div class="form-group" id="referencia" style="display: block;">
                   <label for="referencia">Referencia:</label>
                   {!! 
                       Form::text(
@@ -88,7 +91,7 @@
                       ) 
                   !!}
                 </div>
-                <div class="form-group" id="proc" style="display: none;">
+                <div class="form-group" id="proc" style="display: block;">
                       <label class="control-label" for="process_id">Proceso:</label>
                       {!! Form::select('process_id', $process, null, ['class' => 'form-control','id'=>'proces']) !!}
                 </div>

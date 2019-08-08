@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Bolsa_de_trabajo extends Model
 {
     protected $table = 'bolsa_de_trabajos';
-    protected $fillable = ['nombre', 'nroregistro', 'email', 'telefono', 'carta_de_presentacion', 'curriculum'];
+    protected $fillable = ['nombre', 'nroregistro', 'email', 'telefono', 'carta_de_presentacion', 'curriculum', 'event_date'];
 
     //public function user()
     //{

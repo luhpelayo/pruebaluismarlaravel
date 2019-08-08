@@ -45,7 +45,7 @@ class TramiteController extends Controller
         $user=\Auth::user()->id;
         $tramites = Tramite::where([
                     ['estado_id','=',$estado],
-                    ['user_id','=',$user],
+                   
                     ])->get();
        
         return view('admin.tramite.index', compact('tramites'));
@@ -59,7 +59,7 @@ class TramiteController extends Controller
     public function create()
     {
          $req=0;
-        $solicitantes = Solicitante::orderBy('id', 'desc')->pluck('nombre', 'id');
+        $solicitantes = Solicitante::orderBy('id', 'desc')->pluck('ci', 'id');
         $process = Process::orderBy('id', 'desc')->pluck('descripcion', 'id');
         $estados = Estado::orderBy('id', 'desc')->pluck('estado', 'id');
         return view('admin.tramite.create',compact('solicitantes','estados','process','req'));
@@ -162,7 +162,7 @@ class TramiteController extends Controller
      */
     public function edit(Tramite $tramite)
     {
-        $solicitantes = Solicitante::orderBy('id', 'desc')->pluck('nombre', 'id');
+        $solicitantes = Solicitante::orderBy('id', 'desc')->pluck('ci', 'id');
         $process = Process::orderBy('id', 'desc')->pluck('descripcion', 'id');
         $estados = Estado::orderBy('id', 'desc')->pluck('estado', 'id');
 

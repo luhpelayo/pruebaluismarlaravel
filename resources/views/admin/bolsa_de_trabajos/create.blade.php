@@ -96,6 +96,9 @@
           {!! Form::label('file','Agregar un archivo') !!}
           {!! Form::file('file')!!}
          </div>
+
+
+         
          <div class="form-group">
               <label for="event_date">Fecha:</label>
 
