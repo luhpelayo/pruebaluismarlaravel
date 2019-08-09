@@ -117,7 +117,7 @@ class EventoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param Evento $evento
      * @return \Illuminate\Http\Response
      */
     public function edit(Evento $evento)
@@ -177,6 +177,7 @@ class EventoController extends Controller
         
         return redirect()->route('eventos.index')->with('message', $message);
     }
+
 
     /**
      * Delete the specified resource in storage.
