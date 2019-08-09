@@ -29,6 +29,8 @@ class Tramite extends Model
         
     }
 
+ 
+
     public function scopecreated_at($query,$created_at)
     {
      // dd("scope: ".$fecha);
@@ -38,6 +40,23 @@ class Tramite extends Model
             //return $query->where('idMovil', 'LIKE', "%$idMovil%");
         }
     }
+    
+    public function scopeCi($query, $nombre)
+    {
+      //dd("scope: ".$descripcion);
+        if(trim($nombre) !="")
+        {
+           //$query->where('nombre', $nombre);
+            //$query->where(\DB::raw("CONCAT(nombre,'',palabraClabe)"),"LIKE", "%$palabraClabe%");
+           $query->where('nombre','like','%'.$nombre.'%');
+        }
+    
+     
+    }  
+
+
+
+
     public function areas()
     {
         return $this->belongsToMany('App\Models\Area');

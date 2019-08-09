@@ -16,7 +16,7 @@ class SolicitanteController extends Controller
      */
     public function index(Request $request)
     {
-        $solicitantes = Solicitante::nombre($request->get('nombre'))->orderby('id','DESC')->paginate(2);
+        $solicitantes = Solicitante::ci($request->get('ci'))->orderby('id','DESC')->paginate(2);
 
         return view('admin.solicitante.index', compact('solicitantes'));
     }

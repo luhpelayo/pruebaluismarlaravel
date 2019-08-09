@@ -63,7 +63,7 @@
          </div>
 
          <div class="form-group">
-           <label for="content">PreContenido:</label>
+           <label for="precontent">PreContenido:</label>
               {!! 
                   Form::textarea(
                       'precontent', 
@@ -122,6 +122,7 @@
 @section('js')
 
   <script>
+    $('.textarea-precontent').trumbowyg();
     $('.textarea-content').trumbowyg();
 
   </script>

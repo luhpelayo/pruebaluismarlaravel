@@ -14,14 +14,14 @@ class Solicitante extends Model
         return $this->hasMany('App\Models\Reception');
     }
 
-    public function scopeNombre($query, $nombre)
+    public function scopeCi($query, $ci)
     {
       //dd("scope: ".$descripcion);
-        if(trim($nombre) !="")
+        if(trim($ci) !="")
         {
            //$query->where('nombre', $nombre);
             //$query->where(\DB::raw("CONCAT(nombre,'',palabraClabe)"),"LIKE", "%$palabraClabe%");
-           $query->where('nombre','like','%'.$nombre.'%');
+           $query->where('ci','like','%'.$ci.'%');
         }
     
      
