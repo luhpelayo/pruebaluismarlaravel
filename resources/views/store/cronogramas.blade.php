@@ -1,4 +1,4 @@
-@extends('store.template')
+@extends('store.templatePublic')
 
 @section('content')
 @include('store.informativa.layouts.headContentEventos')
