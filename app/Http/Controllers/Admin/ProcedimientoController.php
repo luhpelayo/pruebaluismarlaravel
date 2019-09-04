@@ -81,7 +81,7 @@ class ProcedimientoController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  Procedimiento  $procedimiento
      * @return \Illuminate\Http\Response
      */
     public function show(Procedimiento $procedimiento)
@@ -92,7 +92,7 @@ class ProcedimientoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  Procedimiento $procedimiento
      * @return \Illuminate\Http\Response
      */
     public function edit(Procedimiento $procedimiento)
@@ -103,11 +103,11 @@ class ProcedimientoController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request  $request
+     * @param Procedimiento $procedimiento
      * @return \Illuminate\Http\Response
      */
-    public function update(Procedimiento $procedimiento,Request $request)
+    public function update(Procedimiento $procedimiento, Request $request)
     {
     
         $this->validate($request, [
@@ -151,8 +151,7 @@ class ProcedimientoController extends Controller
 
     /**
      * Remove the specified resource from storage.
-     *
-     * @param  int  $id
+     * @param Procedimiento $procedimiento
      * @return \Illuminate\Http\Response
      */
     public function destroy(Procedimiento $procedimiento)

@@ -1,9 +1,10 @@
 @extends('store.templatePublic')
 
 @section('content')
-    <footer class="footer_area">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+    <section class="our_services_area">
         <div class="container">
-            <div class="footer_row row">
+            <div class="row">
 
                 <div class="col-md-6 col-sm-6 footer_about quick">
                     <h2>Normas de la carrera</h2>
@@ -27,5 +28,5 @@
             </div>
         </div>
 
-    </footer>
+    </section>
 @stop
