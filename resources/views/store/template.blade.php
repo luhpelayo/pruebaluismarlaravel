@@ -61,7 +61,7 @@
    
 
   <!-- End Header_Area -->
-    @yield('content')
+    {{--@yield('content')--}}
 
 
 
@@ -151,9 +151,9 @@
             </div>
         </div>
     </section>
-    <!-- End Our Features Area -->
-    
-    <!-- Our Labor Area -->
+    {{--<!-- End Our Features Area -->--}}
+    {{----}}
+    {{--<!-- Our Labor Area -->--}}
     <section class="our_feature_area">
         <div class="container">
             <div class="tittle wow fadeInUp">
@@ -228,9 +228,9 @@
             </div>
         </div>
     </section>
-    <!-- End Our Labor Area -->
+    {{--<!-- End Our Labor Area -->--}}
 
-    <!-- What ew offer Area -->
+    {{--<!-- What ew offer Area -->--}}
     <section class="what_we_area row">
         <div class="container">
             <div class="tittle wow fadeInUp">
@@ -270,7 +270,7 @@
                            - Trabajo en equipo<br/>
                            - Desarrollo de las capacidades humanas.<br/>
                            <br/>
-                           
+
                          </p>
                    </div>
                 </div>
@@ -297,7 +297,8 @@
                 </div>
                 <div class="col-md-4 col-sm-4 col-md-offset-1 hiwbox construction">
                    <div class="cns-img">
-                        <img src="<?php echo e(asset('images/images/objetivo.jpg')); ?>" alt="">
+
+                       <img src=" <?php echo e( asset('images/images/objetivo.jpg'));  ?>" alt="" >
                    </div>
                    <div class="cns-content">
                         <i class="fa fa-hourglass-end" aria-hidden="true"></i>
@@ -308,7 +309,7 @@
                    </div>
                 </div>
 
-              
+
             </div>
         </div>
     </section>
@@ -365,7 +366,7 @@
     <script src="{{ asset('store/vendors/stellar/jquery.stellar.js') }}"></script>
     <!-- Theme JS -->
     <script src="{{ asset('store/js/theme.js') }}"></script>
-   
+
 </body>
 
 </html>

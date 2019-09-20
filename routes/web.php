@@ -47,14 +47,14 @@ Route::get('contacto', function(){return view('store.contacto');})->name('contac
 Route::post('contact-send','Web\ContactController@sendMessage')->name('contact.send');
 //Route::post('contact-send','Web\ContactController@sendMessage')->name('contact.send');
 
-Route::get('aca', 'Admin\ReportController@index')->name('aca');
+
 
 Route::resource('estado', 'Admin\EstadoController');
 Route::resource('solicitante', 'Admin\SolicitanteController');
 Route::resource('admin/cronogramas', 'Admin\CronogramaController');
 Route::resource('admin/eventos', 'Admin\EventoController');
 Route::resource('admin/bolsa_de_trabajos', 'Admin\Bolsa_de_trabajoController');
-
+Route::resource('admin/report', 'Admin\ReportController');
 Route::resource('admin/noticias', 'Admin\NoticiaController');
 
 Route::resource('archivos', 'Admin\FileController');
@@ -135,6 +135,9 @@ Route::middleware(['auth'])->group(function(){
     //Tramites
     
 	Route::resource('tramite', 'Admin\TramiteController');
+	// students Route::get('students', 'Admin\StudentController@index')->name('student');
+	Route::resource('students', 'Admin\StudentController');
+
     Route::get('tramite/requisito/{id}', 'Admin\TramiteController@requisito')->name('tramite.requisito');
  
     Route::get('cierredeestados/{id}', 'Admin\TramiteController@cierredeestados')->name('cierredeestados');

@@ -118,7 +118,7 @@
               <ul class="treeview-menu">
                 
                 <li><a href="{{ route('tramite.index') }}"><i class="fa fa-circle-o"></i>Recepcion</a></li>
-                <li><a href="{{ route('tramite.index') }}"><i class="fa fa-circle-o"></i>Recebido</a></li>
+                <li><a href="{{ route('tramite.index') }}"><i class="fa fa-circle-o"></i>Recibido</a></li>
                 <li><a href="{{ route('indexdespachado') }}"><i class="fa fa-circle-o"></i>Despacho</a></li>
                 <li><a href="{{ route('indexrechazada') }}"><i class="fa fa-circle-o"></i>Solicitudes Rechazadas</a></li>
                 <li><a href="{{ route('indexaceptada') }}"><i class="fa fa-circle-o"></i>Solicitudes Aceptadas</a></li>
@@ -132,22 +132,20 @@
               <ul class="treeview-menu">
                 <li><a href="{{ route('galleries.index') }}"><i class="fa fa-circle-o"></i>Galeria de fotos</a></li>
                 {{--<li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Por Llegar</a></li>--}}
-                
-               
               </ul>
             </li>
 
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-pie-chart"></i>
-                <span>Reportes</span>
+                <span>Datos Estudiantes</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
-                <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
-                <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
-                <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
+                <li><a href="{{ route('students.index') }}"><i class="fa fa-circle-o"></i>Estudiantes Data</a></li>
+                <li><a href="{{ route('report.index') }}"><i class="fa fa-circle-o"></i>Estudiantes Report</a></li>
+                {{--<li><a href="{{ route('report') }}"><i class="fa fa-circle-o"></i>Estudiantes Flot</a></li>--}}
+                {{--<li><a href="{{ route('report') }}"><i class="fa fa-circle-o"></i>Estudiantes Inline charts</a></li>--}}
               </ul>
             </li>
             {{--TODO --}}
