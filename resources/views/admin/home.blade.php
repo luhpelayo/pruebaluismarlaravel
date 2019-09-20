@@ -11,7 +11,7 @@
             <div class="icon">
                 <i class="fa fa-file-text-o"></i>
             </div>
-            <a href="{{route('tramite.index')}}" class="small-box-footer">Más información <i class="fa fa-arrow-circle-right"></i></a>
+            <!-- <a href="{{route('tramite.index')}}" class="small-box-footer">Más información <i class="fa fa-arrow-circle-right"></i></a> -->
         </div>
     </div><!-- ./col -->
     <div class="col-lg-3 col-xs-6">
@@ -24,7 +24,7 @@
             <div class="icon">
                 <i class="fa fa-file-text-o"></i>
             </div>
-            <a href="{{route('tramite.index')}}" class="small-box-footer">Más información <i class="fa fa-arrow-circle-right"></i></a>
+            <!-- <a href="{{route('tramite.index')}}" class="small-box-footer">Más información <i class="fa fa-arrow-circle-right"></i></a> -->
         </div>
     </div><!-- ./col -->
 

@@ -133,8 +133,15 @@ Route::middleware(['auth'])->group(function(){
 	//Proceso
 	Route::resource('processes','Admin\ProcesoController');
     //Tramites
+    
 	Route::resource('tramite', 'Admin\TramiteController');
     Route::get('tramite/requisito/{id}', 'Admin\TramiteController@requisito')->name('tramite.requisito');
+ 
+    Route::get('cierredeestados/{id}', 'Admin\TramiteController@cierredeestados')->name('cierredeestados');
+    Route::get('indexaceptada', 'Admin\TramiteController@indexaceptada')->name('indexaceptada');
+    Route::get('indexrechazada', 'Admin\TramiteController@indexrechazada')->name('indexrechazada');
+    Route::get('indexdespachado', 'Admin\TramiteController@indexdespachado')->name('indexdespachado');
+
     //sliders
     Route::resource('admin/sliders', 'Admin\SliderController');
     //Area
@@ -161,5 +168,7 @@ Route::middleware(['auth'])->group(function(){
            $message->to('valcyum.085@gmail.com')->subject('subject Envio Email Laravel');
         });
         return "Email Enviado Exitosamente!!!";
+
+      
     });
 });

@@ -117,11 +117,11 @@
               </a>
               <ul class="treeview-menu">
                 
-                <li><a href="{{ route('tramite.index') }}"><i class="fa fa-circle-o"></i>En Oficina</a></li>
-                 
-                <li><a href="{{ route('tramite.index') }}"><i class="fa fa-circle-o"></i> deriva</a></li>
-                <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Archivados</a></li>
-               
+                <li><a href="{{ route('tramite.index') }}"><i class="fa fa-circle-o"></i>Recepcion</a></li>
+                <li><a href="{{ route('tramite.index') }}"><i class="fa fa-circle-o"></i>Recebido</a></li>
+                <li><a href="{{ route('indexdespachado') }}"><i class="fa fa-circle-o"></i>Despacho</a></li>
+                <li><a href="{{ route('indexrechazada') }}"><i class="fa fa-circle-o"></i>Solicitudes Rechazadas</a></li>
+                <li><a href="{{ route('indexaceptada') }}"><i class="fa fa-circle-o"></i>Solicitudes Aceptadas</a></li>
               </ul>
             </li>
             @endcan

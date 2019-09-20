@@ -55,7 +55,7 @@
       var responsable = document.getElementById('responsable');
       var proc = document.getElementById('proc');
       var req = document.getElementById('demos');
-      if(SelectRecep== 'recepcion'){
+      if(SelectRecep== 'Recibido'){
         
          nro_oficio.style.display = 'block';
          remitente.style.display = 'block';
@@ -66,7 +66,7 @@
          proc.style.display = 'block';
         
             
-      }else if(SelectRecep == 'despacho'){
+      }else if(SelectRecep == 'Despacho'){
     
          nro_oficio.style.display = 'block';
          remitente.style.display = 'none';

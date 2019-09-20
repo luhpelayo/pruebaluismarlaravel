@@ -13,6 +13,7 @@ use App\Models\Process;
 use App\Models\Archivo;
 use App\Models\Reception;
 use App\Models\Despacho;
+use App\MOdels\Derivacion;
 use Storage;
 use DB;
 
@@ -25,11 +26,14 @@ class TramiteController extends Controller
     {
        
         $this->tramite = $tramite;
-        $this->middleware('permission:tramite.create')->only(['create','atore']);
+        $this->middleware('permission:tramite.create')->only(['create','store']);
         $this->middleware('permission:tramite.index')->only('index');
-        $this->middleware('permission:tramite.edit')->only(['edit','update']);
+        $this->middleware('permission:tramite.edit')->only(['edit']);
+        
         $this->middleware('permission:tramite.show')->only('show');
         $this->middleware('permission:tramite.destroy')->only('destroy');
+
+       
         
     }
 
@@ -40,16 +44,214 @@ class TramiteController extends Controller
      */
     public function index(Request $request)
     {
+
+
+
+
+        
+
+        // $estado = DB::table('estados')->where('estado', 'Recibido')->value('id');
+        // //$tramites = Tramite::where('estado_id',$estado)->get()daj
+        // $user=\Auth::user()->id;
+      
+
+        // $area_id= DB::table('users')->where('id', $user)->value('area_id');
+        // $area= DB::table('areas')->where('id', $area_id)->value('descripcion');
+        // $tramites = Tramite::where([
+        //             ['estado_id','=',$estado],
+        //             ['user_id','=',$user],
+        //             ])->get();
+       
+        // return view('admin.tramite.index', compact('tramites', 'area'));
+      
+
+
+        $user=\Auth::user()->id;
+      
+
+        $area_id= DB::table('users')->where('id', $user)->value('area_id');
+        $area= DB::table('areas')->where('id', $area_id)->value('descripcion');
+
+        if ($area=='Secretaria/Dirección de Carrera') {      
+
         $estado = DB::table('estados')->where('estado', 'Recibido')->value('id');
+        //$tramites = Tramite::where('estado_id',$estado)->get();t
+        $user=\Auth::user()->id;
+      
+
+        $area_id= DB::table('users')->where('id', $user)->value('area_id');
+        $area= DB::table('areas')->where('id', $area_id)->value('descripcion');
+        $tramites = Tramite::where([
+                    ['estado_id','=',$estado],
+                    ['user_id','=',$user],
+                    ])->get();
+        //  dd($tramites);
+        //      exit;
+        return view('admin.tramite.index', compact('tramites', 'area'));
+        } else {
+            $estado = 2;
+          
+            //$tramites = Tramite::where('estado_id',$estado)->get();
+            $user=\Auth::user()->id;
+          
+    
+            $area_id= DB::table('users')->where('id', $user)->value('area_id');
+             
+        
+         
+            $area= DB::table('areas')->where('id', $area_id)->value('descripcion');
+             
+            // $area2= DB::table('areas')->where('id', $area_id)->value('id');
+            
+// SELECT A.id, A.area_id, A.tramite_id, A.observacion,A.created_at, A.updated_at 
+// FROM derivacions A INNER JOIN derivacions B ON A.tramite_id =B.tramite_id AND A.id > B.id
+
+            //  $derivadasin = DB::table('derivacions')->get();
+            //   dd($derivadasin);
+            // exit;
+            //  $derivadfin= DB::table('derivacions')->get(); 
+
+            $deriva = Derivacion::where('area_id',$area_id)->pluck('tramite_id');
+            // dd($deriva);
+            // exit;
+             $tramites = DB::table('tramites')->whereIn('id',$deriva)->where('estado_id', '=', $estado)->get();  
+                  
+       
+          
+           
+            return view('admin.tramite.index', compact('tramites'));
+
+
+
+
+
+
+
+        }  
+    }
+
+        /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function indexRecebida(Request $request)
+    {    
+         
+       
+        $estado = DB::table('estados')->where('estado', 'Derivado')->value('id');
+        //$tramites = Tramite::where('estado_id',$estado)->get();
+        $user=\Auth::user()->id;
+        $area_id= DB::table('users')->where('user_id', $user)->value('area_id');
+        $tramites = Tramite::where([
+                    ['estado_id','=',$estado],
+                    ['user_id','=',$user],
+                    ])->get();
+       
+        return view('admin.tramite.index', compact('tramites','area_id'));
+    }
+       /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function indexaceptada(Request $request)
+    {
+
+        
+        $user=\Auth::user()->id;
+      
+
+        $area_id= DB::table('users')->where('id', $user)->value('area_id');
+        $area= DB::table('areas')->where('id', $area_id)->value('descripcion');
+
+        if ($area=='Secretaria/Dirección de Carrera') {   
+
+
+        $estado = DB::table('estados')->where('estado', 'Aceptada')->value('id');
+       
         //$tramites = Tramite::where('estado_id',$estado)->get();
         $user=\Auth::user()->id;
         $tramites = Tramite::where([
                     ['estado_id','=',$estado],
-                   
+                    ['user_id','=',$user],
+                    ])->get();
+                    // dd($tramites);
+                    // exit;
+        return view('admin.tramite.indexaceptada', compact('tramites'));
+        } else {
+            
+        }
+    }
+     
+    
+       /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function indexrechazada()
+    {
+
+        $user=\Auth::user()->id;
+      
+
+        $area_id= DB::table('users')->where('id', $user)->value('area_id');
+        $area= DB::table('areas')->where('id', $area_id)->value('descripcion');
+
+        if ($area=='Secretaria/Dirección de Carrera') {   
+
+        $estado = DB::table('estados')->where('estado', 'Rechazada')->value('id');
+        //$tramites = Tramite::where('estado_id',$estado)->get();
+        $user=\Auth::user()->id;
+        $tramites = Tramite::where([
+                    ['estado_id','=',$estado],
+                    ['user_id','=',$user],
                     ])->get();
        
-        return view('admin.tramite.index', compact('tramites'));
+        return view('admin.tramite.indexrechazada', compact('tramites'));
+
+        } else {
+
+        }
     }
+      /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function indexdespachado(Request $request)
+    {
+
+        
+        $user=\Auth::user()->id;
+      
+
+        $area_id= DB::table('users')->where('id', $user)->value('area_id');
+        $area= DB::table('areas')->where('id', $area_id)->value('descripcion');
+
+        if ($area=='Secretaria/Dirección de Carrera') {   
+
+
+        $estado = DB::table('estados')->where('estado', 'Despachado')->value('id');
+       
+        //$tramites = Tramite::where('estado_id',$estado)->get();
+        $user=\Auth::user()->id;
+        $tramites = Tramite::where([
+                    ['estado_id','=',$estado],
+                    ['user_id','=',$user],
+                    ])->get();
+                    // dd($tramites);
+                    // exit;
+        return view('admin.tramite.indexdespachado', compact('tramites'));
+        } else {
+            
+        }
+    }
+     
+
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -65,7 +267,7 @@ class TramiteController extends Controller
         return view('admin.tramite.create',compact('solicitantes','estados','process','req'));
     }
 
-    /**
+   /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -157,33 +359,65 @@ class TramiteController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  Tramite $tramite
      * @return \Illuminate\Http\Response
      */
     public function edit(Tramite $tramite)
-    {
+    {   
+        $user=\Auth::user()->id;
+  
+          
+        $area_id= DB::table('users')->where('id', $user)->value('area_id');
+        $area= DB::table('areas')->where('id', $area_id)->value('descripcion');
+     
+         
+
+        $procedencia =  DB::table('receptions')->where('tramite_id', $tramite->id)->value('procedencia');
         $solicitantes = Solicitante::orderBy('id', 'desc')->pluck('ci', 'id');
         $process = Process::orderBy('id', 'desc')->pluck('descripcion', 'id');
         $estados = Estado::orderBy('id', 'desc')->pluck('estado', 'id');
-
-        return view('admin.tramite.edit', compact('tramite','solicitantes','process','estados'));
+        
+        return view('admin.tramite.edit', compact('tramite','solicitantes','process','estados', 'procedencia'));
+        
+   
+   
     }
+ 
+
+
+
+
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  Tramite  $tramite
      * @return \Illuminate\Http\Response
      */
+
     public function update(SaveTramiteRequest $request, Tramite $tramite)
     {
+
+        // dd($request);
+        // exit;
+
+        $estado = DB::table('estados')->where('estado', $request->get('tipo'))->value('id');
+                   
+ 
         $tramite->fill($request->all());
+        $tramite->estado_id=$estado;
+
+        
         $updated = $tramite->save();
         $message = $updated ? 'Tramite actualizado correctamente!' : 'El tramite NO pudo actualizarse!';
         
         return redirect()->route('tramite.index')->with('message', $message);
     }
+
+    
+
+
 
     /**
      * Remove the specified resource from storage.
