@@ -308,7 +308,7 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
   padding-top: 39px;
 }
 .header_aera .navbar-header .navbar-brand img {
-  max-width: 85%;
+  max-width: 155%;
 }
 .header_aera .navbar-collapse .navbar-nav.navbar-right li a {
   font: 700 14px/100px "Roboto", sans-serif;
