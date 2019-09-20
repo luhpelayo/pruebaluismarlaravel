@@ -1,10 +1,10 @@
+@extends('admin.template')
+
 @section('content')
 <div class="box box-primary">
 <div class="page-header text-center">
     <h1>TRAMITES
-        @can('tramite.create') 
-        <a href="{{ route('tramite.create') }}" class="btn btn-success"><i class="fa fa-plus-circle"></i> Nuevo</a>
-        @endcan
+
     </h1>
 </div>
 <div class="box-body">              
@@ -21,17 +21,11 @@
             </tr>
         </thead>         
    <tbody>
- 
-    @foreach($tramites as $tramite)
+    @foreach($tramites4 as $tramite)
          <tr>
             <th>
-            @if($tramite->estado_id == '1')
-                    <span class="label label-info">Recibido</span>
-                @else
-                    <span class="label label-danger">Derivado</span>
-                @endif
-
-                @extends('admin.template')
+            <span class="label label-info">Recibido</span>
+                
 
              </th>    
              <td>{{ $tramite->created_at}}</td>
@@ -42,30 +36,22 @@
            
     
             <td>
-             
- 
-             
-                <a href="{{ route('derivacion', $tramite->id) }}" class="btn btn-sm btn-info">
-                    <i class="fa fa-send"></i>
+            
                 </a>
-             
-        
-
+                @can('tramite.cierredeestados')
+                <a href="{{ route('tramite.edit', $tramite) }}" class="btn btn-sm btn-pl">
+                    <i class="fa fa-pencil-square" style="color:white;"></i>
+                </a>
+               @endcan
                 
                 
                 @can('tramite.edit')
-                <a href="{{ route('tramite.edit', $tramite->id) }}" class="btn btn-sm btn-primary">
+                <a href="{{ route('tramite.edit', $tramite) }}" class="btn btn-sm btn-primary">
                     <i class="fa fa-pencil-square"></i>
                 </a>
                 @endcan
-               @can('roles.destroy')
-              {!! Form::open(['route' => ['tramite.destroy', $tramite],'style'=>'display:inline']) !!}
-                        <input type="hidden" name="_method" value="DELETE">
-                        <button onClick="return confirm('Eliminar registro?')" class="btn btn-sm btn-danger">
-                          <i class="fa fa-trash-o"></i>
-                        </button>
-              {!! Form::close() !!}  
-              @endcan 
+                
+      
             </td> 
         </tr>
     @endforeach

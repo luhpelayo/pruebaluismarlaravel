@@ -25,8 +25,8 @@
     @foreach($tramites as $tramite)
          <tr>
             <th>
-            @if($tramite->estado_id == '1')
-                    <span class="label label-info">Recibido</span>
+            @if($tramite->estado_id == '3')
+                    <span class="label label-info">Despachadon</span>
                 @else
                     <span class="label label-danger">Derivado</span>
                 @endif

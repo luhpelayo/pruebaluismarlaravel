@@ -12,6 +12,7 @@
  <div class="form-group">
  	<label>{{Form::radio('special','all-access')}} Acceso total</label>
  	<label>{{Form::radio('special','no-access')}} Ningun acceso</label>
+	<label>{{Form::radio('special',' ')}} solo accesos</label>
  </div>
 
 <h3>Usuario</h3>
