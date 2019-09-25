@@ -57,8 +57,10 @@
 
    @include('store.partials.nav')
 
-
-   
+ {{-- Todo --}}
+    {{-- slider and Notice preview--}}
+    @include('store.partials.slider')
+    @include('store.partials.noti')
 
   <!-- End Header_Area -->
     {{--@yield('content')--}}
