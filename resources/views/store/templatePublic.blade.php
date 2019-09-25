@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>ING. FINANCIERA</title>
+    <title>INGENIERIA FINANCIERA</title>
 
     <!-- Favicon -->
     <link rel="icon" href="{{asset('images/images/finanzas.png')}}" type="image/x-icon" />
@@ -39,16 +39,15 @@
 
 
   <!-- Top Header_Area -->
-  <section class="top_header_area">
-          <div class="container">
+    <section class="top_header_area">
+        <div class="container">
             <div class="row">
                 <div class="col-xs-12 ">
-                     <img id="img-logo-ucr" class="img-responsive center-block" src="{{ asset('images/img_include/portada2.png')}}">
+                    <a href="/"><img id="img-logo-ucr" class="img-responsive center-block" src="{{ asset('images/img_include/portada2.png')}}">  </a>
                 </div>
             </div>
         </div>
-</section>
-
+    </section>
 
 
   <!-- End Top Header_Area -->
