@@ -276,7 +276,7 @@ class TramiteController extends Controller
     public function store(SaveTramiteRequest $request)
     {
 
-        if ($request->get('tipo')=='recepcion') {
+        if ($request->get('tipo')=='Recibido') {
             $estado = DB::table('estados')->where('estado', 'Recibido')->value('id');
             $data = [
                     'tipo'      => $request->get('tipo'),
@@ -299,7 +299,7 @@ class TramiteController extends Controller
                 # code...
             }
             
-        } else {
+        } else { if ($request->get('tipo')=='despacho') {
 
             $estado = DB::table('estados')->where('estado', 'Despachado')->value('id');
             $data = [
@@ -318,8 +318,63 @@ class TramiteController extends Controller
                 $despacho->save();
             } else {
                 # code...
-            }    
+            } 
+                     } else { if ($request->get('tipo')=='aceptada') {
+
+                        $estado = DB::table('estados')->where('estado', 'Aceptada')->value('id');
+                        $data = [
+                                'tipo'      => $request->get('tipo'),
+                                'nroficio'       => $request->get('nroficio'),
+                                'referencia'     => $request->get('referencia'),
+                                'user_id'        => \Auth::user()->id,
+                                'estado_id'      => $estado
+                            ];
+            
+                        
+                        if ($tramite = Tramite::create($data)) {
+                            $id_tramite=$tramite->id;
+                            $recepcion=new Reception();
+                            $recepcion->tramite_id = $id_tramite;
+                            $recepcion->procedencia = $request->get('procedencia');
+                            $recepcion->solicitante_id = $request->get('solicitante_id');
+                            $recepcion->process_id = $request->get('process_id');
+                            $recepcion->save();
+                        } else {
+                            # code...
+                        }
+                            
+
+                            } else { if ($request->get('tipo')=='rechazada') {
+                                $estado = DB::table('estados')->where('estado', 'Rechazada')->value('id');
+                                $data = [
+                                        'tipo'      => $request->get('tipo'),
+                                        'nroficio'       => $request->get('nroficio'),
+                                        'referencia'     => $request->get('referencia'),
+                                        'user_id'        => \Auth::user()->id,
+                                        'estado_id'      => $estado
+                                    ];
+                    
+                                
+                                if ($tramite = Tramite::create($data)) {
+                                    $id_tramite=$tramite->id;
+                                    $recepcion=new Reception();
+                                    $recepcion->tramite_id = $id_tramite;
+                                    $recepcion->procedencia = $request->get('procedencia');
+                                    $recepcion->solicitante_id = $request->get('solicitante_id');
+                                    $recepcion->process_id = $request->get('process_id');
+                                    $recepcion->save();
+                                } else {
+                                    # code...
+                                }
+
+  
+
+
+
+        }   
+        } 
         }
+    }
                
 
         $message = $tramite ? 'Tramite agregado correctamente!' : 'Tramite NO pudo agregarse!';
