@@ -39,16 +39,15 @@
 
 
   <!-- Top Header_Area -->
-  <section class="top_header_area">
-          <div class="container">
+    <section class="top_header_area">
+        <div class="container">
             <div class="row">
-                <div class="col-sm-12 col-md-12 col-xs-12 ">
-                    <a href="/"> id="img-logo-ucr" class="img-responsive center-block" src="{{ asset('images/img_include/portada2.png')}}"></a>
+                <div class="col-xs-12 ">
+                    <a href="/"><img id="img-logo-ucr" class="img-responsive center-block" src="{{ asset('images/img_include/portada2.png')}}">  </a>
                 </div>
             </div>
         </div>
-</section>
-
+    </section>
 
 
   <!-- End Top Header_Area -->
