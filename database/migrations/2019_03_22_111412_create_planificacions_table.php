@@ -21,7 +21,7 @@ class CreatePlanificacionsTable extends Migration
             $table->text('description')->nullable();
 
             $table->integer('area_id')->unsigned();
-            $table->foreign('area_id')->references('id')->on('aeraacademicas')
+            $table->foreign('area_id')->references('id')->on('areaAcademicas')
                   ->onDelete('cascade')
                   ->onUpdate('cascade'); 
 
