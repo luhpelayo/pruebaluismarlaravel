@@ -20,11 +20,14 @@ use Illuminate\Support\Facades\Mail;
 ////////////////////////////////////////////////
 Route::get('/', ['uses' => 'SlideController@index'])->name('/');
 
+Route::get('plandeestudio' ,  'PlanDeEstudioController@index' )->name('plandeestudio');
+
 // noticias
 
 Route::get('noticia/{id}' , [ 'uses' => 'Web\NoticiaController@Noticia' ])->name('noticia');
 
 
+Route::get('bolsa_de_trabajo/{id}' , [ 'uses' => 'Web\Bolsa_de_trabajoController@Bolsa_de_trabajo' ])->name('bolsa_de_trabajo');
 
 Route::get('noticias' , [ 'uses' => 'Web\NoticiaController@indexInformativa' ])->name('noticias');
 Route::get('eventos' , [ 'uses' => 'Web\EventoController@indexInformativa' ])->name('eventos');
@@ -32,11 +35,15 @@ Route::get('cronogramas' , [ 'uses' => 'Web\CronogramaController@indexInformativ
 Route::get('trabajos' , [ 'uses' => 'Web\TrabajoController@indexInformativa' ])->name('trabajos');
 
 Route::get('bolsa_de_trabajos' , [ 'uses' => 'Web\Bolsa_de_trabajoController@indexInformativa' ])->name('bolsa_de_trabajos');
+Route::get('crearcurriculum' , [ 'uses' => 'Web\Bolsa_de_trabajoController@crearcurriculum' ])->name('crearcurriculum');
+
 
 Route::get('procedimientos' , [ 'uses' => 'Web\ProcedController@getProced' ])->name('procedimientos');
 Route::get('proced/{id}' , [ 'uses' => 'Web\ProcedController@Proced' ])->name('proced');
 Route::get('normas' , [ 'uses' => 'Web\NormasController@getNormaInterna' ])->name('normas');
 
+
+// Route::get('plandeestudio' , [ 'plandeestudio' => 'Web\PlanDeEstudioController@index' ])->name('plandeestudio');
 
 
 //Acerca del sitio

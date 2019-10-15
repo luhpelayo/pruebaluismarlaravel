@@ -299,27 +299,7 @@ class TramiteController extends Controller
                 # code...
             }
             
-        } else { if ($request->get('tipo')=='despacho') {
-
-            $estado = DB::table('estados')->where('estado', 'Despachado')->value('id');
-            $data = [
-                    'tipo'      => $request->get('tipo'),
-                    'nroficio'       => $request->get('nroficio'),
-                    'referencia'     => $request->get('referencia'),
-                    'user_id'        => \Auth::user()->id,
-                    'estado_id'      => $estado
-                ];
-            if ($tramite = Tramite::create($data)) {
-                $id_tramite=$tramite->id;
-                $despacho=new Despacho();
-                $despacho->tramite_id = $id_tramite;
-                $despacho->destinatario = $request->get('destinatario');
-                $despacho->reponsable = $request->get('reponsable');
-                $despacho->save();
-            } else {
-                # code...
-            } 
-                     } else { if ($request->get('tipo')=='aceptada') {
+        } else { if ($request->get('tipo')=='aceptada') {
 
                         $estado = DB::table('estados')->where('estado', 'Aceptada')->value('id');
                         $data = [
@@ -363,18 +343,40 @@ class TramiteController extends Controller
                                     $recepcion->solicitante_id = $request->get('solicitante_id');
                                     $recepcion->process_id = $request->get('process_id');
                                     $recepcion->save();
-                                } else {
-                                    # code...
+                                } 
+                            } else {
+                              
+                                
+                               
+
+                                    $estado = DB::table('estados')->where('estado', 'Despachado')->value('id');
+                                    $data = [
+                                            'tipo'      => $request->get('tipo'),
+                                            'nroficio'       => $request->get('nroficio'),
+                                            'referencia'     => $request->get('referencia'),
+                                            'user_id'        => \Auth::user()->id,
+                                            'estado_id'      => $estado
+                                        ];
+                                    if ($tramite = Tramite::create($data)) {
+                                        $id_tramite=$tramite->id;
+                                        $despacho=new Despacho();
+                                        $despacho->tramite_id = $id_tramite;
+                                        $despacho->destinatario = $request->get('destinatario');
+                                        $despacho->reponsable = $request->get('reponsable');
+                                        $despacho->save();
+                                    } else {
+                                        # code...
+                                    }    
                                 }
 
   
 
 
 
-        }   
+           
         } 
         }
-    }
+    
                
 
         $message = $tramite ? 'Tramite agregado correctamente!' : 'Tramite NO pudo agregarse!';

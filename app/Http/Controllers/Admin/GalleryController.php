@@ -20,11 +20,17 @@ class GalleryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        $galleries = Gallery::all();
+    // public function index()
+    // {
+    //     $galleries = Gallery::all();
 
-        return view('admin.gallery.index',compact('galleries'));
+    //     return view('admin.gallery.index',compact('galleries'));
+    // }
+    public function index(Request $request)
+    {
+        $galleries = Gallery::content($request->get('content'))->orderby('id','DESC')->paginate(2);
+
+        return view('admin.gallery.index', compact('galleries'));
     }
 
     /**

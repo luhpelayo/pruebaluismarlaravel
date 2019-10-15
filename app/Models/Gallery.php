@@ -13,4 +13,15 @@ class Gallery extends Model
         return $this->hasMany('App\Models\Photo');
         
     }
+
+    public function scopeContent($query, $content)
+    {
+      //dd("scope: ".$descripcion);
+        if(trim($content) !="")
+        {
+           $query->where('content','like','%'.$content.'%');
+        }
+    
+     
+    } 
 }

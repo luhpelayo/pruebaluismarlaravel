@@ -1,277 +1,190 @@
+
 @extends('store.templatePublic')
-@section('content')
 @include('store.informativa.layouts.headContentEventos')
 
-
-		<div style="background-color: #FFFFFF">
-
-		
-
-
-
-			<div class="container" style="-webkit-box-shadow: 0px 0px 32px -2px rgba(0,0,0,0.08); -moz-box-shadow: 0px 0px 32px -2px rgba(0,0,0,0.08); box-shadow: 0px 0px 32px -2px rgba(0,0,0,0.08); background-color: #FFF">
-				
-
-
-
-
-
-				<div id="allEvents" class="row">
-					<div class="col-xs-12 ">
-						<div class="col-xs-12 ">
-							<h3>Bolsa de Trabajos</h3>
-							<div class="divider-md pull-left"></div>
-						</div>
-						<div class="bloque1"></div>
-						@if(isset($bolsa_de_trabajos) && count($bolsa_de_trabajos) > 0)
-							@foreach($bolsa_de_trabajos as $bolsa_de_trabajo)
-							<div class="col-xs-12 col-sm-6">
-								<div class="panel panel-default">
-									<div class="panel-body">
-                                    
-										<div class="divider-sm-color pull-left"></div>
-										</h2>
-										<!-- <br>
-										<h3>{{ $bolsa_de_trabajo->nombre }}</h3>
-										<div class="divider-sm-color pull-left"></div>
-										</h2>
-										<br>
-										<h3>{{ $bolsa_de_trabajo->nroregistro }}</h3>
-										<div class="divider-sm-color pull-left"></div>
-										</h2>
-										<br>
-                                        <h3>{{ $bolsa_de_trabajo->email }}</h3>
-										<div class="divider-sm-color pull-left"></div>
-										</h2>
-										<br>
-                                        <h3>{{ $bolsa_de_trabajo->telefono }}</h3>
-										<div class="divider-sm-color pull-left"></div>
-										</h2> -->
-										<br>
-                                        <a>{{ $bolsa_de_trabajo->email }}</a>
-                                        <br>
-                                        
-										<i>Fecha: {{ explode(" ", $bolsa_de_trabajo->event_date)[0] }}<br>
-								
-											 <td></td></i>
-										<br>
-										@if(isset($bolsa_de_trabajo->carta_de_presentacion))
-											<br>
-											Carta de presentacion:
-											<p>
-												<a class="download_file" href="{{ asset('/file/getBolsa_de_trabajo/'.$bolsa_de_trabajo->carta_de_presentacion) }}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i><span>&nbsp;{{ $bolsa_de_trabajo->carta_de_presentacion}}</span></a>
-												
-											</p>
-										@endif
-                                        @if(isset($bolsa_de_trabajo->curriculum))
-											<br>
-											Curriculum:
-											<p>
-												<a class="download_file" href="{{ asset('/file/getBolsa_de_trabajo/'.$bolsa_de_trabajo->curriculum) }}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i><span>&nbsp;{{ $bolsa_de_trabajo->curriculum}}</span></a>
-												
-											</p>
-										@endif
-									</div>
-								</div>
-							</div>
-							@endforeach
-						@else
-							<div class="panel-body">
-								<h1 class="text-center" >No hay Bolsa_de_trabajo </h1>
-							</div>
-							<div class="bloque"></div>
-						@endif
-					</div>
-					<div class="col-xs-12 text-center">
-						<nav>
-							{!! $bolsa_de_trabajos->render() !!}
-						</nav>
-					</div>
-				</div>
-				<div id="eventDetails" class="row" style="display:none;">
-					<div class="col-xs-12">
-					  <div class="col-xs-12">
-							<div id="event_Exit">
-								<p>
-									<i class="fa fa-chevron-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Volver</span>
-								</p>
-							</div>
-					    <div class="panel panel-default">
-					      <div class="panel-body">
-					        <h3 id="eventTitle"></h3>
-					        <div class="divider-sm-color pull-left"></div>
-					        </h2>
-					        <br>
-									<i id="eventInfo"></i><br>
-									<br>
-							
-									<p id="eventDocument">
-										<a class="download_file hide" href="" target="_blank"><i class="fa fa-download" aria-hidden="true"></i><span>&nbsp;</span></a>
-									</p>
-
-                                    <p id="eventDocument">
-										<a class="download_file hide" href="" target="_blank"><i class="fa fa-download" aria-hidden="true"></i><span>&nbsp;</span></a>
-									</p>
-
-					      </div>
-								
-					    </div>
-							
-					  </div>
-						
-					</div>
-					
-				</div>
-
-
-
-
-
-
-<div class="page-header  text-center" class="row" id="allEvents"> 
-      <h1>
-       <i class="fa fa-newspaper-o"style="color:grey"></i>
-       CURRICULUM <small>[Datos Personales]</small>
-      </h1>
-    </div>
-  <div class="col-xs-12 col-md-8 col-md-offset-2 col-xl-6 col-xl-offset-3">
-    @if (count($errors) > 0)
-        @include('admin.partials.errors')
-    @endif
-
-
-     {!! Form::open(['route'=>'bolsa_de_trabajos.store','method' => 'POST','files' => true]) !!}
-
-          <div class="form-group">
-              <label for="nombre">Nombre:</label>
-              {!! 
-                  Form::text(
-                      'nombre', 
-                      null, 
-                      array(
-                         
-                          'class'=>'form-control',
-                          'placeholder' => 'Nombre de la bolsa_de_trabajo...',
-                                        'autofocus' => 'autofocus'
-                      )
-                  ) 
-              !!}
-          </div>
-
-
-          <div class="form-group">
-              <label for="nroregistro">Nroregistro:</label>
-              {!! 
-                  Form::text(
-                      'nroregistro', 
-                      null, 
-                      array(
-                         
-                          'class'=>'form-control',
-                          'placeholder' => 'Nroregistro de la bolsa_de_trabajo...',
-                                        'autofocus' => 'autofocus'
-                      )
-                  ) 
-              !!}
-          </div>
-
-          <div class="form-group">
-              <label for="email">Email:</label>
-              {!! 
-                  Form::text(
-                      'email', 
-                      null, 
-                      array(
-                         
-                          'class'=>'form-control',
-                          'placeholder' => 'Email de la bolsa_de_trabajo...',
-                                        'autofocus' => 'autofocus'
-                      )
-                  ) 
-              !!}
-          </div>
-
-          <div class="form-group">
-              <label for="telefono">Telefono:</label>
-              {!! 
-                  Form::text(
-                      'telefono', 
-                      null, 
-                      array(
-                         
-                          'class'=>'form-control',
-                          'placeholder' => 'Telefono de la bolsa_de_trabajo...',
-                                        'autofocus' => 'autofocus'
-                      )
-                  ) 
-              !!}
-          </div>
-
-       
-
-          <div class="form-group">
-          {!! Form::label('file','Carta de presentacion') !!}
-          {!! Form::file('file')!!}
-         </div>
-         
-         <div class="form-group">
-          {!! Form::label('file','Curriculum') !!}
-          {!! Form::file('file')!!}
-         </div>
-
-<!-- 
-				 <div class="form-group">
-              <label for="event_date">Fecha:</label>
-              {!! 
-                  Form::date(
-                      'event_date', 
-                      null, 
-                      array(
-                          'class'=>'form-control',
-                          'placeholder' => 'Título del bolsa_de_trabajo...',
-                                        'autofocus' => 'autofocus'
-                      )
-                  ) 
-              !!}
-          </div>  -->
-
-
-
-					
-			
-
-      
-
-          <div class="form-group"> 
-              
-              {!! Form::submit('Enviar', array('class'=>'btn btn-primary')) !!}
-              <a href="{{ route('/') }}" class="btn btn-warning">Cancelar</a>
-          </div>
-			
-      {!! Form::close() !!}
- </div>
-
-
-
-
-				<br><br>
-				<br><br>
-				<br><br>
-			</div>
-		</div>
-		
-
-		
-
-                                 
+@section('content')
+<div class="box box-primary">
+<div class="page-header text-center">
+    <h1>
+        <i class="fa fa-user-o"></i>
+        Bolsa de Empleo <a href="{{ route('crearcurriculum') }}" class="btn btn-success"><i class="fa fa-plus-circle"></i> Nuevo</a>
+    </h1>
+</div>
+<div class="panel-body">
         
-		<script type="text/javascript">
-			loadEvents(<?php echo json_encode($bolsa_de_trabajosAll); ?>);
-		</script>		
+           {{ Form::open(['route' =>'bolsa_de_trabajos', 'method' => 'GET', 'class' => 'navbar-form navbar-left pull-right','role'=>'search']) }}
+                <div class="form-group">Nombre:
+                   
+                    {{ Form::text('nombre', null, ['class' => 'form-control', 'placeholder' => '']) }}
+
+                </div>
+                <div class="form-group">Año de Graduacion:
+                   
+                   {{ Form:: select(
+                             'anho_de_graduacion',
+                                [
+                                  ''=>'Seleccione opción',
+                                  '2019' => '2019',
+                                  '2018' => '2018',
+                                  '2017' => '2017',
+                                  '2016' => '2016',
+                                  '2015' => '2015',
+                                  '2014' => '2014',
+                                  '2013' => '2013',
+                                  '2012' => '2012',
+                                  '2011' => '2011',
+                                  '2010' => '2010',
+                                  '2009' => '2009'
+                                ],
+                                null, ['class' => 'form-control', 'placeholder' => '']) }}
+
+               </div>
+               <div class="form-group">Genero:
+                   
+                   {{ Form:: select(
+                             'genero',
+                             [
+                                  ''=>'Seleccione opción',
+                                  'Masculino' => 'Masculino',
+                                  'Femenino' => 'Femenino',
+                                  'Prefiero no decir' => 'Prefiero no decirlo'
+                                ],
+                                null, ['class' => 'form-control', 'placeholder' => '']) }}
+
+               </div>
+               <div class="form-group">Años de Experiencia:
+                   
+                   {{ Form:: select(
+                             'anhos_de_experiencia',
+                             [
+                                  ''=>'Seleccione opción',
+                                  '0' => '0',
+                                  '1' => '1',
+                                  '2' => '2',
+                                  '3' => '3',
+                                  '4' => '4',
+                                  '5' => '5',
+                                  '6' => '6',
+                                  '7' => '7',
+                                  '8' => '8',
+                                  '9' => '9',
+                                  '10' => '10'
+                                ],
+                                null, ['class' => 'form-control', 'placeholder' => '']) }}
+
+               </div>
+               <div class="form-group">Ingles:
+                   
+                   {{ Form:: select(
+                             'ingles',
+                             [
+                                  ''=>'Seleccione opción',
+                                  'Basico' => 'Basico',
+                                  'Intermedio' => 'Intermedio',
+                                  'Avanzado' => 'Avanzado'
+                                ],
+                                null, ['class' => 'form-control', 'placeholder' => '']) }}
+
+               </div>
+                <button type="submit" class="btn btn-info btn-flat">Buscar</button>
+           {{ Form::close() }}    
+
+</div>
+
+<!-- <div class="panel-body">
+        
+           {{ Form::open(['route' =>'bolsa_de_trabajos', 'method' => 'GET', 'class' => 'navbar-form navbar-left pull-right','role'=>'search']) }}
+                <div class="form-group">
+                   
+                    {{ Form::text('anho_de_graduacion', null, ['class' => 'form-control', 'placeholder' => 'Search bolsa_de_trabajo']) }}
+
+                </div>
+                <button type="submit" class="btn btn-info btn-flat">Buscar</button>
+           {{ Form::close() }}    
+
+</div>
+<div class="panel-body">
+        
+           {{ Form::open(['route' =>'bolsa_de_trabajos', 'method' => 'GET', 'class' => 'navbar-form navbar-left pull-right','role'=>'search']) }}
+                <div class="form-group">
+                   
+                    {{ Form::text('genero', null, ['class' => 'form-control', 'placeholder' => 'Search bolsa_de_trabajo']) }}
+
+                </div>
+                <button type="submit" class="btn btn-info btn-flat">Buscar</button>
+           {{ Form::close() }}    
+
+</div>
+<div class="panel-body">
+        
+           {{ Form::open(['route' =>'bolsa_de_trabajos', 'method' => 'GET', 'class' => 'navbar-form navbar-left pull-right','role'=>'search']) }}
+                <div class="form-group">
+                   
+                    {{ Form::text('anhos_de_experiencia', null, ['class' => 'form-control', 'placeholder' => 'Search bolsa_de_trabajo']) }}
+
+                </div>
+                <button type="submit" class="btn btn-info btn-flat">Buscar</button>
+           {{ Form::close() }}    
+
+</div>
+<div class="panel-body">
+        
+           {{ Form::open(['route' =>'bolsa_de_trabajos', 'method' => 'GET', 'class' => 'navbar-form navbar-left pull-right','role'=>'search']) }}
+                <div class="form-group">
+                   
+                    {{ Form::text('ingles', null, ['class' => 'form-control', 'placeholder' => 'Search bolsa_de_trabajo']) }}
+
+                </div>
+                <button type="submit" class="btn btn-info btn-flat">Buscar</button>
+           {{ Form::close() }}    
+
+</div>
+<div class="panel-body">
+        
+           {{ Form::open(['route' =>'bolsa_de_trabajos', 'method' => 'GET', 'class' => 'navbar-form navbar-left pull-right','role'=>'search']) }}
+                <div class="form-group">
+                   
+                    {{ Form::text('postgrado', null, ['class' => 'form-control', 'placeholder' => 'Search bolsa_de_trabajo']) }}
+
+                </div>
+                <button type="submit" class="btn btn-info btn-flat">Buscar</button>
+           {{ Form::close() }}    
+
+</div> -->
+<div class="box-body">              
+<table class="display table table-hover" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+              
+                <th>Nombre</th>  
+                <th>Año de Graduacion</th>          
+                <th>Genero</th>
+                <th>Email</th>
+                <th text-center style="width: 100px;">Acciónes </th>
+            </tr>
+        </thead>         
+   <tbody>
+    @foreach($bolsa_de_trabajos as $bolsa_de_trabajo)
+         <tr>  
+             
+             <td>{{ $bolsa_de_trabajo->nombre }}</td>  
+             <td>{{ $bolsa_de_trabajo->anho_de_graduacion }}</td>
+             <td>{{ $bolsa_de_trabajo->genero }}</td>
+             <td>{{ $bolsa_de_trabajo->email }}</td>
+             <td>
+             <a class="btn btn-primary" class="download_file" href="{{ route('bolsa_de_trabajo',$bolsa_de_trabajo->id)}}" ><span>&nbsp;</span>Ver
+                    <i class="fa fa-pencil-square"></i>
+                </a>
+                <a class="btn btn-primary" class="download_file" href="{{ asset('/file/getBolsa_de_trabajo/'.$bolsa_de_trabajo->curriculum) }}" ><i class="fa fa-download" aria-hidden="true"></i><span>&nbsp;</span>Curriculum
+                    <i ></i>
+                </a>
+            </td>
+        </tr>
+    @endforeach
+
+    </tbody>
+   </table>
+    {{ $bolsa_de_trabajos->render() }}
+</div> 
+</div>    
 @stop
-
-
- 
- 
-
-         

@@ -21,6 +21,7 @@
             <div class="col-md-10 p0">
                 <div class="collapse navbar-collapse" id="min_navbar">
                     <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{{route('plandeestudio')}}">Plan de Estudio</a></li>
                         <li class="dropdown submenu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Legal</a>
                             <ul class="dropdown-menu">
@@ -33,10 +34,10 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Servicios</a>
                             <ul class="dropdown-menu other_dropdwn">
                                 
-                                <li class="@if(isset($noticiasActive))  {{ 'active' }}  @endif"><a href="{{ route('noticias') }}">Noticias</a></li>
-                                <li class="@if(isset($eventosActive))  {{ 'active' }}  @endif"><a href="{{ route('eventos') }}">Eventos</a></li>
-                                <li class="@if(isset($cronogramasActive))  {{ 'active' }}  @endif"><a href="{{ route('cronogramas') }}">Cronograma</a></li>
-                                <li class="@if(isset($bolsa_de_trabajosActive))  {{ 'active' }}  @endif"><a href="{{ route('bolsa_de_trabajos') }}">Bolsa de Trabajo</a></li>
+                                <li ><a href="{{ route('noticias') }}">Noticias</a></li>
+                                <li ><a href="{{ route('eventos') }}">Eventos</a></li>
+                                <li ><a href="{{ route('cronogramas') }}">Cronograma</a></li>
+                                <li ><a href="{{ route('bolsa_de_trabajos') }}">Bolsa de Trabajo</a></li>
                             </ul>
                         </li>
 

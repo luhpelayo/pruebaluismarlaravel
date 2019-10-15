@@ -312,7 +312,7 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
 }
 .header_aera .navbar-collapse .navbar-nav.navbar-right li a {
   font: 700 14px/100px "Roboto", sans-serif;
-  color: #222222;
+  color: #fff;
   text-transform: uppercase;
   padding: 0;
   padding-left: 30px;
@@ -323,7 +323,7 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
 .header_aera .navbar-collapse .navbar-nav.navbar-right li .nav_searchFrom {
   width: 100px;
   background: #f6b60b;
-  color: #fff;
+  color: #222222;
   padding: 0;
   text-align: center;
   margin-left: 15px;

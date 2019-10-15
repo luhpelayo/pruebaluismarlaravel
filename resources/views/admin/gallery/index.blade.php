@@ -8,6 +8,19 @@
         GALERIA <a href="{{ route('galleries.create') }}" class="btn btn-success"><i class="fa fa-plus-circle"></i> Nuevo</a>
     </h1>
 </div>
+
+<div class="panel-body">
+        
+           {{ Form::open(['route' =>'bolsa_de_trabajos.index', 'method' => 'GET', 'class' => 'navbar-form navbar-left pull-right','role'=>'search']) }}
+                <div class="form-group">
+                   
+                    {{ Form::text('content', null, ['class' => 'form-control', 'placeholder' => 'Search bolsa_de_trabajo']) }}
+
+                </div>
+                <button type="submit" class="btn btn-info btn-flat">Buscar</button>
+           {{ Form::close() }}    
+
+</div>
 <div class="box-body">              
  <table class="table table-bordered table-hover"  id="dataTable_gallery">
         <thead>

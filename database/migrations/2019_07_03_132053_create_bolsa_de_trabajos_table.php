@@ -16,11 +16,18 @@ class CreateBolsaDeTrabajosTable extends Migration
         Schema::create('bolsa_de_trabajos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre');
-            $table->string('nroregistro');
+            $table->string('anho_de_graduacion');
+            $table->string('genero');
+            $table->string('anhos_de_experiencia');
+            $table->string('paquetes_informaticos');
+            $table->string('ingles');
+            $table->string('maestrias');
+            $table->string('postgrado');
             $table->string('email');
             $table->string('telefono');
-            $table->string('carta_de_presentacion');
+  
             $table->string('curriculum');
+            $table->dateTime('event_date');
             $table->timestamps();
         });
     }

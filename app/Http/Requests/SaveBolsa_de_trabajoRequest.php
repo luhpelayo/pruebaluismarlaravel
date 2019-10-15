@@ -25,7 +25,13 @@ class SaveEventoRequest extends FormRequest
     {
         return [
             'nombre'         => 'required',
-            'nroregistro'    => 'required',
+            'anho_de_graduacion' => 'required',
+            'genero' => 'required',
+            'anhos_de_experiencia' => 'required',
+            'paquetes_informaticos' => 'required',
+            'ingles' => 'required',
+            'maestrias' => 'required',
+            'postgrado' => 'required',
             'email'          => 'required',
             'telefono'       => 'required',
             'event_date'     => 'required',

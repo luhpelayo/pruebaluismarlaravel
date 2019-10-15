@@ -16,16 +16,30 @@ use Storage;
 
 class Bolsa_de_trabajoController extends Controller
 {
-    /**
+    // /**
+    //  * Display a listing of the resource.
+    //  *
+    //  * @return \Illuminate\Http\Response
+    //  */
+    // public function index()
+    // {
+
+
+    //     $bolsa_de_trabajo = Bolsa_de_trabajo::all();
+
+    //     return view('admin.bolsa_de_trabajos.index',compact('bolsa_de_trabajo'));
+    // }
+
+      /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $bolsa_de_trabajo = Bolsa_de_trabajo::all();
+        $bolsa_de_trabajo = Bolsa_de_trabajo::anho_de_graduacion($request->get('anho_de_graduacion'))->orderby('id','DESC')->paginate(2);
 
-        return view('admin.bolsa_de_trabajos.index',compact('bolsa_de_trabajo'));
+        return view('admin.bolsa_de_trabajos.index', compact('bolsa_de_trabajo'));
     }
 
 
@@ -49,7 +63,13 @@ class Bolsa_de_trabajoController extends Controller
     {
          $this->validate($request, [
             'nombre'      => 'required',
-            'nroregistro' => 'required',
+            'anho_de_graduacion' => 'required',
+            'genero' => 'required',
+            'anhos_de_experiencia' => 'required',
+            'paquetes_informaticos' => 'required',
+            'ingles' => 'required',
+            'maestrias' => 'required',
+            'postgrado' => 'required',
             'email'       => 'required',
             'telefono'    => 'required',
            // 'event_date' => 'required',
@@ -65,7 +85,13 @@ class Bolsa_de_trabajoController extends Controller
 
         $bolsa_de_trabajo=new Bolsa_de_trabajo;
         $bolsa_de_trabajo->nombre=$request->get('nombre');
-        $bolsa_de_trabajo->nroregistro=$request->get('nroregistro');
+        $bolsa_de_trabajo->anho_de_graduacion=$request->get('anho_de_graduacion');
+        $bolsa_de_trabajo->genero=$request->get('genero');
+        $bolsa_de_trabajo->anhos_de_experiencia=$request->get('anhos_de_experiencia');
+        $bolsa_de_trabajo->paquetes_informaticos=$request->get('paquetes_informaticos');
+        $bolsa_de_trabajo->ingles=$request->get('ingles');
+        $bolsa_de_trabajo->maestrias=$request->get('maestrias');
+        $bolsa_de_trabajo->postgrado=$request->get('postgrado');
         $bolsa_de_trabajo->email=$request->get('email');
         $bolsa_de_trabajo->telefono=$request->get('telefono');
       //  $bolsa_de_trabajo->event_date=$request->get('event_date');
@@ -73,15 +99,15 @@ class Bolsa_de_trabajoController extends Controller
      
      //   $evento->user_id= \Auth::user()->id;
    
-        $file= $request->file('file');
+        // $file= $request->file('file');
 
-          $file_route = time().'_'.$file->getClientOriginalName();
+        //   $file_route = time().'_'.$file->getClientOriginalName();
             
-          if(Storage::disk('bolsa_de_trabajo/archivo')->put($file_route, file_get_contents($file->getRealPath()))) {
-            $bolsa_de_trabajo->carta_de_presentacion= $file_route;
-          } else {
-            Flash::error(' Error al guardar el archivo en los bolsa_de_trabajos. ');
-          }
+        //   if(Storage::disk('bolsa_de_trabajo/archivo')->put($file_route, file_get_contents($file->getRealPath()))) {
+        //     $bolsa_de_trabajo->carta_de_presentacion= $file_route;
+        //   } else {
+        //     Flash::error(' Error al guardar el archivo en los bolsa_de_trabajos. ');
+        //   }
           $file= $request->file('file');
 
           $file_route = time().'_'.$file->getClientOriginalName();
@@ -145,7 +171,13 @@ class Bolsa_de_trabajoController extends Controller
     
         $this->validate($request, [
             'nombre'      => 'required',
-            'nroregistro' => 'required',
+            'anho_de_graduacion' => 'required',
+            'genero' => 'required',
+            'anhos_de_experiencia' => 'required',
+            'paquetes_informaticos' => 'required',
+            'ingles' => 'required',
+            'maestrias' => 'required',
+            'postgrado' => 'required',
             'email'       => 'required',
             'telefono'    => 'required',
           //  'event_date' => 'required',
@@ -158,23 +190,29 @@ class Bolsa_de_trabajoController extends Controller
            
               
           $bolsa_de_trabajo->nombre= $request->nombre;
-          $bolsa_de_trabajo->nroregistro= $request->nroregistro;
+          $bolsa_de_trabajo->anho_de_graduacion= $request->anho_de_graduacion;
+          $bolsa_de_trabajo->genero= $request->genero;
+          $bolsa_de_trabajo->anhos_de_experiencia= $request->anhos_de_experiencia;
+          $bolsa_de_trabajo->paquetes_informaticos= $request->paquetes_informaticos;
+          $bolsa_de_trabajo->ingles= $request->ingles;
+          $bolsa_de_trabajo->maestrias= $request->maestrias;
+          $bolsa_de_trabajo->postgrado= $request->postgrado;
           $bolsa_de_trabajo->email= $request->email;
           $bolsa_de_trabajo->telefono= $request->telefono;
          // $bolsa_de_trabajo->event_date=$request->get('event_date');
          $bolsa_de_trabajo->event_date=$fecha_actual;
 
-          $file= $request->file('file');
-//   if($file != null) {
-            $file_route = time().'_'.$file->getClientOriginalName();
+//           $file= $request->file('file');
+// //   if($file != null) {
+//             $file_route = time().'_'.$file->getClientOriginalName();
 
-            if(Storage::disk('bolsa_de_trabajo/archivo')->put($file_route, file_get_contents($file->getRealPath()))){
-              Storage::disk('bolsa_de_trabajo/archivo')->delete($bolsa_de_trabajo->carta_de_presentacion);
-              $bolsa_de_trabajo->carta_de_presentacion= $file_route;
-            } else {
-              Flash::error(' Error al guardar el archivo en las bolsa_de_trabajos. ');
-            }
-    //      }
+//             if(Storage::disk('bolsa_de_trabajo/archivo')->put($file_route, file_get_contents($file->getRealPath()))){
+//               Storage::disk('bolsa_de_trabajo/archivo')->delete($bolsa_de_trabajo->carta_de_presentacion);
+//               $bolsa_de_trabajo->carta_de_presentacion= $file_route;
+//             } else {
+//               Flash::error(' Error al guardar el archivo en las bolsa_de_trabajos. ');
+//             }
+//     //      }
 
     $file= $request->file('file');
     //   if($file != null) {
@@ -207,7 +245,7 @@ class Bolsa_de_trabajoController extends Controller
           $deleted = $bolsa_de_trabajo->delete();
 
           if($deleted == true){
-            Storage::disk('bolsa_de_trabajo/archivo')->delete($bolsa_de_trabajo->carta_de_presentacion);
+            // Storage::disk('bolsa_de_trabajo/archivo')->delete($bolsa_de_trabajo->carta_de_presentacion);
 
             Storage::disk('bolsa_de_trabajo/archivo')->delete($bolsa_de_trabajo->curriculum);
                       
