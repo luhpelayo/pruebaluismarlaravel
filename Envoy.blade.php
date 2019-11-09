@@ -1,4 +1,4 @@
-@servers( [ 'aws' => 'ubuntu@18.220.190.211'  ] )
+@servers(['aws' => 'ubuntu@18.220.190.211'])
 
 @include( 'vendor/autoload.php' )
 
