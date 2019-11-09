@@ -6,9 +6,4 @@
 echo "tarea test ejecutada"
 @endtask
 
-@task( 'ls', [ 'on' => '$on'] )
-cd /var/www/html
-ls -la
-echo "tarea test ejecutada";
-@endtask
 
