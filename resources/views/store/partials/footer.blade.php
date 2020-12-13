@@ -26,7 +26,7 @@
                         <li><a href="/noticias"><i class="fa fa-chevron-right"></i>Noticias</a></li>
                         <li><a href="/eventos"><i class="fa fa-chevron-right"></i>Eventos</a></li>
                         <li><a href="/contacto"><i class="fa fa-chevron-right"></i>Contacto</a></li>
-                        <li><a href="/galeria"><i class="fa fa-chevron-right"></i>Galeria</a></li>
+                        <li><a href="/gallery"><i class="fa fa-chevron-right"></i>Galeria</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4 col-sm-6 footer_about">

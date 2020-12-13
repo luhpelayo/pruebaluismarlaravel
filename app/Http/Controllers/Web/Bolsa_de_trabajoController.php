@@ -12,8 +12,19 @@ class Bolsa_de_trabajoController extends Controller
   
   public function indexInformativa(Request $request)
   {
+
+          //  dd($request);
+          //    exit;
       $bolsa_de_trabajos = Bolsa_de_trabajo::anho_de_graduacion($request->get('anho_de_graduacion'))->orderby('id','DESC')->paginate(10);
- 
+   
+      // $bolsa_de_trabajos = DB::table('bolsa_de_trabajos')->whereIn('anho_de_graduacion',$request->get('anho_de_graduacion'))->where('nombre', '=',$request->get('nombre'))->orderby('id','DESC')->paginate(10);
+
+
+      // $bolsa_de_trabajos = Bolsa_de_trabajo::where([
+      //   ['anho_de_graduacion','=',$request->get('anho_de_graduacion')],
+      //   ['nombre','=',$request->get('nombre')],
+      //   ])->get();
+     
       return view('store.bolsa_de_trabajos', compact('bolsa_de_trabajos'));
   }
  

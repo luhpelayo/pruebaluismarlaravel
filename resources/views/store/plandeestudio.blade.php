@@ -399,7 +399,7 @@ SISTEMA DE REG. FINANCIERA
                  
                    </div>
                  
-                   <div class="cns-content"> 
+                   <div class="col-md-6 col-sm-6 cns-content"> 
                         
                         <a href="#" ></a>
                         <p align="right">FIN500<br/>

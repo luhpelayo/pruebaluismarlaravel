@@ -13,11 +13,11 @@
 <div class="panel-body">
         
            {{ Form::open(['route' =>'bolsa_de_trabajos', 'method' => 'GET', 'class' => 'navbar-form navbar-left pull-right','role'=>'search']) }}
-                <div class="form-group">Nombre:
+                <!-- <div class="form-group">Nombre:
                    
                     {{ Form::text('nombre', null, ['class' => 'form-control', 'placeholder' => '']) }}
 
-                </div>
+                </div> -->
                 <div class="form-group">Año de Graduacion:
                    
                    {{ Form:: select(
@@ -39,7 +39,7 @@
                                 null, ['class' => 'form-control', 'placeholder' => '']) }}
 
                </div>
-               <div class="form-group">Genero:
+               <!-- <div class="form-group">Genero:
                    
                    {{ Form:: select(
                              'genero',
@@ -85,7 +85,7 @@
                                 ],
                                 null, ['class' => 'form-control', 'placeholder' => '']) }}
 
-               </div>
+               </div> -->
                 <button type="submit" class="btn btn-info btn-flat">Buscar</button>
            {{ Form::close() }}    
 
