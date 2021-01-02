@@ -7,7 +7,7 @@
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"><b>A</b>LT</span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>INGENIERIA</b>FINANCIERA</span>
+          <span class="logo-lg"><b>Sistema</b>Pelayo</span>
 
         </a>
 
@@ -113,7 +113,7 @@
             @can('tramite.index')
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-file-word-o"></i><span>Tramites</span><i class="fa fa-angle-left pull-right"></i>
+                <i class="fa fa-file-word-o"></i><span>Orden de trabajo</span><i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
                 
@@ -138,7 +138,7 @@
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-pie-chart"></i>
-                <span>Datos Estudiantes</span>
+                <span>Reportes</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
@@ -230,7 +230,7 @@
         <div class="pull-right hidden-xs">
           <b>Version</b> 2.3.0
         </div>
-        <strong>Copyright &copy; 2019 <a href="#">Ingenieria Financiera</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 2020 <a href="#">MKT Pelayo</a>.</strong> All rights reserved.
       </footer>
 
 

@@ -186,7 +186,7 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
 /*--------------------------------------------------*/
 /* Top header */
 .top_header_area {
-  background:  #3d9e1d;
+  background:  #000000;
 }
 .top_header_area .top_nav li a {
   font: 400 14px/50px "Roboto", sans-serif;
@@ -254,7 +254,7 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
 /* End Top header 2 */
 /* Header Aera */
 .header_aera {
-   background: #44ac09;
+   background: #020202;
   border-radius: 0;
   border: 0;
   margin: 0;

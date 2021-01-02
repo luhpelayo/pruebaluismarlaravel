@@ -6,7 +6,8 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="col-md-2 p0">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="{{route('/')}}"><img src="{{ asset('images/images/logo1.png')}}" class="img-responsive"></a>
+             <!--   <a class="navbar-brand" href="{{route('/')}}"><img src="{{ asset('images/images/logo1.png')}}" class="img-responsive"></a> -->
+                    <a class="navbar-brand"  href="{{route('/')}}">MKT Pelayo</a></li>
                     <button type="button" class="navbar-toggle collapsed" style="margin-top: 0px;border-color: #ffffff;" data-toggle="collapse" data-target="#min_navbar">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -21,7 +22,7 @@
             <div class="col-md-10 p0">
                 <div class="collapse navbar-collapse" id="min_navbar">
                     <ul class="nav navbar-nav navbar-right">
-                    <li><a href="{{route('plandeestudio')}}">Plan de Estudio</a></li>
+                    <li><a href="{{route('plandeestudio')}}">Empresa</a></li>
                         <li class="dropdown submenu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Legal</a>
                             <ul class="dropdown-menu">
@@ -49,3 +50,14 @@
             </div>
         </div><!-- /.container -->
     </nav>
+
+
+
+    <style>
+
+
+.navbar-default .navbar-brand{
+color: #f8b81d;
+} 
+
+</style>
