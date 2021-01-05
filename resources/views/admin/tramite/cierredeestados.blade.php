@@ -7,7 +7,7 @@
         <div class="page-header  text-center">
            <h1>
            <i class="fa fa-user-secret"style="color:green"></i>
-              RESPONDER LA SOLICITUD <small>[Editar Tramite]</small>
+              RESPONDER LA SOLICITUD <small>[Editar  Orden de trabajo]</small>
           </h1>
         </div><!-- /.box-header -->             
     <div class="col-xs-12 col-md-8 col-md-offset-2 col-xl-6 col-xl-offset-3">

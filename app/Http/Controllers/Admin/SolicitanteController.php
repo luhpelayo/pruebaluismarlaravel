@@ -44,6 +44,9 @@ class SolicitanteController extends Controller
         $solicitante->nombre=$request->get('nombre');
         $solicitante->apellido=$request->get('apellido');
         $solicitante->telefono=$request->get('telefono');
+        $solicitante->direccion=$request->get('direccion');
+        $solicitante->lat=$request->get('lat');
+        $solicitante->lon=$request->get('lon');
         $solicitante->email=$request->get('email');
         $solicitante->save();
 

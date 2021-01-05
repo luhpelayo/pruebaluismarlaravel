@@ -72,6 +72,48 @@
                   ) 
               !!}
           </div>
+          <div class="form-group col-xs-6">
+              <label for="direccion">Direccion:</label>
+              {!! 
+                  Form::text(
+                      'direccion', 
+                      null, 
+                      array(
+                          'class'=>'form-control',
+                          'placeholder' => 'Ingrese direccion...',
+                                        'autofocus' => 'autofocus'
+                      )
+                  ) 
+              !!}
+          </div>
+          <div class="form-group col-xs-6">
+              <label for="lat">Lat:</label>
+              {!! 
+                  Form::text(
+                      'lat', 
+                      null, 
+                      array(
+                          'class'=>'form-control',
+                          'placeholder' => 'Ingrese numero lat...',
+                                        'autofocus' => 'autofocus'
+                      )
+                  ) 
+              !!}
+          </div>
+          <div class="form-group col-xs-6">
+              <label for="lon">Lon:</label>
+              {!! 
+                  Form::text(
+                      'lon', 
+                      null, 
+                      array(
+                          'class'=>'form-control',
+                          'placeholder' => 'Ingrese numero lon...',
+                                        'autofocus' => 'autofocus'
+                      )
+                  ) 
+              !!}
+          </div>
           <div class="form-group col-xs-12">
               <label for="email">Email:</label>
               {!! 

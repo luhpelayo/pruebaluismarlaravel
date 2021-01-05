@@ -3,7 +3,7 @@
 @section('content')
 <div class="box box-primary">
 <div class="page-header text-center">
-    <h1>TRAMITES
+    <h1>Orden de trabajo
 
     </h1>
 </div>

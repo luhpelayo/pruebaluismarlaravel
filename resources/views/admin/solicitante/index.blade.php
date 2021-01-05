@@ -28,6 +28,9 @@
                 <th>Nombre</th>  
                 <th>Apellido</th>          
                 <th>Telefono</th>
+                <th>Direccion</th>
+                <th>Lat</th>
+                <th>Lon</th>
                 <th>Email</th>
                 <th text-center style="width: 100px;">Acciónes </th>
             </tr>
@@ -39,6 +42,9 @@
              <td>{{ $solicitante->nombre }}</td> 
              <td>{{ $solicitante->apellido }}</td>
              <td>{{ $solicitante->telefono }}</td>
+             <td>{{ $solicitante->direccion }}</td>
+             <td>{{ $solicitante->lat }}</td>
+             <td>{{ $solicitante->lon }}</td>
              <td>{{ $solicitante->email }}</td>
              <td>
                 <a href="{{ route('solicitante.edit', $solicitante) }}" class="btn btn-primary">

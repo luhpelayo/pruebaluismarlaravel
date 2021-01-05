@@ -28,6 +28,9 @@ class SaveSolicitanteRequest extends FormRequest
             'nombre'        => 'required',
             'apellido'      => 'required',
             'telefono'      => 'required',
+            'direccion'     => 'required',
+            'lat'           => 'required',
+            'lon'           => 'required',
             'email'         => 'required'
         ];
     }

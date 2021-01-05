@@ -1,7 +1,7 @@
 @section('content')
 <div class="box box-primary">
 <div class="page-header text-center">
-    <h1>TRAMITES
+    <h1>Orden de trabajo
         @can('tramite.create') 
         <a href="{{ route('tramite.create') }}" class="btn btn-success"><i class="fa fa-plus-circle"></i> Nuevo</a>
         @endcan

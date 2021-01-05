@@ -72,7 +72,7 @@ class TramiteController extends Controller
         $area_id= DB::table('users')->where('id', $user)->value('area_id');
         $area= DB::table('areas')->where('id', $area_id)->value('descripcion');
 
-        if ($area=='Secretaria/Dirección de Carrera') {      
+        if ($area=='Recepcion') {      
 
         $estado = DB::table('estados')->where('estado', 'Recibido')->value('id');
         //$tramites = Tramite::where('estado_id',$estado)->get();t
@@ -165,7 +165,7 @@ class TramiteController extends Controller
         $area_id= DB::table('users')->where('id', $user)->value('area_id');
         $area= DB::table('areas')->where('id', $area_id)->value('descripcion');
 
-        if ($area=='Secretaria/Dirección de Carrera') {   
+        if ($area=='Recepcion') {   
 
 
         $estado = DB::table('estados')->where('estado', 'Aceptada')->value('id');
@@ -199,7 +199,7 @@ class TramiteController extends Controller
         $area_id= DB::table('users')->where('id', $user)->value('area_id');
         $area= DB::table('areas')->where('id', $area_id)->value('descripcion');
 
-        if ($area=='Secretaria/Dirección de Carrera') {   
+        if ($area=='Recepcion') {   
 
         $estado = DB::table('estados')->where('estado', 'Rechazada')->value('id');
         //$tramites = Tramite::where('estado_id',$estado)->get();
@@ -230,7 +230,7 @@ class TramiteController extends Controller
         $area_id= DB::table('users')->where('id', $user)->value('area_id');
         $area= DB::table('areas')->where('id', $area_id)->value('descripcion');
 
-        if ($area=='Secretaria/Dirección de Carrera') {   
+        if ($area=='Recepcion') {   
 
 
         $estado = DB::table('estados')->where('estado', 'Despachado')->value('id');

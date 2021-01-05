@@ -68,6 +68,42 @@
                   ) 
               !!}
           </div>
+          <div class="form-group col-xs-6">
+              <label for="direccion">Direccion:</label>
+              {!! 
+                  Form::text(
+                      'direccion', 
+                      null, 
+                      array(
+                          'class'=>'form-control'
+                      )
+                  ) 
+              !!}
+          </div>
+          <div class="form-group col-xs-6">
+              <label for="lat">Lat:</label>
+              {!! 
+                  Form::text(
+                      'lat', 
+                      null, 
+                      array(
+                          'class'=>'form-control'
+                      )
+                  ) 
+              !!}
+          </div>
+          <div class="form-group col-xs-6">
+              <label for="Lon">Lon:</label>
+              {!! 
+                  Form::text(
+                      'lon', 
+                      null, 
+                      array(
+                          'class'=>'form-control'
+                      )
+                  ) 
+              !!}
+          </div>
           <div class="box-body col-xs-12">
               <label for="email">Email:</label>
               {!! 

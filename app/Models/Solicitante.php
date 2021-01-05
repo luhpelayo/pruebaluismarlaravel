@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Solicitante extends Model
 {
     protected $table = 'solicitantes';
-    protected $fillable = ['ci','nombre','apellido','telefono','email'];
+    protected $fillable = ['ci','nombre','apellido','telefono','direccion','lat','lon','email'];
 
     public function receptions()
     {

@@ -9,7 +9,7 @@
       <div class="page-header  text-center">
         <h1>
           <i class="fa fa-book"style="color:green"></i>
-          TRAMITES <small>[Agregar Tramite]</small>
+          Orden de trabajo <small>[Agregar  Orden de trabajo]</small>
         </h1>
       </div>
 
