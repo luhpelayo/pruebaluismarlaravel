@@ -15,6 +15,8 @@ class Tramite extends Model
         return $this->belongsTo('App\Models\Estado');
     }
 
+  
+
     public function derivacions()
     {
         return $this->hasMany('App\Models\Derivacion');

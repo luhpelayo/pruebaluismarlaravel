@@ -120,8 +120,8 @@
                 <li><a href="{{ route('tramite.index') }}"><i class="fa fa-circle-o"></i>Recepcion</a></li>
                 <li><a href="{{ route('tramite.index') }}"><i class="fa fa-circle-o"></i>Recibido</a></li>
                 <li><a href="{{ route('indexdespachado') }}"><i class="fa fa-circle-o"></i>Despacho</a></li>
-                <li><a href="{{ route('indexrechazada') }}"><i class="fa fa-circle-o"></i>Solicitudes Rechazadas</a></li>
-                <li><a href="{{ route('indexaceptada') }}"><i class="fa fa-circle-o"></i>Solicitudes Aceptadas</a></li>
+                <li><a href="{{ route('indexrechazada') }}"><i class="fa fa-circle-o"></i>Solicitudes No Terminadas</a></li>
+                <li><a href="{{ route('indexaceptada') }}"><i class="fa fa-circle-o"></i>Solicitudes Terminadas</a></li>
               </ul>
             </li>
             @endcan

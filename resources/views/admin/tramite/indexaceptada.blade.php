@@ -1,10 +1,8 @@
 @section('content')
 <div class="box box-primary">
 <div class="page-header text-center">
-    <h1> Orden de trabajo
-        @can('tramite.create') 
-        <a href="{{ route('tramite.create') }}" class="btn btn-success"><i class="fa fa-plus-circle"></i> Nuevo</a>
-        @endcan
+    <h1> Orden de trabajo Terminados
+
     </h1>
 </div>
 <div class="box-body">              
@@ -13,10 +11,12 @@
             <tr>
                 <th>Estado</th>
                 <th>Fecha de recepcion</th>
-                <th>Nro.Oficio</th>
+                <th>Proceso</th>
                 <th>Referencia</th>  
                 <th>Tipo recepcion</th>
                 <th>Atendido</th>
+                <th>Nro. Solicitud</th>
+                
        
             </tr>
         </thead>         
@@ -26,7 +26,7 @@
          <tr>
             <th>
             @if($tramite->estado_id == '4')
-                    <span class="label label-info">Aceptada</span>
+                    <span class="label label-info">Terminado</span>
                 @else
                     <span class="label label-danger">Derivado</span>
                 @endif
@@ -38,7 +38,8 @@
              <td>{{ $tramite->nroficio }}</td> 
              <td>{{ $tramite->referencia }}</td>
              <td>{{ $tramite->tipo }}</td>
-             <td>{{ $tramite->user_id}}</td>    
+             <td>{{ $tramite->user_id}}</td> 
+             <td>{{ $tramite->id}}</td>      
            
     
             <td>

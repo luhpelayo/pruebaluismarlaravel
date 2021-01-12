@@ -7,7 +7,7 @@
         <div class="page-header  text-center">
            <h1>
            <i class="fa fa-user-secret"style="color:green"></i>
-              RESPONDER LA SOLICITUD <small>[Editar  Orden de trabajo]</small>
+              RESPONDER LA SOLICITUD <small></small>
           </h1>
         </div><!-- /.box-header -->             
     <div class="col-xs-12 col-md-8 col-md-offset-2 col-xl-6 col-xl-offset-3">
@@ -19,7 +19,7 @@
         {!! Form::model($tramite, array('route' => array('tramite.update', $tramite))) !!}
 
             <input type="hidden" name="_method" value="PUT">
-            <label for="nroficio">Nro. Oficio:</label>
+            <label for="nroficio">Area:</label>
                     <h2>{{ $tramite->nroficio }}</h2>
             <div class="form-group" id="nro_oficio" style="display: none;">
                     <label for="nroficio">Nro. Oficio:</label>
@@ -37,14 +37,33 @@
                     !!}
                 </div>
 
+                <label for="nroficio">Nro. de Solicitud:</label>
+                    <h2>{{ $tramite->id }}</h2>
+            <div class="form-group" id="nro_oficio" style="display: none;">
+                    <label for="nroficio">Nro. Oficio:</label>
+                  
+                    {!! 
+                        Form::text(
+                            'nroficio', 
+                            null, 
+                            array(
+                                'class'=>'form-control',
+                                'placeholder' => 'Ingrese numero oficio...',
+                                              'autofocus' => 'autofocus' 
+                            )
+                        ) 
+                    !!}
+                </div>
+                
+
             <div class="form-group">
-                  <label class="control-label" for="tipo">Solicitud del Tramite:</label>
+                  <label class="control-label" for="tipo">Estado:</label>
                     {!! Form:: select(
                              'tipo',
                                 [
                                   ''=>'Seleccion la opcion',
-                                  'aceptada' => 'Aceptada',
-                                  'rechazada'=>'Rechazada'
+                                  'Terminado' => 'Terminado',
+                                  'No Terminado'=>'No Terminado'
                                 ],
                                 null,
                                    ['

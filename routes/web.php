@@ -69,7 +69,7 @@ Route::resource('archivos', 'Admin\FileController');
 Route::get('derivacion/{id}', 'Admin\DerivacionController@index')->name('derivacion');
 Route::post('dericion/store/{id}', 'Admin\DerivacionController@setDetalle')->name('dericion/store');
 
-
+//Route::get('tramite', 'Admin\TramiteController@editver')->name('tramite');
 
 
 //File
@@ -151,7 +151,8 @@ Route::middleware(['auth'])->group(function(){
     Route::get('indexaceptada', 'Admin\TramiteController@indexaceptada')->name('indexaceptada');
     Route::get('indexrechazada', 'Admin\TramiteController@indexrechazada')->name('indexrechazada');
     Route::get('indexdespachado', 'Admin\TramiteController@indexdespachado')->name('indexdespachado');
-
+    Route::get('indexver/{id}', 'Admin\TramiteController@indexver')->name('tramite.indexver');
+    Route::get('indexsoli/{id}', 'Admin\TramiteController@indexsoli')->name('tramite.indexsoli');
     //sliders
     Route::resource('admin/sliders', 'Admin\SliderController');
     //Area

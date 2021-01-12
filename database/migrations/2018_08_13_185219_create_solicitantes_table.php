@@ -20,8 +20,10 @@ class CreateSolicitantesTable extends Migration
             $table->integer('ci');
             $table->integer('telefono');
             $table->string('direccion', 100);
-            $table->floatval('lat');
-            $table->floatval('lon');
+            $table->string('lat', 150);
+            $table->string('lon', 150);
+           // $table->floatval('lat');
+            //$table->floatval('lon');
             $table->string('email',100)->unique();
             $table->timestamps();
         });

@@ -26,7 +26,7 @@
          <tr>
             <th>
             @if($tramite->estado_id == '3')
-                    <span class="label label-info">Despachadon</span>
+                    <span class="label label-info">Despachado</span>
                 @else
                     <span class="label label-danger">Derivado</span>
                 @endif

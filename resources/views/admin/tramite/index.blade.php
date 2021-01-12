@@ -13,10 +13,13 @@
             <tr>
                 <th>Estado</th>
                 <th>Fecha de recepcion</th>
-                <th>Nro.Oficio</th>
+                <th>Proceso</th>
                 <th>Referencia</th>  
                 <th>Tipo recepcion</th>
                 <th>Atendido</th>
+                <th>Nro. Solicitud</th>
+              
+              
                 <th text-center style="width: 120px;">Acciones </th>
             </tr>
         </thead>         
@@ -39,8 +42,8 @@
              <td>{{ $tramite->referencia }}</td>
              <td>{{ $tramite->tipo }}</td>
              <td>{{ $tramite->user_id}}</td>    
+             <td>{{ $tramite->id}}</td>   
            
-    
             <td>
              
  
@@ -50,7 +53,9 @@
                 </a>
              
         
-
+                <a href="{{ route('tramite.indexsoli', $tramite->id) }}" class="btn btn-primary">
+                    <i class="fa fa-pencil-square"></i> Detalle
+                </a>
                 
                 
                 @can('tramite.edit')
