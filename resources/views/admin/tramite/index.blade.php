@@ -53,9 +53,7 @@
                 </a>
              
         
-                <a href="{{ route('tramite.indexsoli', $tramite->id) }}" class="btn btn-primary">
-                    <i class="fa fa-pencil-square"></i> Detalle
-                </a>
+            
                 
                 
                 @can('tramite.edit')
@@ -63,6 +61,7 @@
                     <i class="fa fa-pencil-square"></i>
                 </a>
                 @endcan
+
                @can('roles.destroy')
               {!! Form::open(['route' => ['tramite.destroy', $tramite],'style'=>'display:inline']) !!}
                         <input type="hidden" name="_method" value="DELETE">
@@ -71,6 +70,10 @@
                         </button>
               {!! Form::close() !!}  
               @endcan 
+              
+              <a href="{{ route('tramite.indexsoli', $tramite->id) }}" class="btn btn-primary">
+                    <i class="fa fa-pencil-square"></i> Detalle
+                </a>
             </td> 
         </tr>
     @endforeach

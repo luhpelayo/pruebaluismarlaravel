@@ -20,11 +20,11 @@
                              'nroficio',
                                 [
                                   ''=>'Seleccione opción',
-                                  'Intalacion' => 'Instalacion',
-                                  'Soporte' => 'Soporte',
-                                  'Retiro' => 'Retiro',
-                                  'Cableado' => 'Cableado',
-                                  'Mantenimiento' => 'Mantenimiento'
+                                  'Salon1' => 'Salon1',
+                                  'Salon2' => 'Salon2',
+                                  'Salon3' => 'Salon3',
+                                  'Salon4' => 'Salon4',
+                                  'Salon5' => 'Salon5'
                                
                                 ],
                                 null,

@@ -12,7 +12,7 @@
 box-shadow: 0px 0px 32px -2px rgba(0,0,0,0.08); background-color: #FFF">
 	<div class="row">
 		<div class="col-xs-12">
-			<h3>Noticias recientes</h3>
+			<h3>Promos recientes</h3>
 			<div class="divider-md pull-left"></div>
 		</div>
 	</div>
@@ -41,7 +41,7 @@ box-shadow: 0px 0px 32px -2px rgba(0,0,0,0.08); background-color: #FFF">
 								<p class="text-justify">
 										{!! $noticia->precontent !!}
 										<button  style="background-color: #339CFF" class="btn btn-danger">
-                                     <a href="{{ route('noticia',$noticia->id)}}" target="_blank" class="blancotext">LEER MAS</a>
+                                     <a href="{{ route('noticia',$noticia->id)}}" target="_blank" class="blancotext">VER MAS</a>
                                     </button>
 									</p>  
 								

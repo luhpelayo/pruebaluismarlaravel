@@ -8,7 +8,7 @@ box-shadow: 0px 0px 32px -2px rgba(0,0,0,0.08); background-color: #FFF">
   <div class="row building_construction_row">
 	<div class="row">
 		<div class="col-xs-12">
-			<h3>Noticias recientes</h3>
+			<h3>Promos recientes</h3>
 			<div class="divider-md pull-left"></div>
 		</div>
 	</div>
@@ -39,7 +39,7 @@ box-shadow: 0px 0px 32px -2px rgba(0,0,0,0.08); background-color: #FFF">
 								<p class="text-justify">
 									
 										<button  style="background-color: #339CFF" class="btn btn-danger">
-                                     <a href="{{ route('noticia',$noticia->id)}}"  class="blancotext">LEER MAS</a>
+                                     <a href="{{ route('noticia',$noticia->id)}}"  class="blancotext">VER MAS</a>
                                     </button>
 									</p>  
 								
@@ -63,7 +63,7 @@ box-shadow: 0px 0px 32px -2px rgba(0,0,0,0.08); background-color: #FFF">
 				@endforeach
 			@else
 				<div class="panel-body">
-					<h1 class="text-center">No hay noticias</h1>
+					<h1 class="text-center">No hay promo</h1>
 				</div>
 				<div class="bloque"></div>
 			@endif

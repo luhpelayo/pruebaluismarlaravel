@@ -25,6 +25,8 @@ class CreateSolicitantesTable extends Migration
            // $table->floatval('lat');
             //$table->floatval('lon');
             $table->string('email',100)->unique();
+            $table->string('precio', 100);
+            $table->string('url_img')->nullable();
             $table->timestamps();
         });
     }

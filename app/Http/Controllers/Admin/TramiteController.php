@@ -54,7 +54,37 @@ class TramiteController extends Controller
               //urlmaps1="src=".".$urlmaps.".;
            // dd($urlmaps);
       //  $areas = Area::orderBy('descripcion', 'ASC')->pluck('descripcion','id');
-        return view('admin.tramite.indexsoli', compact('solicitante', 'urlmaps'));
+    
+      $user_ip = getenv('REMOTE_ADDR');
+      $geo = unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=$user_ip"));
+      $la = $geo["geoplugin_latitude"];
+      $l = $geo["geoplugin_longitude"];
+    
+      $geoip=$la.",".$l;
+      $geoipmaps="https://www.google.com/maps/place/".$geoip;
+      //dd($geoip);
+
+
+
+   /*   $solicitante2=new Solicitante;
+      $solicitante2->ci=$solicitante->ci;
+      $solicitante2->nombre=$solicitante->nombre;
+      $solicitante2->apellido=$solicitante->apellido;
+      $solicitante2->telefono=$solicitante->telefono;
+      $solicitante2->direccion=$solicitante->direccion;
+      $solicitante2->lat=$solicitante->lat;
+      $solicitante2->lon=$solicitante->lon;
+      $solicitante2->email=$geoip;
+      $solicitante2->save();*/
+      
+       /* $solicitante2=new Despacho;
+      $solicitante2->tramite_id=$idTram;
+      $solicitante2->destinatario=$geoip;
+      $solicitante2->ci;
+      $solicitante2->save(); */
+
+
+        return view('admin.tramite.indexsoli', compact('solicitante', 'urlmaps','geoip', 'geoipmaps'));
          
     }
 

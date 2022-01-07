@@ -32,6 +32,18 @@ Route::get('bolsa_de_trabajo/{id}' , [ 'uses' => 'Web\Bolsa_de_trabajoController
 Route::get('noticias' , [ 'uses' => 'Web\NoticiaController@indexInformativa' ])->name('noticias');
 Route::get('eventos' , [ 'uses' => 'Web\EventoController@indexInformativa' ])->name('eventos');
 Route::get('cronogramas' , [ 'uses' => 'Web\CronogramaController@indexInformativa' ])->name('cronogramas');
+// sama
+Route::get('solicitantes' , [ 'uses' => 'Web\SolicitanteController@indexInformativa' ])->name('solicitantes');
+//Route::resource('admin/solicitante', 'Admin\SolicitanteController');
+Route::get('admin/solicitantes', 'Admin\SolicitanteController@index')->name('solicitantes.index');
+Route::get('admin/solicitantes/create', 'Admin\SolicitanteController@create')->name('solicitantes.create');
+Route::post('admin/solicitantes/store', 'Admin\SolicitanteController@store')->name('solicitantes.store');
+Route::get('admin/solicitantes/edit/{solicitante}', 'Admin\SolicitanteController@edit')->name('solicitantes.edit');
+Route::put('admin/solicitantes/update/{solicitante}', 'Admin\SolicitanteController@update')->name('solicitantes.update');
+Route::delete('admin/solicitantes/destroy/{solicitante}', 'Admin\SolicitanteController@destroy')->name('solicitantes.destroy');
+Route::get('file/getSolicitante/{id}' , ['uses' => 'Web\SolicitanteController@getFileEvento'])->name('file.getSolicitante');
+
+
 Route::get('trabajos' , [ 'uses' => 'Web\TrabajoController@indexInformativa' ])->name('trabajos');
 
 Route::get('bolsa_de_trabajos' , [ 'uses' => 'Web\Bolsa_de_trabajoController@indexInformativa' ])->name('bolsa_de_trabajos');
@@ -57,7 +69,9 @@ Route::post('contact-send','Web\ContactController@sendMessage')->name('contact.s
 
 
 Route::resource('estado', 'Admin\EstadoController');
-Route::resource('solicitante', 'Admin\SolicitanteController');
+
+
+
 Route::resource('admin/cronogramas', 'Admin\CronogramaController');
 Route::resource('admin/eventos', 'Admin\EventoController');
 Route::resource('admin/bolsa_de_trabajos', 'Admin\Bolsa_de_trabajoController');
@@ -96,6 +110,7 @@ Route::get('slideImages/delete/{id}' , ['uses' => 'SlideController@delete' ,  'm
 //Route::get('file/getNoticia/{id}' , ['uses' => 'Web\NoticiaController@getFileLaNoticias'])->name('file.getNoticia');
 Route::get('file/getNoticia/{id}' , ['uses' => 'Web\NoticiaController@getFileNoticia'])->name('file.getNoticia');
 Route::get('file/getEvento/{id}' , ['uses' => 'Web\EventoController@getFileEvento'])->name('file.getEvento');
+
 
 
 

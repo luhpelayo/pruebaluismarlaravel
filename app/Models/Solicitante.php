@@ -2,18 +2,22 @@
 
 namespace App\models;
 
-use Illuminate\Database\Eloquent\Model;
 
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 class Solicitante extends Model
 {
+    use SoftDeletes;
     protected $table = 'solicitantes';
-    protected $fillable = ['ci','nombre','apellido','telefono','direccion','lat','lon','email'];
+    protected $fillable = ['nombre','apellido','ci','telefono','direccion','lat','lon','email','precio','url_img'];
 
     public function receptions()
     {
         return $this->hasMany('App\Models\Reception');
     }
+     
 
+    
     public function scopeCi($query, $ci)
     {
       //dd("scope: ".$descripcion);
@@ -27,3 +31,5 @@ class Solicitante extends Model
      
     }  
 }
+
+

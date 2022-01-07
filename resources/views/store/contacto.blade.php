@@ -22,10 +22,13 @@
             <div class="row contact_row">
                 <div class="col-sm-6 contact_info">
                     <h2>Datos de contacto</h2>
-                    <p>El Ingeniero Financiero es un profesional de espíritu creativo e innovador con capacidad para la gestión financiera e empresas privadas e instituciones del sector público.</p>
-                    <p>Interpreta las connotaciones de los procesos financieros y sus efectos en el contexto de la organización y de la sociedad.</p>
-                    <p>Tiene profundo conocimiento y habilidad para operar en los mercados financieros.</p>
-                    <p>Contribuye a la creación y valor a partir de su liderazgo y calidad.</p>
+                    <p>Horario de apertura</p>
+                    <p>lun:	9:00–21:00</p>
+                    <p>mar:	9:00–21:00</p>
+                    <p>mie:	9:00–21:00</p>
+                    <p>jue:	9:00–21:00</p>
+                    <p>vie:	9:00–21:00</p>
+                    <p>sab:	9:00–21:00</p>
                     <div class="location">
                         <div class="location_laft">
                             <a class="f_location" href="{{route('contacto')}}">Dirección</a>

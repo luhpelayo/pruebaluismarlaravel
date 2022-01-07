@@ -47,12 +47,7 @@
             <a href="{{ route('derivacion', $tramite->id) }}" class="btn btn-sm btn-info">
                     <i class="fa fa-send"></i>
                 </a>
-                @can('tramite.edit')
-                
-                <a href="{{ route('tramite.indexver',$tramite->id) }}" class="btn btn-sm btn-primary">
-                    <i class="fa fa-pencil-square"></i>
-                </a>
-                @endcan
+             
         
             </td> 
         </tr>

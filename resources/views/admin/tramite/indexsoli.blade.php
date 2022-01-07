@@ -15,7 +15,7 @@
         @if (count($errors) > 0)
             @include('admin.partials.errors')
         @endif
-        {!! Form::model($solicitante, array('route' => array('solicitante.update', $solicitante))) !!}
+        {!! Form::model($solicitante, array('route' => array('solicitantes.update', $solicitante))) !!}
 
        
 
@@ -47,10 +47,7 @@
               <label for="Lon">Lon:</label>
               <h2>{{ $solicitante->lon }}</h2>
           </div>
-          <div class="form-group col-xs-6">
-              <label for="lat">GPS LACTIUD Y LONGITUD ACtUAL:</label>
-              <h2>{{ $solicitante->lat }} , {{ $solicitante->lon }}</h2>
-          </div>
+       
           <div class="form-group col-xs-6">
               <label for="direccion">Direccion:</label>
               <h2>{{ $solicitante->direccion }}</h2>
@@ -61,7 +58,34 @@
               <label for="email">Email:</label>
               <h2>{{ $solicitante->email }}</h2>
           </div>
-       
+
+          <div class="box-body col-xs-12">
+              <label for="precio">Precio:</label>
+              <h2>{{ $solicitante->precio }} bs.</h2> 
+          </div>
+
+          <div class="box-body col-xs-12">
+          <label for="email">Diseño de Uña:</label>
+          <a class="" href="{{ $solicitante->url_img }}">
+                  <img src="{{ asset($solicitante->url_img) }}" class="img-responsive" alt="" height="120" width="120" />
+                  </a><br/>
+         </div>
+          <div class="form-group col-xs-6">
+              <label for="lat">GPS LATITUD Y LONGITUD ACTUAL :</label>
+              <h2>{{ $geoip }}</h2>
+              {!! 
+                      Form::text(
+                          $geoip, 
+                          null, 
+                          array(
+                              'class'=>'form-control',
+                              'placeholder' => $geoip,
+                                'autofocus' => 'autofocus'
+                          )
+                      ) 
+              !!}
+            
+          </div>
 
             <div class="box-body col-xs-12">
                 {!! Form::submit('Actualizar', array('class'=>'btn btn-primary')) !!}

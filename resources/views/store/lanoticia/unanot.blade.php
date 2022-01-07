@@ -8,7 +8,7 @@
 box-shadow: 0px 0px 32px -2px rgba(0,0,0,0.08); background-color: #FFF">
 	<div class="row">
 		<div class="col-xs-12">
-			<h3>Noticia</h3>
+			<h3>Promo</h3>
 			<div class="divider-md pull-left"></div>
 		</div>
 	</div>
@@ -45,7 +45,7 @@ box-shadow: 0px 0px 32px -2px rgba(0,0,0,0.08); background-color: #FFF">
 								<br><br>
 						<i>Fecha {{ $unanoti->updated_at }} | Por: {{ $unanoti->auth }} </i>
 						<br>
-						<a href="{{ route('noticias') }}">VER NOTICIAS</a>
+						<a href="{{ route('noticias') }}">VER PROMOS</a>
 						<br>
 				  	</div>
 				</div>

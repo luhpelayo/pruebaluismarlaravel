@@ -6,7 +6,7 @@
         <div class="container">
             <div class="tittle wow fadeInUp">
                 <h2>EQUIPO DE DESARROLLO</h2>
-                <h4>Bienvenido al portal web de la Carrera de Ingenieria Financiera, Universidad Autónoma Gabriel René Moreno.</h4>
+                <h4>Bienvenido al portal web deL Salon de Uñas.</h4>
             </div>
             <div class="testimonial_carosel">
                 <div class="item">

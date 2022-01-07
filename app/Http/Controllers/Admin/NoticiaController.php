@@ -18,7 +18,7 @@ class NoticiaController extends Controller
     public function index()
     {
        $noticia = Noticia::all();
-
+  
         return view('admin.noticias.index',compact('noticia'));
     }
 
@@ -133,7 +133,14 @@ class NoticiaController extends Controller
           $noticia->title= $request->title;
           $noticia->precontent= $request->precontent;
           $noticia->content= $request->content;
-      
+          
+          if($request->auth !== null) {
+            $noticia->auth= $request->auth;
+          } else {
+             $noticia->auth= \Auth::user()->name;
+          }
+        
+          $noticia->user_id= \Auth::user()->id;
 
 
           $file= $request->file('file');

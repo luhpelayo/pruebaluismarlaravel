@@ -24,14 +24,16 @@ class SaveSolicitanteRequest extends FormRequest
     public function rules()
     {
         return [
-            'ci'            => 'required',
+            
             'nombre'        => 'required',
             'apellido'      => 'required',
+            'ci'            => 'required',
             'telefono'      => 'required',
             'direccion'     => 'required',
             'lat'           => 'required',
             'lon'           => 'required',
-            'email'         => 'required'
+            'email'         => 'required',
+            'precio'        => 'required'
         ];
     }
 }

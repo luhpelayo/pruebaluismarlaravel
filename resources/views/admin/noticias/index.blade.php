@@ -1,4 +1,4 @@
-@extends('admin.templatePublic')
+@extends('admin.template')
 
 @section('content')
 <div class="box box-primary">

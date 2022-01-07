@@ -83,7 +83,7 @@
               </ul>
             </li>
            @endcan
-           @can('sliders.index' || 'area.index' || 'requirements.index' || 'processes.index' || 'estado.index' || 'solicitante.index')
+           @can('sliders.index' || 'area.index' || 'requirements.index' || 'processes.index' || 'estado.index' || 'solicitantes.index')
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-cog"></i> <span>Configuración</span> <i class="fa fa-angle-left pull-right"></i>
@@ -104,8 +104,8 @@
                   @can('estado.index')
                   <li><a href="{{ route('estado.index') }}"><i class="fa fa-circle-o"></i>Estados</a></li>
                   @endcan
-                  @can('solicitante.index')
-                  <li><a href="{{ route('solicitante.index') }}"><i class="fa fa-circle-o"></i>Solicitantes</a></li>
+                  @can('solicitantes.index')
+                  <li><a href="{{ route('solicitantes.index') }}"><i class="fa fa-circle-o"></i>Solicitantes</a></li>
                   @endcan
               </ul>
             </li>
@@ -130,7 +130,7 @@
                 <i class="fa fa-file-image-o"></i><span>Galeria</span><i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="{{ route('galleries.index') }}"><i class="fa fa-circle-o"></i>Galeria de fotos</a></li>
+                <li><a href="{{ route('galleries.index') }}"><i class="fa fa-circle-o"></i>Catalogo de fotos</a></li>
                 {{--<li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Por Llegar</a></li>--}}
               </ul>
             </li>
@@ -184,9 +184,10 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
+              <li><a href="{{route('noticias.index')}}"><i class="fa fa-circle-o"></i> Promociones</a></li>
                 <li><a href="{{route('eventos.index')}}"><i class="fa fa-circle-o"></i> Eventos</a></li>
                 <li><a href="{{route('cronogramas.index')}}"><i class="fa fa-circle-o"></i> Cronogramas</a></li>
-                <li><a href="{{route('noticias.index')}}"><i class="fa fa-circle-o"></i> Noticias</a></li>
+                
                 <li><a href="{{route('procedimientos.index')}}"><i class="fa fa-circle-o"></i>Procedimientos</a></li>
                  <li><a href="{{route('normas.index')}}"><i class="fa fa-circle-o"></i>Normas</a></li>
                  <li><a href="{{route('bolsa_de_trabajos.index')}}"><i class="fa fa-circle-o"></i>Bolsa de Trabajo</a></li>

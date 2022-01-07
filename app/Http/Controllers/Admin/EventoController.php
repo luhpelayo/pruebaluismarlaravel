@@ -170,6 +170,7 @@ class EventoController extends Controller
             } else {
               Flash::error(' Error al guardar la imagen en las eventos. ');
             }
+            
           }
     
          $updated = $evento->save();
