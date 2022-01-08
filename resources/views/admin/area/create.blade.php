@@ -15,7 +15,7 @@
     
       {!! Form::open(['route'=>'area.store']) !!}
           
-          <div class="box-body col-xs-12">
+          <div class="form-group">
               <label for="description">Descripción:</label>
               {!! 
                   Form::text(
@@ -29,6 +29,55 @@
                   ) 
               !!}
           </div>
+
+          <div class="form-group">
+              <label for="direccion">Direccion:</label>
+              {!! 
+                  Form::text(
+                      'direccion', 
+                      null, 
+                      array(
+                         
+                          'class'=>'form-control',
+                          'placeholder' => 'Direccion del solicitante...',
+                                        'autofocus' => 'autofocus'
+                      )
+                  ) 
+              !!}
+          </div>
+
+          <div class="form-group">
+              <label for="lat">Lat:</label>
+              {!! 
+                  Form::text(
+                      'lat', 
+                      null, 
+                      array(
+                         
+                          'class'=>'form-control',
+                          'placeholder' => 'Lat del solicitante...',
+                                        'autofocus' => 'autofocus'
+                      )
+                  ) 
+              !!}
+          </div>
+
+          <div class="form-group">
+              <label for="lon">Lon:</label>
+              {!! 
+                  Form::text(
+                      'lon', 
+                      null, 
+                      array(
+                         
+                          'class'=>'form-control',
+                          'placeholder' => 'Lon del solicitante...',
+                                        'autofocus' => 'autofocus'
+                      )
+                  ) 
+              !!}
+          </div>
+
           <div class="box-body col-xs-12">
               {!! Form::submit('Guardar', array('class'=>'btn btn-primary')) !!}
               <a href="{{ route('area.index') }}" class="btn btn-warning">Cancelar</a>

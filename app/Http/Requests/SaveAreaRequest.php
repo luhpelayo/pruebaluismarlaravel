@@ -24,7 +24,10 @@ class SaveAreaRequest extends FormRequest
     public function rules()
     {
         return [
-            'descripcion'   => 'required'
+            'descripcion'   => 'required',
+            'direccion'     => 'required',
+            'lat'           => 'required',
+            'lon'           => 'required'
            
         ];
     }

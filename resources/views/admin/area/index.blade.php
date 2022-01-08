@@ -5,7 +5,7 @@
 <div class="page-header text-center">
     <h1>
         <i class="fa fa-university"style="color:green"></i>
-        AREAS 
+        SALONES
         @can('area.create') 
         <a href="{{ route('area.create') }}" class="btn btn-warning"><i class="fa fa-plus-circle"></i> Area</a>
         @endcan
@@ -29,7 +29,9 @@
             <tr>
              <th style="width:20px">Codigo</th>
                 <th>Descripcion</th>          
-
+                <th>Direccion</th>
+                <th>Lat</th>
+                <th>Lon</th>
                 <th text-center style="width: 20px;">Acciónes </th>
             </tr>
         </thead>         
@@ -38,6 +40,9 @@
          <tr>  
              <td>{{ $area->id }}</td>
              <td>{{ $area->descripcion }}</td> 
+             <td>{{ $area->direccion }}</td>  
+             <td>{{ $area->lat }}</td>   
+             <td>{{ $area->lon }}</td>  
              @can('area.edit') 
              <td>
                 <a href="{{ route('area.edit', $area->id) }}" class="btn btn-primary">
