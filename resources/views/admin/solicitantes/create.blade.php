@@ -152,21 +152,7 @@
               !!}
           </div>
 
-          <div class="form-group">
-              <label for="precio">Precio:</label>
-              {!! 
-                  Form::text(
-                      'precio', 
-                      null, 
-                      array(
-                         
-                          'class'=>'form-control',
-                          'placeholder' => 'Precio del solicitante...',
-                                        'autofocus' => 'autofocus'
-                      )
-                  ) 
-              !!}
-          </div>
+       
 
           <div class="form-group">
           {!! Form::label('img','Agregar una imagen') !!}
