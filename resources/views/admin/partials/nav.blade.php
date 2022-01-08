@@ -93,7 +93,7 @@
                   <li class="active"><a href="{{ route('sliders.index') }}"><i class="fa fa-circle-o"></i>Sliders</a></li>
                   @endcan
                   @can('area.index')
-                  <li class="active"><a href="{{ route('area.index') }}"><i class="fa fa-circle-o"></i>Areas</a></li>
+                  <li class="active"><a href="{{ route('area.index') }}"><i class="fa fa-circle-o"></i>SALONES</a></li>
                   @endcan
                   @can('requirements.index')
                   <li><a href="{{ route('requirements.index') }}"><i class="fa fa-circle-o"></i>Requisitos</a></li>

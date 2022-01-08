@@ -40,6 +40,64 @@ class SolicitanteController extends Controller
         return view('admin.solicitantes.create');
     }
 
+    function call_ia_fetch_price($image_file) {
+      $url = 'http://137.184.192.21/predict';
+      $filenames = array($image_file);
+      $files = array();
+      foreach ($filenames as $f){
+        $files[$f] = file_get_contents($f);
+      }
+
+      // curl
+      $curl = curl_init();
+      $boundary = uniqid();
+      $delimiter = '-------------' . $boundary;
+      $post_data = $this->build_data_files($boundary, $files);
+
+      curl_setopt_array($curl, array(
+        CURLOPT_URL => $url,
+        CURLOPT_RETURNTRANSFER => 1,
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_CUSTOMREQUEST => "POST",
+        CURLOPT_POST => 1,
+        CURLOPT_POSTFIELDS => $post_data,
+        CURLOPT_HTTPHEADER => array(
+          "Content-Type: multipart/form-data; boundary=" . $delimiter,
+          "Content-Length: " . strlen($post_data)
+        ),
+      ));
+
+      $response = curl_exec($curl);
+      $response_json = json_decode($response, true);
+      curl_close($curl);
+      return $response_json['price_2'];
+    }
+
+    function build_data_files($boundary, $files){
+      $data = '';
+      $eol = "\r\n";
+  
+      $delimiter = '-------------' . $boundary;
+  
+      foreach ($files as $name => $content) {
+          $data .= "--" . $delimiter . $eol
+              . 'Content-Disposition: form-data; name="image"; filename="' . basename($name) . '"' . $eol
+              //. 'Content-Type: image/png'.$eol
+              . 'Content-Transfer-Encoding: binary'.$eol
+              ;
+  
+          $data .= $eol;
+          $data .= $content . $eol;
+      }
+      $data .= "--" . $delimiter . "--".$eol;
+  
+  
+      return $data;
+    }
+
+
+
     /**
      * Store a newly created resource in storage.
      *
@@ -59,7 +117,6 @@ class SolicitanteController extends Controller
             'lat'      => 'required',
             'lon'      => 'required',
             'email'      => 'required',
-            'precio'      => 'required',
         ]);
       
         $solicitante=new Solicitante;
@@ -71,39 +128,20 @@ class SolicitanteController extends Controller
         $solicitante->lat=$request->get('lat');
         $solicitante->lon=$request->get('lon');
         $solicitante->email=$request->get('email');
-        $solicitante->precio=$request->get('precio');
-      //  var_dump($cronograma);
-       // exit();
-      
-   
-    
-
-        
-
-
   
-// $img= $request->file('img');
-// if($img != null) {
-//   $img_route = time().'_'.$img->getClientOriginalName();
+        if ($image = $request->file('img')) {
+          $destinationPath = 'images/solicitantes';
+          $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+          $image->move($destinationPath, $profileImage);
+          $solicitante->url_img=$destinationPath.'/'.$profileImage;
 
-//   if(Storage::disk('solicitantes/img')->put($img_route, file_get_contents($img->getRealPath()))){
-//     $solicitante->url_img= $img_route;
-//   } else {
-//     Flash::error(' Error al guardar la imagen en los cronogramas. ');
-//   }
-// }
-
-
-if ($image = $request->file('img')) {
-  $destinationPath = 'images/solicitantes';
-  $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-  $image->move($destinationPath, $profileImage);
-  $solicitante->url_img=$destinationPath.'/'.$profileImage;
+          # calcular precio usando la IA
+          $solicitante->precio=$this->call_ia_fetch_price($solicitante->url_img);
 }
+
+
 //dd($destinationPath.$solicitante->url_img);
 // dd($destinationPath.'/'.$solicitante->url_img);
-
-
 
       $solicitante->save();
          $message = $solicitante ? 'solicitante agregado correctamente!' : 'Cronograma NO pudo agregarse!';
@@ -154,7 +192,6 @@ if ($image = $request->file('img')) {
                 'lat'      => 'required',
                 'lon'      => 'required',
                 'email'      => 'required',
-                'precio'      => 'required',
             ]);
        
 
@@ -167,17 +204,13 @@ if ($image = $request->file('img')) {
             $solicitante->lat=$request->get('lat');
             $solicitante->lon=$request->get('lon');
             $solicitante->email=$request->get('email');
-            $solicitante->precio=$request->get('precio');
-
-    
-          
-         
-  
-        if ($image = $request->file('img')) {
+        
+            if ($image = $request->file('img')) {
           $destinationPath = 'images/solicitantes';
             $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
             $image->move($destinationPath, $profileImage);
-            $solicitante->url_img=$destinationPath.'/'.$profileImage;
+            $solicitante->url_img=$destinationPath.'/'.$profileImage;   
+            $solicitante->precio=$this->call_ia_fetch_price($solicitante->url_img);
         } else {
           $solicitante->url_img=null;
           File::delete($solicitante->url_img);

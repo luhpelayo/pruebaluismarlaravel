@@ -5,7 +5,7 @@
      <div class="page-header  text-center">
       <h1>
         <i class="fa fa-university"style="color:green"></i>
-        AREAS <small>[Agregar Area]</small>
+        AREAS SALONES<small>[Agregar SALON]</small>
       </h1>
     </div>
   <div class="col-xs-12 col-md-8 col-md-offset-2 col-xl-6 col-xl-offset-3">

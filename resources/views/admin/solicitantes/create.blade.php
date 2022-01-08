@@ -9,7 +9,7 @@
     <div class="page-header  text-center">
       <h1>
        <i class="fa fa-calendar"style="color:green"></i>
-       SOLICITANTES <small>[Agregar Cronograma]</small>
+       SOLICITANTES <small>[Agregar ]</small>
       </h1>
     </div>
   <div class="col-xs-12 col-md-8 col-md-offset-2 col-xl-6 col-xl-offset-3">
