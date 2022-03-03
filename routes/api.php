@@ -19,5 +19,14 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
+Route::group([
+    'prefix' => 'v1'
+], function () {
+    Route::post('solicitar', 'Admin\SolicitanteController@storeAPI');
+    Route::get('salones', 'Admin\AreaController@listAPI');
+    Route::post('solicitar/{solicitante}', 'Admin\SolicitanteController@updateAPI');
+});
+
+
     
 

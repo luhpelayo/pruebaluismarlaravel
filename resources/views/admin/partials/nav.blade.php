@@ -45,7 +45,7 @@
               <img src="{{asset('dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-               <p>{{ Auth::user()->name }}</p>
+        
               <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
           </div>
@@ -127,7 +127,7 @@
             @endcan
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-file-image-o"></i><span>Galeria</span><i class="fa fa-angle-left pull-right"></i>
+                <i class="fa fa-file-image-o"></i><span>Catalogo</span><i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
                 <li><a href="{{ route('galleries.index') }}"><i class="fa fa-circle-o"></i>Catalogo de fotos</a></li>
@@ -138,14 +138,13 @@
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-pie-chart"></i>
-                <span>Reportes</span>
+                <span>Suscripcion</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="{{ route('students.index') }}"><i class="fa fa-circle-o"></i>Estudiantes Data</a></li>
-                <li><a href="{{ route('report.index') }}"><i class="fa fa-circle-o"></i>Estudiantes Report</a></li>
-                {{--<li><a href="{{ route('report') }}"><i class="fa fa-circle-o"></i>Estudiantes Flot</a></li>--}}
-                {{--<li><a href="{{ route('report') }}"><i class="fa fa-circle-o"></i>Estudiantes Inline charts</a></li>--}}
+                <li><a href="{{ route('homepago') }}"><i class="fa fa-circle-o"></i>Pago</a></li>
+                <li><a href="{{ route('report.index') }}"><i class="fa fa-circle-o"></i>Renovacion</a></li>
+                
               </ul>
             </li>
             {{--TODO --}}
@@ -185,12 +184,11 @@
               </a>
               <ul class="treeview-menu">
               <li><a href="{{route('noticias.index')}}"><i class="fa fa-circle-o"></i> Promociones</a></li>
-                <li><a href="{{route('eventos.index')}}"><i class="fa fa-circle-o"></i> Eventos</a></li>
-                <li><a href="{{route('cronogramas.index')}}"><i class="fa fa-circle-o"></i> Cronogramas</a></li>
+     
                 
                 <li><a href="{{route('procedimientos.index')}}"><i class="fa fa-circle-o"></i>Procedimientos</a></li>
                  <li><a href="{{route('normas.index')}}"><i class="fa fa-circle-o"></i>Normas</a></li>
-                 <li><a href="{{route('bolsa_de_trabajos.index')}}"><i class="fa fa-circle-o"></i>Bolsa de Trabajo</a></li>
+             
               </ul>
             </li>
             <li class="treeview">

@@ -122,6 +122,9 @@ Route::get('file/getBolsa_de_trabajo/{id}' , ['uses' => 'Web\Bolsa_de_trabajoCon
 Route::get('file/getProce/{id}' , ['uses' => 'Web\ProcedController@getFileProc'])->name('file.getProce');
 
 
+//paymant
+Route::get('/paypal/pay', 'PaymentController@payWithPayPal');
+Route::get('/paypal/status', 'PaymentController@payPalStatus');
 
 
 //********************************************//
@@ -133,6 +136,7 @@ Auth::routes();
 
 Route::middleware(['auth'])->group(function(){
 	Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/homepago', 'HomeController@homepago')->name('homepago');
 	//Roles
 	Route::resource('roles', 'Admin\RoleController');
 	//Permisos

@@ -33,6 +33,10 @@ class AreaController extends Controller
      return view('admin.area.index', compact('areas'));
     }
 
+    public function listAPI(Request $request) {
+      $areas = Area::descripcion($request->get('descripcion'))->orderby('id','DESC')->paginate(5);
+        return $areas;
+    }
     /**
      * Show the form for creating a new resource.
      *
