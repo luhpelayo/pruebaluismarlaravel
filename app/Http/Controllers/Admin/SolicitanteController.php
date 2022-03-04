@@ -191,7 +191,7 @@ class SolicitanteController extends Controller
 // dd($destinationPath.'/'.$solicitante->url_img);
 
       $solicitante->save();
-         $message = $solicitante ? 'solicitante agregado correctamente!' : 'Cronograma NO pudo agregarse!';
+         $message = $solicitante ? 'solicitante agregado correctamente!' : ' NO pudo agregarse!';
 
 
         return $solicitante;
@@ -271,12 +271,37 @@ class SolicitanteController extends Controller
         
         return redirect()->route('solicitantes.index')->with('message', $message);
     }
+    public function updateAPI(Solicitante $solicitante, Request $request)
+    {
+        $this->validate($request, [
+  'image' => 'required|mimes:jpg,png,jpeg'
+            ]);
+           
+        if ($image = $request->file('image')) {
+            $destinationPath = 'images/solicitantes';
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $profileImage);
+            $solicitante->url_img=$destinationPath.'/'.$profileImage;   
+            $solicitante->precio=$this->call_ia_fetch_price($solicitante->url_img);
+        } else {
+          $solicitante->url_img=null;
+          File::delete($solicitante->url_img);
+        }
+
+      
+
+         $updated = $solicitante->update();
+         $message = $updated ? 'Solicitante actualizado correctamente!' : 'El solicitante NO pudo actualizarse!';
+        
+         return $solicitante;
+    }
 
     /**
      * Delete the specified resource in storage.
      * @param Solicitante $solicitante
      * @return \Illuminate\Http\Response
      */
+  
 
     public function destroy(Solicitante $solicitante)
     {
