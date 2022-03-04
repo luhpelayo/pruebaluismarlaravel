@@ -148,13 +148,61 @@ class SolicitanteController extends Controller
 
         return redirect()->route('solicitantes.index')->with('message', $message);
     }
+    public function storeAPI(Request $request)
+    {
+      //dd($request);
+         $this->validate($request, [
+            'nombre'      => 'required',
+        
+            'apellido'      => 'required',
+            'ci'      => 'required',
+            'telefono'      => 'required',
+            'direccion'      => 'required',
+            'lat'      => 'required',
+            'lon'      => 'required',
+            'email'      => 'required',
+        ]);
+      
+        $solicitante=new Solicitante;
+        $solicitante->nombre=$request->get('nombre');
+        $solicitante->apellido=$request->get('apellido');
+        $solicitante->ci=$request->get('ci');
+        $solicitante->telefono=$request->get('telefono');
+        $solicitante->direccion=$request->get('direccion');
+        $solicitante->lat=$request->get('lat');
+        $solicitante->lon=$request->get('lon');
+        $solicitante->email=$request->get('email');
+        $solicitante->precio=123;
+  
+        if ($image = $request->file('img')) {
+          $destinationPath = 'images/solicitantes';
+          $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+          $image->move($destinationPath, $profileImage);
+          $solicitante->url_img=$destinationPath.'/'.$profileImage;
 
+          # calcular precio usando la IA
+          $solicitante->precio=$this->call_ia_fetch_price($solicitante->url_img);
+        
+        
+        }
+
+
+//dd($destinationPath.$solicitante->url_img);
+// dd($destinationPath.'/'.$solicitante->url_img);
+
+      $solicitante->save();
+         $message = $solicitante ? 'solicitante agregado correctamente!' : 'Cronograma NO pudo agregarse!';
+
+
+        return $solicitante;
+    }
     /**
      * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+ 
    public function show(Solicitante $solicitante)
     {
         return $solicitante;
