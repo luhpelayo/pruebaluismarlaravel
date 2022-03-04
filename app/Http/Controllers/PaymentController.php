@@ -39,7 +39,7 @@ class PaymentController extends Controller
         $payer->setPaymentMethod('paypal');
 
         $amount = new Amount();
-        $amount->setTotal('3.99');
+        $amount->setTotal('20.99');
         $amount->setCurrency('USD');
 
         $transaction = new Transaction();

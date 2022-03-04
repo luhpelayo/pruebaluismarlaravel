@@ -57,9 +57,9 @@ class AreaController extends Controller
     {
         $area=new Area;
         $area->descripcion=$request->get('descripcion');
-        $area->descripcion=$request->get('direccion');
-        $area->descripcion=$request->get('lat');
-        $area->descripcion=$request->get('lon');
+        $area->direccion=$request->get('direccion');
+        $area->lat=$request->get('lat');
+        $area->lon=$request->get('lon');
         
     //dd($area);
         $area->save();
