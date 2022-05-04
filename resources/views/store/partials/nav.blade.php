@@ -23,22 +23,9 @@
             <div class="col-md-10 p0">
                 <div class="collapse navbar-collapse" id="min_navbar">
                     <ul class="nav navbar-nav navbar-right">
-                    <li><a href="{{route('plandeestudio')}}">Empresa</a></li>
-                       
-                        <li class="dropdown submenu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Servicios</a>
-                            <ul class="dropdown-menu other_dropdwn">
-                                
-                                <li ><a href="{{ route('noticias') }}">Promociones</a></li>
-                            
-                         
-                                <li ><a href="{{ route('solicitantes') }}">Destacados</a></li>
-                               
-                            </ul>
-                        </li>
-
-                        <li><a href="{{route('contacto')}}">Contacto</a></li>
-                        <li><a href="{{route('gallery')}}">Catalogo</a></li>
+                 
+                        <li><a href="{{route('gallery')}}">Catalogos</a></li>
+                        <li><a href="{{route('/')}}">Registrarse</a></li>
                         <li><a href="{{route('home')}}">Login</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->

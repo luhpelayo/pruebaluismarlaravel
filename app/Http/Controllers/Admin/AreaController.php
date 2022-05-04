@@ -16,7 +16,7 @@ class AreaController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('permission:area.create')->only(['create','atore']);
+        //$this->middleware('permission:area.create')->only(['create','atore']);
         $this->middleware('permission:area.index')->only('index');
         $this->middleware('permission:area.edit')->only(['edit','update']);
         $this->middleware('permission:area.show')->only('show');
@@ -44,7 +44,14 @@ class AreaController extends Controller
      */
     public function create()
     {
-        return view('admin.area.create');
+        $user_ip = getenv('REMOTE_ADDR');
+        $geo = unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=$user_ip"));
+        $la = $geo["geoplugin_latitude"];
+        $l = $geo["geoplugin_longitude"];
+      
+        $geoip=$la.",".$l;
+       // return view('admin.area.create');
+        return view('admin.area.create', compact('geoip'));
     }
 
     /**
@@ -64,9 +71,10 @@ class AreaController extends Controller
     //dd($area);
         $area->save();
 
-        $message = $area ? 'Area agregado correctamente!' : 'Area NO pudo agregarse!';
+        $message = $area ? 'EL SALON SE REGISTRO CORRECTAMENTE EN LA APLICACION!' : 'Area NO pudo agregarse!';
         
-        return redirect()->route('area.index')->with('message', $message);
+        //return redirect()->route('area.index')->with('message', $message);
+        return redirect()->route('home')->with('message', $message);
     }
 
     /**

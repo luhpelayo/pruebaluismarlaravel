@@ -4,8 +4,8 @@
 <div class="container box box-primary">
      <div class="page-header  text-center">
       <h1>
-        <i class="fa fa-university"style="color:green"></i>
-        AREAS SALONES<small>[Agregar SALON]</small>
+        <i class="fa fa-map-marker"style="color:green"></i>
+       REGISTRA TU SALON<small></small>
       </h1>
     </div>
   <div class="col-xs-12 col-md-8 col-md-offset-2 col-xl-6 col-xl-offset-3">
@@ -16,7 +16,7 @@
       {!! Form::open(['route'=>'area.store']) !!}
           
           <div class="form-group">
-              <label for="description">Descripción:</label>
+              <label for="description">Nombre del Salon:</label>
               {!! 
                   Form::text(
                       'descripcion', 
@@ -61,7 +61,7 @@
                   ) 
               !!}
           </div>
-
+        
           <div class="form-group">
               <label for="lon">Lon:</label>
               {!! 
@@ -77,7 +77,10 @@
                   ) 
               !!}
           </div>
-
+          <div class="box-body col-xs-12">
+              <label for="email">Ubicacion Actual(lat, lon):</label>
+              <h2>{{ $geoip }}</h2>
+          </div>
           <div class="box-body col-xs-12">
               {!! Form::submit('Guardar', array('class'=>'btn btn-primary')) !!}
               <a href="{{ route('area.index') }}" class="btn btn-warning">Cancelar</a>
