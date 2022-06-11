@@ -6,6 +6,13 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SaveAreaRequest;
 use App\Models\Area;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\SendMail;
+use App\Models\Solicitante;
+use App\Models\Contact;
+use File;
+use Session;
+use Storage;
 
 class AreaController extends Controller
 {
@@ -54,20 +61,40 @@ class AreaController extends Controller
         return view('admin.area.create', compact('geoip'));
     }
 
+
+
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(SaveAreaRequest $request)
+    public function store(Request $request)
     {
+
+
+        $this->validate($request, [
+            'descripcion'      => 'required',
+        
+            'direccion'      => 'required',
+            'lat'      => 'required',
+            'lon'      => 'required',
+         
+        ]);
         $area=new Area;
         $area->descripcion=$request->get('descripcion');
         $area->direccion=$request->get('direccion');
         $area->lat=$request->get('lat');
         $area->lon=$request->get('lon');
         
+        if ($image = $request->file('img')) {
+            $destinationPath = 'images/areas';
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $profileImage);
+            $area->url_img=$destinationPath.'/'.$profileImage;
+            
+          
+  }
     //dd($area);
         $area->save();
 

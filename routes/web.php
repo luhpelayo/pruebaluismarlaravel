@@ -43,6 +43,9 @@ Route::put('admin/solicitantes/update/{solicitante}', 'Admin\SolicitanteControll
 Route::delete('admin/solicitantes/destroy/{solicitante}', 'Admin\SolicitanteController@destroy')->name('solicitantes.destroy');
 Route::get('file/getSolicitante/{id}' , ['uses' => 'Web\SolicitanteController@getFileEvento'])->name('file.getSolicitante');
 
+Route::get('admin/areas/create', 'Admin\AreaController@create')->name('areas.create');
+Route::post('admin/areas/store', 'Admin\AreaController@store')->name('areas.store');
+Route::get('file/getArea/{id}' , ['uses' => 'Web\AreaController@getFileEvento'])->name('file.getArea');
 
 Route::get('trabajos' , [ 'uses' => 'Web\TrabajoController@indexInformativa' ])->name('trabajos');
 

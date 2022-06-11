@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Area extends Model
 {
      protected $table = 'areas';
-     protected $fillable = ['descripcion','direccion','lat','lon'];
+     protected $fillable = ['descripcion','direccion','lat','lon','url_img'];
      public $timestamps = false;
 
     public function derivacions()

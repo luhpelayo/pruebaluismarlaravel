@@ -229,7 +229,7 @@
         <div class="pull-right hidden-xs">
           <b>Version</b> 2.3.0
         </div>
-        <strong>Copyright &copy; 2020 <a href="#">MKT Pelayo</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 2022 <a href="#">MKT Pelayo</a>.</strong> All rights reserved.
       </footer>
 
 
