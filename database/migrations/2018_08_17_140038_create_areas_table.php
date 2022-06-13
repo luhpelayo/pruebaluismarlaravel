@@ -19,6 +19,7 @@ class CreateAreasTable extends Migration
             $table->string('direccion', 100);
             $table->string('lat', 150);
             $table->string('lon', 150);
+            $table->string('url_img')->nullable();
         });
     }
 
