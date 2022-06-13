@@ -41,7 +41,9 @@ class SolicitanteController extends Controller
     }
 
     function call_ia_fetch_price($image_file) {
-      $url = 'http://143.244.180.140:5001/predict';
+     // $url = 'http://143.244.180.140:5001/predict';
+     $url = 'http://137.184.229.14:5001/predict';
+     
       $filenames = array($image_file);
       $files = array();
       foreach ($filenames as $f){
@@ -143,7 +145,7 @@ class SolicitanteController extends Controller
 //dd($destinationPath.$solicitante->url_img);
 // dd($destinationPath.'/'.$solicitante->url_img);
 
-      $solicitante->save();
+         $solicitante->save();
          $message = $solicitante ? 'solicitante agregado correctamente!' : 'Cronograma NO pudo agregarse!';
 
         return redirect()->route('solicitantes.index')->with('message', $message);
