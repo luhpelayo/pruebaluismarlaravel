@@ -40,41 +40,42 @@ class SolicitanteController extends Controller
         return view('admin.solicitantes.create');
     }
 
-    function call_ia_fetch_price($image_file) {
-     // $url = 'http://143.244.180.140:5001/predict';
-     $url = 'http://137.184.229.14:5001/predict';
-     
-      $filenames = array($image_file);
-      $files = array();
-      foreach ($filenames as $f){
-        $files[$f] = file_get_contents($f);
-      }
-
-      // curl
-      $curl = curl_init();
-      $boundary = uniqid();
-      $delimiter = '-------------' . $boundary;
-      $post_data = $this->build_data_files($boundary, $files);
-
-      curl_setopt_array($curl, array(
-        CURLOPT_URL => $url,
-        CURLOPT_RETURNTRANSFER => 1,
-        CURLOPT_MAXREDIRS => 10,
-        CURLOPT_TIMEOUT => 30,
-        CURLOPT_CUSTOMREQUEST => "POST",
-        CURLOPT_POST => 1,
-        CURLOPT_POSTFIELDS => $post_data,
-        CURLOPT_HTTPHEADER => array(
-          "Content-Type: multipart/form-data; boundary=" . $delimiter,
-          "Content-Length: " . strlen($post_data)
-        ),
-      ));
-
-      $response = curl_exec($curl);
-      $response_json = json_decode($response, true);
-      curl_close($curl);
-      return $response_json['price_2'];
-    }
+    function call_ia_fetch_image($image_file) {
+      // $url = 'http://143.244.180.140:5001/predict';
+      $url = 'http://127.0.0.1:5000/predict';
+      
+       $filenames = array($image_file);
+       $files = array();
+       foreach ($filenames as $f){
+         $files[$f] = file_get_contents($f);
+       }
+ 
+       // curl
+       $curl = curl_init();
+       $boundary = uniqid();
+       $delimiter = '-------------' . $boundary;
+       $post_data = $this->build_data_files($boundary, $files);
+ 
+       curl_setopt_array($curl, array(
+         CURLOPT_URL => $url,
+         CURLOPT_RETURNTRANSFER => 1,
+         CURLOPT_MAXREDIRS => 10,
+         CURLOPT_TIMEOUT => 30,
+         CURLOPT_CUSTOMREQUEST => "POST",
+         CURLOPT_POST => 1,
+         CURLOPT_POSTFIELDS => $post_data,
+         CURLOPT_HTTPHEADER => array(
+           "Content-Type: multipart/form-data; boundary=" . $delimiter,
+           "Content-Length: " . strlen($post_data)
+         ),
+       ));
+       
+       $response = curl_exec($curl);
+       $response_json = json_decode($response, true);
+       curl_close($curl);
+      // dd($response_json);
+       return $response_json['message'];
+     }
 
     function build_data_files($boundary, $files){
       $data = '';
@@ -138,7 +139,7 @@ class SolicitanteController extends Controller
           $solicitante->url_img=$destinationPath.'/'.$profileImage;
 
           # calcular precio usando la IA
-          $solicitante->precio=$this->call_ia_fetch_price($solicitante->url_img);
+          $solicitante->precio=$this->call_ia_fetch_image($solicitante->url_img);
 }
 
 
@@ -183,7 +184,7 @@ class SolicitanteController extends Controller
           $solicitante->url_img=$destinationPath.'/'.$profileImage;
 
           # calcular precio usando la IA
-          $solicitante->precio=$this->call_ia_fetch_price($solicitante->url_img);
+          $solicitante->precio=$this->call_ia_fetch_image($solicitante->url_img);
         
         
         }
@@ -260,7 +261,7 @@ class SolicitanteController extends Controller
             $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
             $image->move($destinationPath, $profileImage);
             $solicitante->url_img=$destinationPath.'/'.$profileImage;   
-            $solicitante->precio=$this->call_ia_fetch_price($solicitante->url_img);
+            $solicitante->precio=$this->call_ia_fetch_image($solicitante->url_img);
         } else {
           $solicitante->url_img=null;
           File::delete($solicitante->url_img);
@@ -284,7 +285,7 @@ class SolicitanteController extends Controller
             $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
             $image->move($destinationPath, $profileImage);
             $solicitante->url_img=$destinationPath.'/'.$profileImage;   
-            $solicitante->precio=$this->call_ia_fetch_price($solicitante->url_img);
+            $solicitante->precio=$this->call_ia_fetch_image($solicitante->url_img);
         } else {
           $solicitante->url_img=null;
           File::delete($solicitante->url_img);
