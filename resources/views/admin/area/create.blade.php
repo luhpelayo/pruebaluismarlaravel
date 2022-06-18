@@ -5,25 +5,25 @@
      <div class="page-header  text-center">
       <h1>
         <i class="fa fa-map-marker"style="color:green"></i>
-       REGISTRA TU SALON<small></small>
+       REGISTRA EL DESAPARECIDO<small></small>
       </h1>
     </div>
   <div class="col-xs-12 col-md-8 col-md-offset-2 col-xl-6 col-xl-offset-3">
     @if (count($errors) > 0)
         @include('admin.partials.errors')
     @endif
-    
-      {!! Form::open(['route'=>'area.store']) !!}
+
+    {!! Form::open(['route'=>'area.store','method' => 'POST','files' => true]) !!}
           
           <div class="form-group">
-              <label for="description">Nombre del Salon:</label>
+              <label for="description">Nombre:</label>
               {!! 
                   Form::text(
                       'descripcion', 
                       null, 
                       array(
                           'class'=>'form-control',
-                          'placeholder' => 'Ingrese descripción...',
+                          'placeholder' => 'Ingrese nombre...',
                                         'autofocus' => 'autofocus'
                       )
                   ) 
@@ -31,7 +31,7 @@
           </div>
         
           <div class="form-group">
-              <label for="direccion">Direccion:</label>
+              <label for="direccion">Detalles:</label>
               {!! 
                   Form::text(
                       'direccion', 
@@ -39,7 +39,7 @@
                       array(
                          
                           'class'=>'form-control',
-                          'placeholder' => 'Direccion del solicitante...',
+                          'placeholder' => 'Detalles del desaparecimiento...',
                                         'autofocus' => 'autofocus'
                       )
                   ) 
@@ -58,7 +58,7 @@
                       array(
                          
                           'class'=>'form-control',
-                          'placeholder' => 'Lat del salon...',
+                          'placeholder' => 'Lat del ...',
                                         'autofocus' => 'autofocus'
                       )
                   ) 
@@ -76,7 +76,7 @@
                       array(
                          
                           'class'=>'form-control',
-                          'placeholder' => 'Lon del salon...',
+                          'placeholder' => 'Lon del ...',
                                         'autofocus' => 'autofocus'
                       )
                   ) 
@@ -164,5 +164,11 @@ marcador= new google.maps.Marker({
 
 
 
+@endsection
 
-@stop
+@section('js')
+  <script>
+    $('.textarea-content').trumbowyg();
+
+  </script>
+@endsection

@@ -30,14 +30,14 @@ class AreaController extends Controller
         $this->middleware('permission:area.destroy')->only('destroy');
 
     }
-    public function index(Request $request)
+    public function index()
     {
        // dd($request->get('descripcion'));
       //$areas = Area::all();
-      $areas = Area::descripcion($request->get('descripcion'))->orderby('id','DESC')->paginate(5);
+      $area = Area::all();
         //dd($areas);
 
-     return view('admin.area.index', compact('areas'));
+     return view('admin.area.index', compact('area'));
     }
 
     public function listAPI(Request $request) {
@@ -95,13 +95,13 @@ class AreaController extends Controller
             
           
   }
-    //dd($area);
-        $area->save();
 
-        $message = $area ? 'EL SALON SE REGISTRO CORRECTAMENTE EN LA APLICACION!' : 'Area NO pudo agregarse!';
+ 
+        $area->save();
+        $message = $area ? ' SE REGISTRO CORRECTAMENTE EN LA APLICACION!' : 'Area NO pudo agregarse!';
         
-        //return redirect()->route('area.index')->with('message', $message);
-        return redirect()->route('home')->with('message', $message);
+        return redirect()->route('area.index')->with('message', $message);
+        //return redirect()->route('home')->with('message', $message);
     }
 
     /**
@@ -127,33 +127,59 @@ class AreaController extends Controller
         return view('admin.area.edit', compact('area'));
     }
 
+
+    
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+    * @param  Area $area
      * @return \Illuminate\Http\Response
      */
-    public function update(SaveAreaRequest $request, Area $area)
+    public function update( Area $area, Request $request)
     {
-        $area->fill($request->all());
-        $updated = $area->save();
-        $message = $updated ? 'Area actualizado correctamente!' : 'El Area NO pudo actualizarse!';
+        $this->validate($request, [
+            'descripcion'      => 'required',
+            'direccion'      => 'required',
+            'lat'      => 'required',
+            'lon'      => 'required',
+        ]);
+
+        $area->descripcion=$request->get('descripcion');
+        $area->direccion=$request->get('direccion');
+        $area->lat=$request->get('lat');
+        $area->lon=$request->get('lon');
+
+        if ($image = $request->file('img')) {
+            $destinationPath = 'images/areas';
+              $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+              $image->move($destinationPath, $profileImage);
+              $area->url_img=$destinationPath.'/'.$profileImage;
+          } else {
+            $area->url_img=null;
+            File::delete($area->url_img);
+          }
+
         
+        $updated = $area->update();
+        $message = $updated ? ' actualizado correctamente!' : 'El NO pudo actualizarse!';
         return redirect()->route('area.index')->with('message', $message);
     }
 
     /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
+     * Delete the specified resource in storage.
+     * @param Area $area
      * @return \Illuminate\Http\Response
      */
     public function destroy(Area $area)
     {
         $deleted = $area->delete();
 
-        $message = $deleted ? 'Area eliminado correctamente!' : 'El area NO pudo eliminarse!';
+        $image_path = $area->url_img;  // the value is : localhost/project/image/filename.format
+          if(File::exists($image_path)) {
+              File::delete($image_path);
+          }
+        $message = $deleted ? ' eliminado correctamente!' : 'El area NO pudo eliminarse!';
         
         return redirect()->route('area.index')->with('message', $message);
     }

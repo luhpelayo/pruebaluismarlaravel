@@ -6,7 +6,7 @@
         <div class="container">
             <div class="tittle wow fadeInUp">
                 <h2>EQUIPO DE DESARROLLO</h2>
-                <h4>Bienvenido al portal web deL Salon de Uñas.</h4>
+                <h4>Bienvenido al portal web deL .</h4>
             </div>
             <div class="testimonial_carosel">
                 <div class="item">

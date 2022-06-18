@@ -6,7 +6,7 @@
 <div class="page-header text-center">
     <h1>
         {{--<i class="fa fa-calendar"style="color:green"></i>--}}
-        solicitantes <a href="{{ route('solicitantes.create') }}" class="btn btn-success"><i class="fa fa-plus-circle"></i> Nuevo</a>
+        SOLICITUDES DE RECONOCIMIENTO <a href="{{ route('solicitantes.create') }}" class="btn btn-success"><i class="fa fa-plus-circle"></i> Nuevo</a>
     </h1>
 </div>
     <div class="fb-share-button" data-href="http://financiera.test:81/eventos" data-layout="button_count" data-size="small">
@@ -22,11 +22,12 @@
                 <th>Apellido</th>          
                 <th>CI</th>
                 <th>Telefono</th>
+                <th>Email</th>
                 <th>Direccion</th>
                 <th>Lat</th>
                 <th>Lon</th>
-                <th>Email</th>
-                <th>precio</th>
+               
+                <th>Reconocimiento</th>
                 <th>Imagen</th>
            
                 <th width="10%">Acciónes </th>
@@ -38,11 +39,12 @@
              <td>{{ $solic->nombre }}</td> 
              <td>{{ $solic->apellido }}</td>  
              <td>{{ $solic->ci }}</td> 
-             <td>{{ $solic->telefono }}</td>  
+             <td>{{ $solic->telefono }}</td> 
+             <td>{{ $solic->email }}</td> 
              <td>{{ $solic->direccion }}</td>  
              <td>{{ $solic->lat }}</td>   
              <td>{{ $solic->lon }}</td>  
-             <td>{{ $solic->email }}</td>  
+             
              <td>{{ $solic->precio }}</td>
               @if ($solic->url_img)
               <td><img src="{{asset($solic->url_img)}}" height="130" width="130" /></td>

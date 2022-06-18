@@ -24,7 +24,7 @@
                 <div class="collapse navbar-collapse" id="min_navbar">
                     <ul class="nav navbar-nav navbar-right">
                  
-                        <li><a href="{{route('gallery')}}">Catalogos</a></li>
+                        <li><a href="{{route('gallery')}}">Publicaciones</a></li>
                         <li><a href="{{route('/')}}">Registrarse</a></li>
                         <li><a href="{{route('home')}}">Login</a></li>
                     </ul>

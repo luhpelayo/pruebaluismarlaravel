@@ -8,8 +8,8 @@
 
     <div class="page-header  text-center">
       <h1>
-       <i class="fa fa-calendar"style="color:green"></i>
-       SOLICITANTES <small>[Agregar ]</small>
+       <i style="color:green"></i>
+       SOLICITAR RECONOCIMIENTO <small>[Agregar ]</small>
       </h1>
     </div>
   <div class="col-xs-12 col-md-8 col-md-offset-2 col-xl-6 col-xl-offset-3">
@@ -19,6 +19,11 @@
 
 
      {!! Form::open(['route'=>'solicitantes.store','method' => 'POST','files' => true]) !!}
+
+     <h1>
+       <i class="fa fa-user"style="color:green"></i>
+       DATOS DEL SOLICITANTE
+      </h1>
 
           <div class="form-group">
               <label for="nombre">Nombre:</label>
@@ -70,7 +75,21 @@
               !!}
           </div>
 
-
+          <div class="form-group">
+              <label for="email">Email:</label>
+              {!! 
+                  Form::text(
+                      'email', 
+                      null, 
+                      array(
+                         
+                          'class'=>'form-control',
+                          'placeholder' => 'Email del solicitante...',
+                                        'autofocus' => 'autofocus'
+                      )
+                  ) 
+              !!}
+          </div>
           <div class="form-group">
               <label for="telefono">Telefono:</label>
               {!! 
@@ -88,6 +107,12 @@
           </div>
 
 
+
+
+          <h1>
+       <i class="fa fa-camara"style="color:green"></i>
+       DATOS DEL NIÑO
+      </h1>
           <div class="form-group">
               <label for="direccion">Direccion:</label>
               {!! 
@@ -97,7 +122,7 @@
                       array(
                          
                           'class'=>'form-control',
-                          'placeholder' => 'Direccion del solicitante...',
+                          'placeholder' => 'Direccion del ...',
                                         'autofocus' => 'autofocus'
                       )
                   ) 
@@ -113,7 +138,7 @@
                       array(
                          
                           'class'=>'form-control',
-                          'placeholder' => 'Lat del solicitante...',
+                          'placeholder' => 'Lat del ...',
                                         'autofocus' => 'autofocus'
                       )
                   ) 
@@ -129,28 +154,14 @@
                       array(
                          
                           'class'=>'form-control',
-                          'placeholder' => 'Lon del solicitante...',
+                          'placeholder' => 'Lon del...',
                                         'autofocus' => 'autofocus'
                       )
                   ) 
               !!}
           </div>
 
-          <div class="form-group">
-              <label for="email">Email:</label>
-              {!! 
-                  Form::text(
-                      'email', 
-                      null, 
-                      array(
-                         
-                          'class'=>'form-control',
-                          'placeholder' => 'Email del solicitante...',
-                                        'autofocus' => 'autofocus'
-                      )
-                  ) 
-              !!}
-          </div>
+       
 
        
 

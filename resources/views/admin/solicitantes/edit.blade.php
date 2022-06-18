@@ -8,7 +8,7 @@
         <div class="page-header  text-center">
            <h1>
            <i class="fa fa-newspaper-o"style="color:green"></i>
-              SOLICITANTES <small>[Editar Cronograma]</small>
+              SOLICITUD <small>[Editar Cronograma]</small>
           </h1>
         </div><!-- /.box-header -->             
       <div class="col-xs-12 col-md-8 col-md-offset-2 col-xl-6 col-xl-offset-3">
