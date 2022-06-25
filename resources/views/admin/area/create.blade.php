@@ -47,7 +47,6 @@
           </div>
 
 
-
           <div class="form-group"  id="lat">
               <label  for="lat">Latitud:</label>
              
@@ -58,7 +57,8 @@
                       array(
                          
                           'class'=>'form-control',
-                          'placeholder' => 'Lat del ...',
+                          'value' => 'lat',
+                          'id' => 'latitud',
                                         'autofocus' => 'autofocus'
                       )
                   ) 
@@ -66,7 +66,7 @@
           </div>
           <div>
   
-          <div  class="form-group" id="lon">
+          <div  class="form-group" id="lon" >
               <label  for="lon">Longitud:</label>
              
               {!! 
@@ -76,7 +76,9 @@
                       array(
                          
                           'class'=>'form-control',
-                          'placeholder' => 'Lon del ...',
+                          'value' => 'lon',
+                          'id' => 'longitud',
+                         
                                         'autofocus' => 'autofocus'
                       )
                   ) 
@@ -88,16 +90,7 @@
           {!! Form::label('img','Agregar una imagen') !!}
           {!! Form::file('img')!!}
          </div>
- <div class="row">
-    <div class="form-group col-md-4"> lat
-        <input type="text" id="latitud" class="form-control" value="lat"  >    
-        </div>
-        
-        <div class="form-group col-md-4">lon
-        <input type="text" id="longitud" class="form-control"  value="lon"  >     
-        </div>
-    </div>
-</div>
+
      
           <div class="row">
    <div class="col-md-12">
