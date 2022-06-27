@@ -19,6 +19,10 @@
         
         {!! Form::model($solicitante, array('route' => array('solicitantes.update', $solicitante),'files' => true)) !!}
 
+        <h1>
+       <i class="fa fa-user"style="color:green"></i>
+       DATOS DEL SOLICITANTE
+      </h1>
             <input type="hidden" name="_method" value="PUT">
              
            <div class="form-group">
@@ -70,6 +74,21 @@
           </div>
 
           <div class="form-group">
+              <label for="email">Email:</label>
+              {!! 
+                  Form::text(
+                      'email', 
+                      null, 
+                      array(
+                         
+                          'class'=>'form-control',
+                          'placeholder' => 'Email del solicitante...',
+                                        'autofocus' => 'autofocus'
+                      )
+                  ) 
+              !!}
+          </div>
+          <div class="form-group">
               <label for="telefono">Telefono:</label>
               {!! 
                   Form::text(
@@ -84,6 +103,13 @@
                   ) 
               !!}
           </div>
+
+
+
+          <h1>
+       <i class="fa fa-camara"style="color:green"></i>
+       DATOS DEL NIÑO
+      </h1>
           <div class="form-group">
               <label for="direccion">Direccion:</label>
               {!! 
@@ -130,23 +156,9 @@
               !!}
           </div>
 
+       
           <div class="form-group">
-              <label for="email">Email:</label>
-              {!! 
-                  Form::text(
-                      'email', 
-                      null, 
-                      array(
-                         
-                          'class'=>'form-control',
-                          'placeholder' => 'Email del solicitante...',
-                                        'autofocus' => 'autofocus'
-                      )
-                  ) 
-              !!}
-          </div>
-          <div class="form-group">
-              <label for="email">Precio:</label>
+              <label for="email">RECONOCIMIENTO:</label>
               {!! 
                   Form::text(
                       'precio', 

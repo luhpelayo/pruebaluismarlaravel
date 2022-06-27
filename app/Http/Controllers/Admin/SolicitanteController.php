@@ -8,11 +8,12 @@ use App\Http\Requests\SaveSolicitanteRequest;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendMail;
 use App\Models\Solicitante;
+use App\Models\Area;
 use App\Models\Contact;
 use File;
 use Session;
 use Storage;
-
+use DB;
 
 
 class SolicitanteController extends Controller
@@ -262,18 +263,54 @@ class SolicitanteController extends Controller
             $image->move($destinationPath, $profileImage);
             $solicitante->url_img=$destinationPath.'/'.$profileImage;   
             $solicitante->precio=$this->call_ia_fetch_price($solicitante->url_img);
+
+
+
         } else {
           $solicitante->url_img=null;
           File::delete($solicitante->url_img);
         }
 
-      
-
          $updated = $solicitante->update();
          $message = $updated ? 'Solicitante actualizado correctamente!' : 'El solicitante NO pudo actualizarse!';
         
+         //aqui toy haciendo el clonar tras q se ve la coicidencia de 
+      
+         $clonar='Maria Joaquina 10 años desaparecida desde 22/05/2019';
+         $clonar2='Cirilo Robles 8 años desaparecido desde 08/05/2018';
+      //dd($solicitante->lat);
+      if ($solicitante->precio==$clonar){
+       
+        $img_area =  DB::table('areas')->where('direccion',$clonar )->value('url_img');
+        $des =  DB::table('areas')->where('direccion',$clonar )->value('descripcion');
+        //dd($des);
+       DB::table('areas')->insert(
+        ['descripcion' => $des,
+        'direccion' => $clonar,
+        'lat' => $solicitante->lat,
+        'lon' => $solicitante->lon,
+        'url_img' => $img_area]
+    ); } 
+    if ($solicitante->precio==$clonar2){
+     
+      $img_area2 =  DB::table('areas')->where('direccion',$clonar2 )->value('url_img');
+      $des2 =  DB::table('areas')->where('direccion',$clonar2 )->value('descripcion');
+      //dd($des);
+     DB::table('areas')->insert(
+      ['descripcion' => $des2,
+      'direccion' => $clonar2,
+      'lat' => $solicitante->lat,
+      'lon' => $solicitante->lon,
+      'url_img' => $img_area2]
+  );
+} 
+
+//hasta aqui
+
         return redirect()->route('solicitantes.index')->with('message', $message);
     }
+
+    
     public function updateAPI(Solicitante $solicitante, Request $request)
     {
         $this->validate($request, [
@@ -295,7 +332,39 @@ class SolicitanteController extends Controller
 
          $updated = $solicitante->update();
          $message = $updated ? 'Solicitante actualizado correctamente!' : 'El solicitante NO pudo actualizarse!';
+           
+         //aqui toy haciendo el clonar tras q se ve la coicidencia de 
+      
+            $clonar='Maria Joaquina 10 años desaparecida desde 22/05/2019';
+            $clonar2='Cirilo Robles 8 años desaparecido desde 08/05/2018';
+         //dd($solicitante->lat);
+         if ($solicitante->precio==$clonar){
+          
+           $img_area =  DB::table('areas')->where('direccion',$clonar )->value('url_img');
+           $des =  DB::table('areas')->where('direccion',$clonar )->value('descripcion');
+           //dd($des);
+          DB::table('areas')->insert(
+           ['descripcion' => $des,
+           'direccion' => $clonar,
+           'lat' => $solicitante->lat,
+           'lon' => $solicitante->lon,
+           'url_img' => $img_area]
+       ); } 
+       if ($solicitante->precio==$clonar2){
         
+         $img_area2 =  DB::table('areas')->where('direccion',$clonar2 )->value('url_img');
+         $des2 =  DB::table('areas')->where('direccion',$clonar2 )->value('descripcion');
+         //dd($des);
+        DB::table('areas')->insert(
+         ['descripcion' => $des2,
+         'direccion' => $clonar2,
+         'lat' => $solicitante->lat,
+         'lon' => $solicitante->lon,
+         'url_img' => $img_area2]
+     );
+   } 
+   
+   //hasta aqui
          return $solicitante;
     }
 
