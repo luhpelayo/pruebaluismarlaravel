@@ -276,8 +276,8 @@ class SolicitanteController extends Controller
         
          //aqui toy haciendo el clonar tras q se ve la coicidencia de 
       
-         $clonar='Maria Joaquina 10 años desaparecida desde 22/05/2019';
-         $clonar2='Cirilo Robles 8 años desaparecido desde 08/05/2018';
+         $clonar='Maria Joaquina 10 años desaparecida desde 22/05/2019 Tel.61368450';
+         $clonar2='Cirilo Robles 8 años desaparecido desde 08/05/2018 Tel.76054679';
       //dd($solicitante->lat);
       if ($solicitante->precio==$clonar){
        
@@ -335,8 +335,8 @@ class SolicitanteController extends Controller
            
          //aqui toy haciendo el clonar tras q se ve la coicidencia de 
       
-            $clonar='Maria Joaquina 10 años desaparecida desde 22/05/2019';
-            $clonar2='Cirilo Robles 8 años desaparecido desde 08/05/2018';
+            $clonar='Maria Joaquina 10 años desaparecida desde 22/05/2019 Tel.61368450';
+            $clonar2='Cirilo Robles 8 años desaparecido desde 08/05/2018 Tel.76054679';
          //dd($solicitante->lat);
          if ($solicitante->precio==$clonar){
           
