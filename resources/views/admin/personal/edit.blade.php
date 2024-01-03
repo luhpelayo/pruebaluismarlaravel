@@ -70,20 +70,23 @@
             </div>
 
             <div class="form-group">
-                <label for="telefono">Telefono:</label>
+                <label for="telefono">Teléfono:</label>
                 
                 {!! 
                     Form::text(
                         'telefono', 
                         null, 
                         array(
-                            'class'=>'form-control',
-                            'placeholder' => 'telefono...',
-                            'autofocus' => 'autofocus'
+                            'class' => 'form-control',
+                            'placeholder' => 'Teléfono...',
+                            'autofocus' => 'autofocus',
+                            'maxlength' => '8', // Limitar a 8 dígitos
                         )
                     ) 
                 !!}
             </div>
+
+
 
 
             <div class="form-group">
@@ -102,36 +105,40 @@
                 !!}
             </div>
             <div class="form-group">
-                <label for="genero">Genero:</label>
+                <label for="genero">Género:</label>
                 
                 {!! 
-                    Form::text(
+                    Form::select(
                         'genero', 
+                        ['' => 'Seleccione un género', 'masculino' => 'Masculino', 'femenino' => 'Femenino', 'otro' => 'Otro'], 
                         null, 
                         array(
-                            'class'=>'form-control',
-                            'placeholder' => 'genero...',
+                            'class' => 'form-control',
+                            'placeholder' => 'Seleccione un género...',
                             'autofocus' => 'autofocus'
                         )
                     ) 
                 !!}
             </div>
 
+
             <div class="form-group">
                 <label for="estado_civil">Estado Civil:</label>
                 
                 {!! 
-                    Form::text(
+                    Form::select(
                         'estado_civil', 
+                        ['' => 'Seleccione un estado civil', 'casado' => 'Casado', 'soltero' => 'Soltero', 'divorciado' => 'Divorciado', 'viudo' => 'Viudo'], 
                         null, 
                         array(
-                            'class'=>'form-control',
-                            'placeholder' => 'estado civil...',
+                            'class' => 'form-control',
+                            'placeholder' => 'Seleccione un estado civil...',
                             'autofocus' => 'autofocus'
                         )
                     ) 
                 !!}
             </div>
+
 
 
 
