@@ -93,9 +93,7 @@
                   @can('personal.index')
                   <li class="active"><a href="{{ route('personal.index') }}"><i class="fa fa-circle-o"></i>Personal</a></li>
                   @endcan
-                  @can('solicitantes.index')
-                  <li><a href="{{ route('solicitantes.index') }}"><i class="fa fa-circle-o"></i>Reconocimiento</a></li>
-                  @endcan
+           
                  
                  
               </ul>
