@@ -7,7 +7,7 @@
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"><b>A</b>LT</span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>NIÑO</b>APP</span>
+          <span class="logo-lg"><b>Prueba</b>APP</span>
 
         </a>
 
@@ -83,15 +83,15 @@
               </ul>
             </li>
            @endcan
-           @can('sliders.index' || 'area.index' || 'requirements.index' || 'processes.index' || 'estado.index' || 'solicitantes.index')
+           @can('sliders.index' || 'personal.index' || 'requirements.index' || 'processes.index' || 'estado.index' || 'solicitantes.index')
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-cog"></i> <span>Configuración</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
       
-                  @can('area.index')
-                  <li class="active"><a href="{{ route('area.index') }}"><i class="fa fa-circle-o"></i>Desaparecidos</a></li>
+                  @can('personal.index')
+                  <li class="active"><a href="{{ route('personal.index') }}"><i class="fa fa-circle-o"></i>Personal</a></li>
                   @endcan
                   @can('solicitantes.index')
                   <li><a href="{{ route('solicitantes.index') }}"><i class="fa fa-circle-o"></i>Reconocimiento</a></li>
@@ -133,7 +133,7 @@
         <div class="pull-right hidden-xs">
           <b>Version</b> 2.3.0
         </div>
-        <strong>Copyright &copy; 2022 <a href="#">MKT Pelayo</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 2024 <a href="#"> Pelayo</a>.</strong> All rights reserved.
       </footer>
 
 

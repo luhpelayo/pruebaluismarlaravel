@@ -14,19 +14,30 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\PersonalController;
+
+use App\Http\Controllers\Auth\LoginController;
+Route::get('/test', function () {
+    return response()->json(['message' => '¡La API está funcionando correctamente!']);
 });
 
+// Rutas del personal API
+Route::get('/personal', [PersonalController::class, 'indexAPI']);
+Route::post('/personal', [PersonalController::class, 'storeAPI']);
+Route::delete('/personal/{personal}', [PersonalController::class, 'destroyAPI']);
+Route::match(['post', 'put'], '/personal/{personal}', [PersonalController::class, 'updateAPI']);
+Route::match(['post', 'put'], '/personal/{id}', [PersonalController::class, 'updateImageUrlAPI']);
 
-Route::group([
-    'prefix' => 'v1'
-], function () {
-    Route::post('solicitar', 'Admin\SolicitanteController@storeAPI');
-    Route::get('salones', 'Admin\AreaController@listAPI');
-    Route::post('solicitar/{solicitante}', 'Admin\SolicitanteController@updateAPI');
+// Rutas de autenticación de la API
+Route::post('/login', [LoginController::class, 'login']);
+Route::post('/register', [RegisterController::class, 'register']);
+
+// Rutas protegidas que requieren autenticación
+Route::middleware('auth:api')->group(function () {
+    Route::post('/logout', [LoginController::class, 'logout']);
+    Route::get('/user', function (\Illuminate\Http\Request $request) {
+        return $request->user();
+    });
 });
-
-
-    
 

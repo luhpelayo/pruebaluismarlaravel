@@ -52,6 +52,15 @@ Route::put('admin/area/update/{area}', 'Admin\AreaController@update')->name('are
 Route::delete('admin/area/destroy/{area}', 'Admin\AreaController@destroy')->name('area.destroy');
 
 
+//personal
+Route::get('admin/personal', 'Admin\PersonalController@index')->name('personal.index');
+Route::get('admin/personal/create', 'Admin\PersonalController@create')->name('personal.create');
+Route::post('admin/personal/store', 'Admin\PersonalController@store')->name('personal.store');
+Route::get('admin/personal/edit/{personal}', 'Admin\PersonalController@edit')->name('personal.edit');
+Route::put('admin/personal/update/{personal}', 'Admin\PersonalController@update')->name('personal.update');
+Route::delete('admin/personal/destroy/{personal}', 'Admin\PersonalController@destroy')->name('personal.destroy');
+
+
 Route::get('trabajos' , [ 'uses' => 'Web\TrabajoController@indexInformativa' ])->name('trabajos');
 
 Route::get('bolsa_de_trabajos' , [ 'uses' => 'Web\Bolsa_de_trabajoController@indexInformativa' ])->name('bolsa_de_trabajos');
@@ -184,6 +193,9 @@ Route::middleware(['auth'])->group(function(){
     Route::resource('admin/sliders', 'Admin\SliderController');
     //Area
     Route::resource('area', 'Admin\AreaController');
+
+    //Personal
+    Route::resource('personal', 'Admin\PersonalController');
     //Area academica
     Route::resource('academica', 'Admin\AreaAcademicaController');
 
